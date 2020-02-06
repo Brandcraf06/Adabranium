@@ -3,7 +3,6 @@
 .gradle/
 build/
 out/
-classes/
 
 # idea
 
@@ -23,3 +22,14 @@ bin/
 # fabric
 
 run/
+
+.mixin.out/
+crash-reports/
+logs/
+mods/
+resourcepacks/
+saves/
+screenshots/
+options.txt
+usercache.json
+*.launch
