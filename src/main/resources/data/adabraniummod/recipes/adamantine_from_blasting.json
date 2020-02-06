@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "adabraniummod:adamantine_ore"
+  },
+  "result": "adabraniummod:adamantine",
+  "experience": 0.7,
+  "cookingtime": 100
+}

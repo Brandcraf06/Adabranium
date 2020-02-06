@@ -1,0 +1,43 @@
+{   
+    "itemGroup.adabraniummod.adabranium_group": "The Adabranium Mod",
+	"block.adabraniummod.vibranium_ore": "Vibranium Ore",
+	"block.adabraniummod.vibranium_block": "Vibranium Block",
+	"block.adabraniummod.adamantine_ore": "Adamantine Ore",
+	"block.adabraniummod.adamantium_block": "Adamantium Block",
+	
+	"item.adabraniummod.obsidian_rod": "Obsidian Rod",
+	"item.adabraniummod.vibranium": "Vibranium",
+	"item.adabraniummod.vibranium_dust": "Vibranium Dust",
+	"item.adabraniummod.vibranium_ingot": "Vibranium Ingot",
+	"item.adabraniummod.adamantine": "Adamantine",
+	"item.adabraniummod.adamantium_ingot": "Adamantium Ingot",
+	"item.adabraniummod.adamantium_rod": "Adamantium Rod",
+	
+	"item.minecraft.potion.effect.toughness": "Potion of Toughness",
+	"item.minecraft.splash_potion.effect.toughness": "Splash Potion of Toughness",
+	"item.minecraft.lingering_potion.effect.toughness": "Lingering Potion of Toughness",
+	"item.minecraft.tipped_arrow.effect.toughness": "Arrow of Toughness",
+	
+	"item.adabraniummod.vibranium_helmet": "Vibranium Helmet",
+	"item.adabraniummod.vibranium_chestplate": "Vibranium Chestplate",
+	"item.adabraniummod.vibranium_leggings": "Vibranium Leggings",
+	"item.adabraniummod.vibranium_boots": "Vibranium Boots",
+	"item.adabraniummod.vibranium_pickaxe": "Vibranium Pickaxe",
+	"item.adabraniummod.vibranium_axe": "Vibranium Axe",
+	"item.adabraniummod.vibranium_shovel": "Vibranium Shovel",
+	"item.adabraniummod.vibranium_hoe": "Vibranium Hoe",
+	"item.adabraniummod.vibranium_sword": "Vibranium Sword",
+	
+	"item.adabraniummod.adamantium_helmet": "Adamantium Helmet",
+	"item.adabraniummod.adamantium_chestplate": "Adamantium Chestplate",
+	"item.adabraniummod.adamantium_leggings": "Adamantium Leggings",
+	"item.adabraniummod.adamantium_boots": "Adamantium Boots",
+	"item.adabraniummod.adamantium_pickaxe": "Adamantium Pickaxe",
+	"item.adabraniummod.adamantium_axe": "Adamantium Axe",
+	"item.adabraniummod.adamantium_shovel": "Adamantium Shovel",
+	"item.adabraniummod.adamantium_hoe": "Adamantium Hoe",
+	"item.adabraniummod.adamantium_sword": "Adamantium Sword",
+	
+	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword"
+
+}

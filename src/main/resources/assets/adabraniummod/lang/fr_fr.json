@@ -1,0 +1,43 @@
+{
+    "itemGroup.adabraniummod.adabranium_group": "The Adabranium Mod",
+	"block.adabraniummod.vibranium_ore": "Minerai de Vibranium",
+	"block.adabraniummod.vibranium_block": "Bloc de Vibranium",
+		"block.adabraniummod.adamantine_ore": "Minerai d'Adamantine",
+	"block.adabraniummod.adamantium_block": "Bloc d'Adamantium",
+	
+	"item.adabraniummod.obsidian_rod": "Bâton d'obsidienne",
+	"item.adabraniummod.vibranium": "Vibranium",
+	"item.adabraniummod.vibranium_dust": "Poudre de vibranium",
+	"item.adabraniummod.vibranium_ingot": "Lingot de vibranium",
+	"item.adabraniummod.adamantine": "Adamantine",
+	"item.adabraniummod.adamantium_ingot": "Lingot d'Adamantium",
+	"item.adabraniummod.adamantium_rod": "Barre d'Adamantium",
+	
+	"item.minecraft.potion.effect.toughness": "Potion de robustesse",
+	"item.minecraft.splash_potion.effect.toughness": "Potion de robustesse jetable",
+	"item.minecraft.lingering_potion.effect.toughness": "Potion de robustesse persistante",
+	"item.minecraft.tipped_arrow.effect.toughness": "Flèche de robustesse",
+	
+	"item.adabraniummod.vibranium_helmet": "Casque en Vibranium",
+	"item.adabraniummod.vibranium_chestplate": "Plastron en Vibranium",
+	"item.adabraniummod.vibranium_leggings": "Jambières en Vibranium",
+	"item.adabraniummod.vibranium_boots": "Bottes en Vibranium",
+	"item.adabraniummod.vibranium_pickaxe": "Pioche en Vibranium",
+	"item.adabraniummod.vibranium_axe": "Hache en Vibranium",
+	"item.adabraniummod.vibranium_shovel": "Pelle en Vibranium",
+	"item.adabraniummod.vibranium_hoe": "Houe en Vibranium",
+	"item.adabraniummod.vibranium_sword": "Epee en Vibranium"
+	
+	"item.adabraniummod.adamantium_helmet": "Casque en Adamantium",
+	"item.adabraniummod.adamantium_chestplate": "Plastron en Adamantium",
+	"item.adabraniummod.adamantium_leggings": "Jambières en Adamantium",
+	"item.adabraniummod.adamantium_boots": "Bottes en Adamantium",
+	"item.adabraniummod.adamantium_pickaxe": "Pioche en Adamantium",
+	"item.adabraniummod.adamantium_axe": "Hache en Adamantium",
+	"item.adabraniummod.adamantium_shovel": "Pelle en Adamantium",
+	"item.adabraniummod.adamantium_hoe": "Houe en Adamantium ",
+	"item.adabraniummod.adamantium_sword": "Epee en Adamantium",
+	
+	"item.adabraniummod.oneshotium_sword": "Epee en Oneshotium"
+
+}

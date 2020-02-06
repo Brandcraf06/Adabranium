@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "vibranium_ingot",
+  "pattern": [
+    " # ",
+	"#O#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "adabraniummod:vibranium"
+    },
+	"O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "adabraniummod:vibranium_ingot",
+    "count": 1
+  }
+}

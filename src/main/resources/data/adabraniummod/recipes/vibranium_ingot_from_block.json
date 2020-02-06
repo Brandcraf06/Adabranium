@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "vibranium_ingot",
+  "ingredients": [
+    {
+      "item": "adabraniummod:vibranium_block"
+    }
+  ],
+  "result": {
+    "item": "adabraniummod:vibranium_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "adamantium_block",
+  "pattern": [
+    "###",
+	"###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "adabraniummod:adamantium_ingot"
+    }
+  },
+  "result": {
+    "item": "adabraniummod:adamantium_block",
+    "count": 1
+  }
+}

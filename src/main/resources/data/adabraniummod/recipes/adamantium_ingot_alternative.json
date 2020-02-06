@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "adamantium_ingot",
+  "pattern": [
+    " # ",
+	"#V#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "adabraniummod:adamantine"
+    },
+	"V": {
+      "item": "adabraniummod:vibranium_ingot"
+    }
+  },
+  "result": {
+    "item": "adabraniummod:adamantium_ingot",
+    "count": 1
+  }
+}
