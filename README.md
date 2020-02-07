@@ -1,4 +1,4 @@
-                      Adabranium is a 1.15.2 (and soon 1.16) mod made using Fabric API.
+                      Adabranium is a 1.15.2 mod made using Fabric API.
 
         The mod adds powerful Marvel materials: the Vibranium from my "Nether Things" mod and the Adamantium
 
