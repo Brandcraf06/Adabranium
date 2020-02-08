@@ -38,6 +38,16 @@
 	"item.adabraniummod.adamantium_hoe": "Houe en Adamantium ",
 	"item.adabraniummod.adamantium_sword": "Epee en Adamantium",
 	
+	"item.adabraniummod.nether_helmet": "Casque du Nether",
+	"item.adabraniummod.nether_chestplate": "Plastron du Nether",
+	"item.adabraniummod.nether_leggings": "Pantalon du Nether",
+	"item.adabraniummod.nether_boots": "Bottes du Nether",
+	"item.adabraniummod.nether_pickaxe": "Pioche du Nether",
+	"item.adabraniummod.nether_axe": "Hache du Nether",
+	"item.adabraniummod.nether_shovel": "Pelle du Nether",
+	"item.adabraniummod.nether_hoe": "Houe du Nether",
+	"item.adabraniummod.nether_sword": "Epee du Nether",
+	
 	"item.adabraniummod.oneshotium_sword": "Epee en Oneshotium"
 
 }

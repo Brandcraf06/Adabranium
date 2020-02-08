@@ -38,6 +38,16 @@
 	"item.adabraniummod.adamantium_hoe": "Adamantium Hoe",
 	"item.adabraniummod.adamantium_sword": "Adamantium Sword",
 	
+	"item.adabraniummod.nether_helmet": "Nether Helmet",
+	"item.adabraniummod.nether_chestplate": "Nether Chestplate",
+	"item.adabraniummod.nether_leggings": "Nether Leggings",
+	"item.adabraniummod.nether_boots": "Nether Boots",
+	"item.adabraniummod.nether_pickaxe": "Nether Pickaxe",
+	"item.adabraniummod.nether_axe": "Nether Axe",
+	"item.adabraniummod.nether_shovel": "Nether Shovel",
+	"item.adabraniummod.nether_hoe": "Nether Hoe",
+	"item.adabraniummod.nether_sword": "Nether Sword",
+	
 	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword"
 
 }

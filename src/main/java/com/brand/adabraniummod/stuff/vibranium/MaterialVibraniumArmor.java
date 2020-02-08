@@ -58,4 +58,9 @@ public class MaterialVibraniumArmor implements ArmorMaterial
     {
         return 3;
     }
+
+	@Override
+	public float method_24355() {
+		return 0.0F;
+	}
 }
