@@ -57,5 +57,5 @@ public class MaterialAdamantiumArmor implements ArmorMaterial
     public float getToughness()
     {
         return 5;
-    }
+	}
 }

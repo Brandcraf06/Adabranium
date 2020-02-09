@@ -1,26 +1,21 @@
-package com.brand.adabraniummod.stuff.vibranium;
+package com.brand.adabraniummod.stuff.nether;
 
-import com.brand.adabraniummod.items.ModItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class MaterialVibraniumArmor implements ArmorMaterial
+public class MaterialNetherArmor implements ArmorMaterial
 {
-    private static final int[] BASE_DURABILITY = new int[]{8, 10, 10, 7};
-    private static final int[] PROTECTION_AMOUNTS =  {
-            5,
-            8,
-            10,
-            5
-    };
+    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    private static final int[] PROTECTION_AMOUNTS = new int[]{2, 5, 6, 2};
 
     @Override
     public int getDurability(EquipmentSlot equipmentSlot)
     {
-        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 1000;
+        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 20;
     }
 
     @Override
@@ -32,30 +27,30 @@ public class MaterialVibraniumArmor implements ArmorMaterial
     @Override
     public int getEnchantability()
     {
-        return 12;
+        return 10;
     }
 
     @Override
     public SoundEvent getEquipSound()
     {
-        return SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND;
+        return SoundEvents.ITEM_ARMOR_EQUIP_GENERIC;
     }
 
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
+        return Ingredient.ofItems(Items.NETHER_BRICK);
     }
 
     @Override
     public String getName()
     {
-        return "vibranium";
+        return "nether";
     }
 
     @Override
     public float getToughness()
     {
-        return 3;
+        return 0;
     }
 }
