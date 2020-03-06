@@ -1,9 +1,9 @@
 package com.brand.adabraniummod.stuff.nether;
 
 import com.brand.adabraniummod.stuff.FullStuffs;
-import com.brand.adabraniummod.stuff.nether.base.NetherBasePaxel;
+import com.brand.adabraniummod.stuff.base.BasePaxel;
 
-public class NetherPaxel extends NetherBasePaxel
+public class NetherPaxel extends BasePaxel
 {
     public NetherPaxel()
     {

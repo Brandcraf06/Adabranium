@@ -1,12 +1,15 @@
 package com.brand.adabraniummod.stuff.oneshotium;
 
+import com.brand.adabraniummod.AdabraniumMod;
 import com.brand.adabraniummod.stuff.FullStuffs;
-import com.brand.adabraniummod.stuff.base.BaseSword;
 
-public class OneshotiumSword extends BaseSword
+import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
+
+public class OneshotiumSword extends SwordItem
 {
     public OneshotiumSword()
     {
-    	super(FullStuffs.materialOneshotiumTool);
+    	super(FullStuffs.materialOneshotiumTool, 0, 0.0F, new Item.Settings().group(AdabraniumMod.ADABRANIUM_GROUP));
     }
 }
