@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "adamantium_ingot",
   "pattern": [
-    "V#V",
+    " #V",
 	"#I#",
-    "V#V"
+    "V# "
   ],
   "key": {
     "#": {

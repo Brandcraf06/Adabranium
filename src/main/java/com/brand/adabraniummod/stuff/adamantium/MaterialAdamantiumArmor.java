@@ -60,7 +60,7 @@ public class MaterialAdamantiumArmor implements ArmorMaterial
     }
 
 	@Override
-	public float method_24355() {
-		return 0.0F;
+	public float getKnockbackResistance() {
+		return 0.1F;
 	}
 }

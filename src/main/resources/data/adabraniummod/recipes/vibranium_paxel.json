@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABC"
+  ],
+  "key": {
+    "A": {
+      "item": "adabraniummod:vibranium_axe"
+    },
+    "B": {
+      "item": "adabraniummod:vibranium_pickaxe"
+    },
+	"C": {
+      "item": "adabraniummod:vibranium_shovel"
+    }
+  },
+  "result": {
+    "item": "adabraniummod:vibranium_paxel"
+  }
+}

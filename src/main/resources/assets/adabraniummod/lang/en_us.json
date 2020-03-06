@@ -48,6 +48,17 @@
 	"item.adabraniummod.nether_hoe": "Nether Hoe",
 	"item.adabraniummod.nether_sword": "Nether Sword",
 	
+	"item.adabraniummod.wooden_paxel": "Wooden Paxel",
+	"item.adabraniummod.golden_paxel": "Golden Paxel",
+	"item.adabraniummod.stone_paxel": "Stone Paxel",
+	"item.adabraniummod.iron_paxel": "Iron Paxel",
+	"item.adabraniummod.diamond_paxel": "Diamond Paxel",
+	"item.adabraniummod.netherite_paxel": "Netherite Paxel",
+	
+	"item.adabraniummod.vibranium_paxel": "Vibranium Paxel",
+	"item.adabraniummod.adamantium_paxel": "Adamantium Paxel",
+	"item.adabraniummod.nether_paxel": "Nether Paxel",
+	
 	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword"
 
 }

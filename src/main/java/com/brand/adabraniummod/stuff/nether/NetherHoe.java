@@ -1,12 +1,15 @@
 package com.brand.adabraniummod.stuff.nether;
 
+import com.brand.adabraniummod.AdabraniumMod;
 import com.brand.adabraniummod.stuff.FullStuffs;
-import com.brand.adabraniummod.stuff.nether.base.NetherBaseHoe;
 
-public class NetherHoe extends NetherBaseHoe
+import net.minecraft.item.HoeItem;
+import net.minecraft.item.Item;
+
+public class NetherHoe extends HoeItem
 {
 	public NetherHoe()
     {
-        super(FullStuffs.materialNetherTool);
+        super(FullStuffs.materialNetherTool, -2, -1.0F, new Item.Settings().group(AdabraniumMod.ADABRANIUM_GROUP).fireproof());
     }
 }

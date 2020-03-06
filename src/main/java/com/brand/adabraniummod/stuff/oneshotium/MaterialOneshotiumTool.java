@@ -21,7 +21,7 @@ public class MaterialOneshotiumTool implements ToolMaterial
     @Override
     public float getAttackDamage()
     {
-        return 999998f;
+        return 999999f;
     }
 
     @Override

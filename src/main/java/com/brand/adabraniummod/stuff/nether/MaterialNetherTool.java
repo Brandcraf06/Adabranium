@@ -21,7 +21,7 @@ public class MaterialNetherTool implements ToolMaterial
     @Override
     public float getAttackDamage()
     {
-        return 2.5f;
+        return 2.0f;
     }
 
     @Override
