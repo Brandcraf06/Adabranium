@@ -6,7 +6,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = "adabraniummod"
-version = "1.0.1-1.15.2"
+version = "1.1.0-1.15.2"
 
 minecraft {
 }
