@@ -2,15 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "#",
-    "#"
+    "V",
+	"O"
   ],
   "key": {
     "#": {
-      "item": "adabraniummod:adamantium_ingot"
+      "item": "adabraniummod:adamantine"
+    },
+	"V": {
+      "item": "adabraniummod:vibranium"
+    },
+	"O": {
+      "item": "adabraniummod:obsidian_rod"
     }
   },
   "result": {
     "item": "adabraniummod:adamantium_rod",
-    "count": 4
+    "count": 2
   }
 }

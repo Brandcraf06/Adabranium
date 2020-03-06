@@ -48,6 +48,16 @@
 	"item.adabraniummod.nether_hoe": "Houe du Nether",
 	"item.adabraniummod.nether_sword": "Epee du Nether",
 	
+	"item.adabraniummod.wooden_paxel": "Piachelle en bois",
+	"item.adabraniummod.golden_paxel": "Piachelle en or",
+	"item.adabraniummod.stone_paxel": "Piachelle en pierre",
+	"item.adabraniummod.iron_paxel": "Piachelle en fer",
+	"item.adabraniummod.diamond_paxel": "Piachelle en diamant",
+	
+	"item.adabraniummod.vibranium_paxel": "Piachelle en Vibranium",
+	"item.adabraniummod.adamantium_paxel": "Piachelle en Adamantium,
+	"item.adabraniummod.nether_paxel": "Piachelle du Nether",
+	
 	"item.adabraniummod.oneshotium_sword": "Epee en Oneshotium"
 
 }

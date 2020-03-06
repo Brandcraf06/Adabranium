@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "adamantium_ingot",
   "pattern": [
-    "V#V",
+    " # ",
 	"#I#",
-    "V#V"
+    " # "
   ],
   "key": {
     "#": {
@@ -12,10 +12,7 @@
     },
 	"I": {
       "item": "minecraft:obsidian"
-	},
-	"V": {
-      "item": "adabraniummod:vibranium"
-    }
+	}
   },
   "result": {
     "item": "adabraniummod:adamantium_ingot",
