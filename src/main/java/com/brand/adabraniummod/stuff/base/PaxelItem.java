@@ -32,7 +32,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
-public class PaxelItem extends MiningToolItem { 
+public class PaxelItem extends MiningToolItem {
 	   private static final Set<Block> EFFECTIVE_BLOCKS;
 	   protected static final Map<Block, Block> STRIPPED_BLOCKS;
 	   protected static final Map<Block, Block> CRACKED_STONE_BLOCKS;
@@ -47,9 +47,9 @@ public class PaxelItem extends MiningToolItem {
 	   public boolean isEffectiveOn(BlockState state) {
 	      Block block = state.getBlock();
 	      int i = this.getMaterial().getMiningLevel();
-	      if (block == Blocks.OBSIDIAN && block != Blocks.NETHERITE_BLOCK && block != Blocks.ANCIENT_DEBRIS) {
+	      if (block == Blocks.OBSIDIAN && block != Blocks.CRYING_OBSIDIAN && block != Blocks.NETHERITE_BLOCK && block != Blocks.ANCIENT_DEBRIS) {
 	         return i == 3;
-	      } else if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE && block != Blocks.EMERALD_ORE && block != Blocks.EMERALD_BLOCK && block != Blocks.GOLD_BLOCK && block != Blocks.GOLD_ORE && block != Blocks.REDSTONE_ORE) {
+	      } else if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE && block != Blocks.EMERALD_ORE && block != Blocks.EMERALD_BLOCK && block != Blocks.GOLD_BLOCK && !block.isIn(BlockTags.GOLD_ORES) && block != Blocks.REDSTONE_ORE) {
 	         if (block != Blocks.IRON_BLOCK && block != Blocks.IRON_ORE && block != Blocks.LAPIS_BLOCK && block != Blocks.LAPIS_ORE) {
 	            Material material = state.getMaterial();
 	            return material == Material.STONE || material == Material.METAL || material == Material.ANVIL || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK || block == Blocks.COBWEB;
@@ -61,17 +61,17 @@ public class PaxelItem extends MiningToolItem {
 	      }
 	   }
 	   
-	   public float getMiningSpeed(ItemStack stack, BlockState state) {
+	   public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
 	      Material material = state.getMaterial();
 	      Block block = state.getBlock();
-	      if (state.matches(BlockTags.WOOL)) {
-	          return state.matches(BlockTags.WOOL) ? 10.0F : super.getMiningSpeed(stack, state);
-	       } else if (state.matches(BlockTags.LEAVES)) {
-		          return state.matches(BlockTags.LEAVES) ? 10.0F : super.getMiningSpeed(stack, state);
+	      if (state.isIn(BlockTags.WOOL)) {
+	          return state.isIn(BlockTags.WOOL) ? 10.0F : super.getMiningSpeedMultiplier(stack, state);
+	       } else if (state.isIn(BlockTags.LEAVES)) {
+		          return state.isIn(BlockTags.LEAVES) ? 10.0F : super.getMiningSpeedMultiplier(stack, state);
 	       } else if (block == Blocks.COBWEB) {
-		          return block == Blocks.COBWEB ? 200.0F : super.getMiningSpeed(stack, state);
+		          return block == Blocks.COBWEB ? 200.0F : super.getMiningSpeedMultiplier(stack, state);
 	       } else {
-	    	   return material != Material.METAL && material != Material.ANVIL && material != Material.STONE && material != Material.WOOD && material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.BAMBOO ?  super.getMiningSpeed(stack, state) : this.miningSpeed;
+	    	   return material != Material.METAL && material != Material.ANVIL && material != Material.STONE && material != Material.WOOD && material != Material.PLANT && material != Material.REPLACEABLE_PLANT && material != Material.BAMBOO ?  super.getMiningSpeedMultiplier(stack, state) : this.miningSpeed;
 	       }
 	    }
   
@@ -158,7 +158,7 @@ public class PaxelItem extends MiningToolItem {
 	      // axe		             
 	    		             Blocks.OAK_PLANKS, Blocks.SPRUCE_PLANKS, Blocks.BIRCH_PLANKS, Blocks.JUNGLE_PLANKS, Blocks.ACACIA_PLANKS, Blocks.DARK_OAK_PLANKS, Blocks.BOOKSHELF, Blocks.OAK_WOOD, Blocks.SPRUCE_WOOD, Blocks.BIRCH_WOOD, Blocks.JUNGLE_WOOD, Blocks.ACACIA_WOOD, Blocks.DARK_OAK_WOOD, Blocks.OAK_LOG, Blocks.SPRUCE_LOG, Blocks.BIRCH_LOG, Blocks.JUNGLE_LOG, Blocks.ACACIA_LOG, Blocks.DARK_OAK_LOG, Blocks.CHEST, Blocks.PUMPKIN, Blocks.CARVED_PUMPKIN, Blocks.JACK_O_LANTERN, Blocks.MELON, Blocks.LADDER, Blocks.SCAFFOLDING, Blocks.OAK_BUTTON, Blocks.SPRUCE_BUTTON, Blocks.BIRCH_BUTTON, Blocks.JUNGLE_BUTTON, Blocks.DARK_OAK_BUTTON, Blocks.ACACIA_BUTTON, Blocks.OAK_PRESSURE_PLATE, Blocks.SPRUCE_PRESSURE_PLATE, Blocks.BIRCH_PRESSURE_PLATE, Blocks.JUNGLE_PRESSURE_PLATE, Blocks.DARK_OAK_PRESSURE_PLATE, Blocks.ACACIA_PRESSURE_PLATE, Blocks.CRIMSON_PLANKS, Blocks.CRIMSON_STEM, Blocks.CRIMSON_HYPHAE, Blocks.CRIMSON_BUTTON, Blocks.CRIMSON_PRESSURE_PLATE, Blocks.CRIMSON_FENCE, Blocks.CRIMSON_FENCE_GATE, Blocks.CRIMSON_STAIRS, Blocks.CRIMSON_DOOR, Blocks.CRIMSON_TRAPDOOR, Blocks.CRIMSON_SIGN, Blocks.CRIMSON_SLAB, Blocks.WARPED_PLANKS, Blocks.WARPED_STEM, Blocks.WARPED_HYPHAE, Blocks.WARPED_BUTTON, Blocks.WARPED_PRESSURE_PLATE, Blocks.WARPED_FENCE, Blocks.WARPED_FENCE_GATE, Blocks.WARPED_STAIRS, Blocks.WARPED_DOOR, Blocks.WARPED_TRAPDOOR, Blocks.WARPED_SIGN, Blocks.WARPED_SLAB,
 	      // hoe
-	    		             Blocks.NETHER_WART_BLOCK, Blocks.WARPED_WART_BLOCK, Blocks.HAY_BLOCK
+	    		             Blocks.NETHER_WART_BLOCK, Blocks.WARPED_WART_BLOCK, Blocks.HAY_BLOCK, Blocks.DRIED_KELP_BLOCK, Blocks.TARGET, Blocks.SHROOMLIGHT
 	      });
 	      
 	      STRIPPED_BLOCKS = (new Builder()).put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD).put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG).put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD).put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG).put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD).put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG).put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD).put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG).put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD).put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG).put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD).put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG).put(Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM).put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE).put(Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM).put(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE).build();

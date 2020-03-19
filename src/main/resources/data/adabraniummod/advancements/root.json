@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "adabraniummod:vibranium_ingot"
+    },
+    "title": {
+      "translate": "advancements.adabranium.root.title"
+    },
+    "description": {
+      "translate": "advancements.adabranium.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "adabraniummod:textures/adv_background.png"
+  },
+  "criteria": {
+    "adabraniumroot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:diamond_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adabraniumroot"
+    ]
+  ]
+}

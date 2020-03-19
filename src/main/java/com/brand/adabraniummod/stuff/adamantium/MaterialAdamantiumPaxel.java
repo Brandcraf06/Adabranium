@@ -13,7 +13,7 @@ public class MaterialAdamantiumPaxel implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 35f;
     }

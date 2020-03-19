@@ -13,7 +13,7 @@ public class MaterialStonePaxel implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 4.0F;
     }

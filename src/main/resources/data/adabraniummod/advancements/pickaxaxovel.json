@@ -1,0 +1,124 @@
+{
+  "parent": "adabraniummod:root",
+  "display": {
+    "icon": {
+      "item": "adabraniummod:netherite_paxel",
+      "nbt": "{Damage:0}"
+    },
+    "title": {
+      "translate": "advancements.adabranium.pickaxaxovel.title"
+    },
+    "description": {
+      "translate": "advancements.adabranium.pickaxaxovel.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "wooden_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:wooden_paxel"
+          }
+        ]
+      }
+    },
+    "golden_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:golden_paxel"
+          }
+        ]
+      }
+    },
+    "stone_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:stone_paxel"
+          }
+        ]
+      }
+    },
+	"iron_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:iron_paxel"
+          }
+        ]
+      }
+    },
+	"nether_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:nether_paxel"
+          }
+        ]
+      }
+    },
+	"vibranium_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:vibranium_paxel"
+          }
+        ]
+      }
+    },
+	"adamantium_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:adamantium_paxel"
+          }
+        ]
+      }
+    },
+	"netherite_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:netherite_paxel"
+          }
+        ]
+      }
+    },
+    "diamond_paxel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:diamond_paxel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "wooden_paxel",
+      "golden_paxel",
+      "stone_paxel",
+	  "iron_paxel",
+      "nether_paxel",
+      "vibranium_paxel",
+	  "adamantium_paxel",
+      "diamond_paxel",
+      "netherite_paxel"
+    ]
+  ]
+}

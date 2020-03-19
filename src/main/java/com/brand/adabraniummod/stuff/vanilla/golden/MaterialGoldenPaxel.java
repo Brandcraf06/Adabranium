@@ -13,7 +13,7 @@ public class MaterialGoldenPaxel implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 12.0F;
     }

@@ -13,7 +13,7 @@ public class MaterialOneshotiumTool implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 23f;
     }

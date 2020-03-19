@@ -13,7 +13,7 @@ public class MaterialNetheritePaxel implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 9.0F;
     }

@@ -13,7 +13,7 @@ public class MaterialVibraniumPaxel implements ToolMaterial
     }
 
     @Override
-    public float getMiningSpeed()
+    public float getMiningSpeedMultiplier()
     {
         return 20f;
     }
