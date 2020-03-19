@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "adabraniummod",
-  "version": "1.1.0-1.15.2",
+  "version": "1.1.1-1.15.2",
    
   "name": "Adabranium Mod",
   "description": "A mod that adds powerful fictional materials: Vibranium & Adamantium",
@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "com.brand.adabraniummod.AdabraniumMod"
+    ],
+	"client": [
+	  "com.brand.adabraniummod.AdabraniumClient"
     ]
   },
   "mixins": [

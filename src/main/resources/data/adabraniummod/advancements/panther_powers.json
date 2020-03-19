@@ -1,0 +1,35 @@
+{
+  "parent": "adabraniummod:wakanda_forever",
+  "display": {
+    "icon": {
+      "item": "adabraniummod:heart_shaped_herb"
+    },
+    "title": {
+      "translate": "advancements.adabranium.panther_powers.title"
+    },
+    "description": {
+      "translate": "advancements.adabranium.panther_powers.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "vibranium_soup": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "adabraniummod:vibranium_soup"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vibranium_soup"
+    ]
+  ]
+}

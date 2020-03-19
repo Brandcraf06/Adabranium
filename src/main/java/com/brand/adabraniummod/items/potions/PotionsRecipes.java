@@ -11,7 +11,7 @@ import net.minecraft.potion.Potions;
 public class PotionsRecipes {
 
     public static void registerRecipes() {
-        register("toughness", Potions.AWKWARD, ModItems.VIBRANIUM_DUST, ModPotions.TOUGHNESS);
+        register("toughness", Potions.AWKWARD, ModItems.HEART_SHAPED_HERB, ModPotions.TOUGHNESS);
         register("toughness", ModPotions.TOUGHNESS, Items.GLOWSTONE_DUST, ModPotions.STRONG_TOUGHNESS);
         register("toughness", ModPotions.TOUGHNESS, Items.REDSTONE, ModPotions.LONG_TOUGHNESS);
         }

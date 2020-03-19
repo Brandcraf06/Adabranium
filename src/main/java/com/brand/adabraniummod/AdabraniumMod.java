@@ -1,7 +1,7 @@
 package com.brand.adabraniummod;
 
 import com.brand.adabraniummod.content.ModBlocks;
-import com.brand.adabraniummod.generation.OresGen;
+import com.brand.adabraniummod.generation.Gen;
 import com.brand.adabraniummod.items.FullSets;
 import com.brand.adabraniummod.items.ModItems;
 import com.brand.adabraniummod.items.ModPotions;
@@ -18,7 +18,7 @@ import net.minecraft.world.biome.Biome;
 public class AdabraniumMod implements ModInitializer {
 	
 	public static final String MOD_ID = "adabraniummod";
-	public static final String VERSION = "1.1.0-1.15.2";
+	public static final String VERSION = "1.1.1-1.15.2";
 	public static final String NAME = "AdabraniumMod";
 	public static final ItemGroup ADABRANIUM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adabranium_group"), () -> new ItemStack(ModItems.VIBRANIUM_INGOT));
 	
@@ -28,7 +28,8 @@ public class AdabraniumMod implements ModInitializer {
 		
 		for (Biome biome : Biome.BIOMES)
 		{
-		OresGen.addCoolOres(biome);
+		Gen.addCoolOres(biome);
+		Gen.addHeartShapedHerb(biome);
 		}
 		
 		new ModItems();

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "adabraniummod:vibranium_ingot"
+    "item": "adabraniummod:vibranium"
   },
   "result": "adabraniummod:vibranium_dust",
   "experience": 1.0,

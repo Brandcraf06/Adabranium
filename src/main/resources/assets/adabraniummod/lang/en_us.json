@@ -4,6 +4,7 @@
 	"block.adabraniummod.vibranium_block": "Vibranium Block",
 	"block.adabraniummod.adamantine_ore": "Adamantine Ore",
 	"block.adabraniummod.adamantium_block": "Adamantium Block",
+	"block.adabraniummod.heart_shaped_plant": "Heart Shaped Plant",
 	
 	"item.adabraniummod.obsidian_rod": "Obsidian Rod",
 	"item.adabraniummod.vibranium": "Vibranium",
@@ -12,6 +13,9 @@
 	"item.adabraniummod.adamantine": "Adamantine",
 	"item.adabraniummod.adamantium_ingot": "Adamantium Ingot",
 	"item.adabraniummod.adamantium_rod": "Adamantium Rod",
+	"item.adabraniummod.heart_shaped_herb": "Heart Shaped Herb",
+	"item.adabraniummod.vibranium_soup": "Vibranium Soup",
+	
 	
 	"item.minecraft.potion.effect.toughness": "Potion of Toughness",
 	"item.minecraft.splash_potion.effect.toughness": "Splash Potion of Toughness",
@@ -53,11 +57,34 @@
 	"item.adabraniummod.stone_paxel": "Stone Paxel",
 	"item.adabraniummod.iron_paxel": "Iron Paxel",
 	"item.adabraniummod.diamond_paxel": "Diamond Paxel",
+	"item.adabraniummod.netherite_paxel": "Netherite Paxel",
 	
 	"item.adabraniummod.vibranium_paxel": "Vibranium Paxel",
 	"item.adabraniummod.adamantium_paxel": "Adamantium Paxel",
 	"item.adabraniummod.nether_paxel": "Nether Paxel",
 	
-	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword"
+	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword",
+	
+	"advancements.adabranium.root.title": "Adabranium",
+	"advancements.adabranium.root.description": "Marvel powerful materials",
+	"advancements.adabranium.adamantium_pickaxe.title": "The Strongest Pick",
+	"advancements.adabranium.adamantium_pickaxe.description": "Craft an adamantium pickaxe",
+	"advancements.adabranium.adamantium_armor.title": "Mineverine",
+	"advancements.adabranium.adamantium_armor.description": "Craft a piece of adamantium armor",
+	"advancements.adabranium.panther_powers.title": "Panther Powers",
+	"advancements.adabranium.panther_powers.description": "Collect some heart shaped herbs in a jungle to craft a vibranium soup",
+	"advancements.adabranium.pickaxaxovel.title": "Pickaxaxovel",
+	"advancements.adabranium.pickaxaxovel.description": "Craft a Paxel",
+	"advancements.adabranium.premium_hoe.title": "Premium Hoe",
+	"advancements.adabranium.premium_hoe.description": "Craft a useful adamantium hoe",
+	"advancements.adabranium.purple_panther.title": "Purple Panther",
+	"advancements.adabranium.purple_panther.description": "Craft a piece of vibranium armor",
+	"advancements.adabranium.vibranium_pickaxe.title": "A Strong Pick",
+	"advancements.adabranium.vibranium_pickaxe.description": "Craft a vibranium pickaxe",
+	"advancements.adabranium.adamantium_ingot.title": "Virtually Indestructible Metal",
+	"advancements.adabranium.adamantium_ingot.description": "Make an adamantium ingot with adamantine and vibranium",
+	"advancements.adabranium.wakanda_forever.title": "Wakanda Forever",
+	"advancements.adabranium.wakanda_forever.description": "Obtain vibranium and be the King of Wakanda"
+	
 
 }
