@@ -39,6 +39,6 @@ public class MaterialDiamondPaxel implements ToolMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(Items.NETHERITE_INGOT);
+        return Ingredient.ofItems(Items.DIAMOND);
     }
 }
