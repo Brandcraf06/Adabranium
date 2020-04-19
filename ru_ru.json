@@ -1,0 +1,64 @@
+{   
+    "itemGroup.adabraniummod.adabranium_group": "The Adabranium Mod",
+	"block.adabraniummod.vibranium_ore": "Руда Вибраниума",
+	"block.adabraniummod.vibranium_block": "Блок Вибраниума",
+	"block.adabraniummod.adamantine_ore": "Адамантиновая Руда",
+	"block.adabraniummod.adamantium_block": "Aдамантиновый Блок",
+	
+	"item.adabraniummod.obsidian_rod": "Обсидиановый стержень",
+	"item.adabraniummod.vibranium": "Вибраниум",
+	"item.adabraniummod.vibranium_dust": "Вибраниумовая пыль",
+	"item.adabraniummod.vibranium_ingot": "Вибраниумовый слиток",
+	"item.adabraniummod.adamantine": "Адамантин",
+	"item.adabraniummod.adamantium_ingot": "Aдамантиновый слиток",
+	"item.adabraniummod.adamantium_rod": "Aдамантиновый стержень",
+	
+	"item.minecraft.potion.effect.toughness": "Зелье выносливости",
+	"item.minecraft.splash_potion.effect.toughness": "Взрывное Зелье выносливости",
+	"item.minecraft.lingering_potion.effect.toughness": "Длительное Зелье выносливости",
+	"item.minecraft.tipped_arrow.effect.toughness": "Стрела Выносливости",
+	
+	"item.adabraniummod.vibranium_helmet": "Вибраниумовый шлем",
+	"item.adabraniummod.vibranium_chestplate": "Вибраниумовый нагрудник",
+	"item.adabraniummod.vibranium_leggings": "Вибраниумовые Поножи",
+	"item.adabraniummod.vibranium_boots": "Вибраниумовые ботинки",
+	"item.adabraniummod.vibranium_pickaxe": "Вибраниумовая Кирка",
+	"item.adabraniummod.vibranium_axe": "Вибраниумовый Топор",
+	"item.adabraniummod.vibranium_shovel": "Вибраниумовая Лопата",
+	"item.adabraniummod.vibranium_hoe": "Вибраниумовая Мотыга",
+	"item.adabraniummod.vibranium_sword": "Вибраниумовый Меч",
+	
+	"item.adabraniummod.adamantium_helmet": "Aдамантиновый шлем",
+	"item.adabraniummod.adamantium_chestplate": "Aдамантиновый нагрудник",
+	"item.adabraniummod.adamantium_leggings": "Aдамантиновые поножи",
+	"item.adabraniummod.adamantium_boots": "Aдамантиновые ботинки",
+	"item.adabraniummod.adamantium_pickaxe": "Aдамантиновая Кирка",
+	"item.adabraniummod.adamantium_axe": "Aдамантиновый Топор",
+	"item.adabraniummod.adamantium_shovel": "Aдамантиновая Лопата",
+	"item.adabraniummod.adamantium_hoe": "Aдамантиновая Мотыга",
+	"item.adabraniummod.adamantium_sword": "Aдамантиновый Меч",
+	
+	"item.adabraniummod.nether_helmet": "Шлем Незера",
+	"item.adabraniummod.nether_chestplate": "Нагрудник Незера",
+	"item.adabraniummod.nether_leggings": "Поножи Незера",
+	"item.adabraniummod.nether_boots": "Ботинки Незера",
+	"item.adabraniummod.nether_pickaxe": "Кирка Незера",
+	"item.adabraniummod.nether_axe": "Топор Незера",
+	"item.adabraniummod.nether_shovel": "Лопата Незера",
+	"item.adabraniummod.nether_hoe": "Мотыга Незера",
+	"item.adabraniummod.nether_sword": "Меч Незера",
+	
+	"item.adabraniummod.wooden_paxel": "Деревянный Паксель",
+	"item.adabraniummod.golden_paxel": "Золотой Паксель",
+	"item.adabraniummod.stone_paxel": "Каменный Паксель",
+	"item.adabraniummod.iron_paxel": "Железный Паксель",
+	"item.adabraniummod.diamond_paxel": "Алмазный Паксель",
+	"item.adabraniummod.netherite_paxel": "Незеритовый Паксель",
+	
+	"item.adabraniummod.vibranium_paxel": "Вибраниумовый Паксель",
+	"item.adabraniummod.adamantium_paxel": "Aдамантиновый Паксель",
+	"item.adabraniummod.nether_paxel": "Паксель Незера",
+	
+	"item.adabraniummod.oneshotium_sword": "Онешотиумный Меч"
+
+}
