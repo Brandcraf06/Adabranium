@@ -24,9 +24,9 @@
 
  
 
-- Vibranium Sets are better than diamonds (and Netherite) and mine faster and make lot of damage! The durability for tools and sword is 10000.
+- Vibranium Sets are better than diamonds (and Netherite) and mine faster and make lot of damage! The durability for tools and sword is 8500.
 
-- Adamantium Sets are the best equipment, mine faster than vibranium and do again more damage! The durability for tools and sword is 50000, Adamantium is widely known to be almost indestructible.
+- Adamantium Sets are the best equipment, mine faster than vibranium and do again more damage! The durability for tools and sword is 25000, Adamantium is widely known to be almost indestructible.
 
  
 
