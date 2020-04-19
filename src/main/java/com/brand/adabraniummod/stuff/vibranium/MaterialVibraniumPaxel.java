@@ -9,7 +9,7 @@ public class MaterialVibraniumPaxel implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 30000;
+        return 25500;
     }
 
     @Override

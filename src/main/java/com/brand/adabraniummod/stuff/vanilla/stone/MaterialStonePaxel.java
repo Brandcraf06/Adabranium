@@ -21,7 +21,7 @@ public class MaterialStonePaxel implements ToolMaterial
     @Override
     public float getAttackDamage()
     {
-        return 1.0f;
+        return 2.0f;
     }
 
     @Override

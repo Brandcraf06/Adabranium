@@ -21,7 +21,7 @@ public class MaterialDiamondPaxel implements ToolMaterial
     @Override
     public float getAttackDamage()
     {
-        return 3.0f;
+        return 4.0f;
     }
 
     @Override

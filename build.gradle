@@ -7,7 +7,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = "adabraniummod"
-version = "1.1.1-1.15.2"
+version = "1.1.2-1.15.2"
 
 
 repositories {

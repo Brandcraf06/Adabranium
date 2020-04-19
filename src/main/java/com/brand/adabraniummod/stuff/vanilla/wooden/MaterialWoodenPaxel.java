@@ -21,7 +21,7 @@ public class MaterialWoodenPaxel implements ToolMaterial
     @Override
     public float getAttackDamage()
     {
-        return 0.0f;
+        return 1.0f;
     }
 
     @Override

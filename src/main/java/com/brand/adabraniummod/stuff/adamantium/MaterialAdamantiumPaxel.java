@@ -9,7 +9,7 @@ public class MaterialAdamantiumPaxel implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 150000;
+        return 75000;
     }
 
     @Override
