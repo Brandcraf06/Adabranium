@@ -14,7 +14,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.Material;
 import net.minecraft.block.PlantBlock;
-import net.minecraft.entity.EntityContext;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -53,7 +53,7 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
 	      return new ItemStack(ModBlocks.HEART_SHAPED_PLANT);
 	   }
 
-	   public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, EntityContext context) {
+	   public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		      Vec3d vec3d = state.getModelOffset(world, pos);
 		      return SHAPE.offset(vec3d.x, vec3d.y, vec3d.z);
 	  }

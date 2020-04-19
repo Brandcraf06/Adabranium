@@ -20,7 +20,7 @@ public class MaterialVibraniumArmor implements ArmorMaterial
     @Override
     public int getDurability(EquipmentSlot equipmentSlot)
     {
-        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 1000;
+        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 850;
     }
 
     @Override
