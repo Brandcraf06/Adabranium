@@ -48,11 +48,11 @@ public class PaxelItem extends MiningToolItem {
 	   public boolean isEffectiveOn(BlockState state) {
 		      Block block = state.getBlock();
 		      int i = this.getMaterial().getMiningLevel();
-		      if (block != Blocks.OBSIDIAN && block != Blocks.CRYING_OBSIDIAN && block != Blocks.NETHERITE_BLOCK && block != Blocks.RESPAWN_ANCHOR && block != Blocks.ANCIENT_DEBRIS) {
-		         if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE && block != Blocks.EMERALD_ORE && block != Blocks.EMERALD_BLOCK && block != Blocks.GOLD_BLOCK && block != Blocks.GOLD_ORE && block != Blocks.REDSTONE_ORE) {
-		            if (block != Blocks.IRON_BLOCK && block != Blocks.IRON_ORE && block != Blocks.LAPIS_BLOCK && block != Blocks.LAPIS_ORE) {
-		               Material material = state.getMaterial();
-		               return material == Material.STONE || material == Material.METAL || material == Material.ANVIL || block == Blocks.NETHER_GOLD_ORE || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK || block == Blocks.COBWEB;
+		      if (!state.isOf(Blocks.OBSIDIAN) && !state.isOf(Blocks.CRYING_OBSIDIAN) && !state.isOf(Blocks.NETHERITE_BLOCK) && !state.isOf(Blocks.RESPAWN_ANCHOR) && !state.isOf(Blocks.ANCIENT_DEBRIS)) {
+		          if (!state.isOf(Blocks.DIAMOND_BLOCK) && !state.isOf(Blocks.DIAMOND_ORE) && !state.isOf(Blocks.EMERALD_ORE) && !state.isOf(Blocks.EMERALD_BLOCK) && !state.isOf(Blocks.GOLD_BLOCK) && !state.isOf(Blocks.GOLD_ORE) && !state.isOf(Blocks.REDSTONE_ORE)) {
+		             if (!state.isOf(Blocks.IRON_BLOCK) && !state.isOf(Blocks.IRON_ORE) && !state.isOf(Blocks.LAPIS_BLOCK) && !state.isOf(Blocks.LAPIS_ORE)) {
+		                Material material = state.getMaterial();
+		                return material == Material.STONE || material == Material.METAL || material == Material.REPAIR_STATION || state.isOf(Blocks.NETHER_GOLD_ORE) || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK || block == Blocks.COBWEB;
 		            } else {
 		               return i >= 1;
 		            }
@@ -77,7 +77,7 @@ public class PaxelItem extends MiningToolItem {
 	    	   return THESE_MATERIALS.contains(material) ? this.miningSpeed : super.getMiningSpeedMultiplier(stack, state);
 	       }
 	    }
-  
+ 
 	   
 	   public ActionResult useOnBlock(ItemUsageContext context) {
 		      World world = context.getWorld();
@@ -131,7 +131,7 @@ public class PaxelItem extends MiningToolItem {
 		            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
 		            blockState3 = blockState2;
 		         } else if (blockState.getBlock() instanceof CampfireBlock && (Boolean)blockState.get(CampfireBlock.LIT)) {
-		            world.playLevelEvent((PlayerEntity)null, 1009, blockPos, 0);
+		            world.syncWorldEvent((PlayerEntity)null, 1009, blockPos, 0);
 		            blockState3 = (BlockState)blockState.with(CampfireBlock.LIT, false);
 		         }
 		         if (blockState3 != null) {
@@ -165,12 +165,12 @@ public class PaxelItem extends MiningToolItem {
 	    		  });
 	      
 	      THESE_MATERIALS = Sets.newHashSet(new Material[]{
-	    		             Material.METAL, Material.ANVIL, Material.STONE,                                   
-	    		             Material.WOOD, Material.NETHER_WOOD, Material.PLANT, Material.REPLACEABLE_PLANT, Material.BAMBOO, Material.PUMPKIN
+	    		             Material.METAL, Material.REPAIR_STATION, Material.STONE,                                   
+	    		             Material.WOOD, Material.NETHER_WOOD, Material.PLANT, Material.REPLACEABLE_PLANT, Material.BAMBOO, Material.GOURD
 	    		  });
 	      
 	      STRIPPED_BLOCKS = AxeItemAccessor.getStrippedBlocks();
-	      CRACKED_STONE_BLOCKS = (new Builder()).put(Blocks.STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS).put(Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).put(Blocks.CUT_SANDSTONE, Blocks.SANDSTONE).put(Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE).build();
+	      CRACKED_STONE_BLOCKS = (new Builder()).put(Blocks.STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS).put(Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).put(Blocks.CUT_SANDSTONE, Blocks.SANDSTONE).put(Blocks.CUT_RED_SANDSTONE, Blocks.RED_SANDSTONE).put(Blocks.NETHER_BRICKS, Blocks.CRACKED_NETHER_BRICKS).build();
 	      CRACKED_STONE_SLABS = (new Builder()).put(Blocks.CUT_SANDSTONE_SLAB, Blocks.SANDSTONE_SLAB).put(Blocks.CUT_RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE_SLAB).build();
 	      PATH_BLOCKSTATES = ShovelItemAccessor.getEffectiveBlocks();
 	   }

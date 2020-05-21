@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+	"adabraniummod:wooden_paxel",
+	"adabraniummod:stone_paxel",
+	"adabraniummod:iron_paxel",
+	"adabraniummod:golden_paxel",
+	"adabraniummod:diamond_paxel",
+	"adabraniummod:netherite_paxel",
+	"adabraniummod:vibranium_paxel",
+    "adabraniummod:adamantium_paxel",
+	"adabraniummod:nether_paxel"
+  ]
+}

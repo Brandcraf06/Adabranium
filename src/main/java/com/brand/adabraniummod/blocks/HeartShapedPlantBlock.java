@@ -8,7 +8,7 @@ import com.brand.adabraniummod.items.ModItems;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
@@ -42,7 +42,7 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
 	   public static final IntProperty AGE;
 
 	   public HeartShapedPlantBlock(String name, float hardness, float resistance) {
-			super(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.GRASS).ticksRandomly().noCollision().breakInstantly().lightLevel(10).strength(hardness, resistance).build());
+			super(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.GRASS).ticksRandomly().noCollision().breakInstantly().lightLevel(10).strength(hardness, resistance));
 			Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
 			Registry.register(Registry.ITEM,new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
 			this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AGE, 0));

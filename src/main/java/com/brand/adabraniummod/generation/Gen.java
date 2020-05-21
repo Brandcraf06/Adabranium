@@ -2,6 +2,8 @@ package com.brand.adabraniummod.generation;
 
 import com.brand.adabraniummod.blocks.HeartShapedPlantBlock;
 import com.brand.adabraniummod.content.ModBlocks;
+import com.google.common.collect.ImmutableList;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -28,7 +30,7 @@ public class Gen {
 			  }
 	public static void addHeartShapedHerb(Biome biome) {
 	        if (biome.getCategory() == Biome.Category.JUNGLE) {
-		        biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(HEART_SHAPED_PLANT, new BlockState[]{GRASS_BLOCK}, new BlockState[]{AIR, GRASS, FERN}, new BlockState[]{AIR, JUNGLE_LEAVES, VINE})).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(4))));
+		        biome.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(HEART_SHAPED_PLANT, ImmutableList.of(GRASS_BLOCK), ImmutableList.of(AIR, GRASS, FERN), ImmutableList.of(AIR, JUNGLE_LEAVES, VINE))).createDecoratedFeature(Decorator.COUNT_HEIGHTMAP_DOUBLE.configure(new CountDecoratorConfig(4))));
 	  }
 	 }
 	   static {
