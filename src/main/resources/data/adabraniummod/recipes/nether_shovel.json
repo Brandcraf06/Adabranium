@@ -1,17 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#X#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:nether_brick"
-    },
-    "X": {
-      "item": "minecraft:iron_shovel"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_shovel"
+  },
+  "addition": {
+    "item": "minecraft:nether_brick"
   },
   "result": {
     "item": "adabraniummod:nether_shovel"
