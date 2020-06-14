@@ -5,8 +5,8 @@ import java.util.Random;
 
 import com.brand.adabraniummod.AdabraniumMod;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tools.FabricToolTags;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -25,7 +25,7 @@ import com.brand.adabraniummod.content.ModBlocks;
 public class VibraniumOre extends Block {
 
 public VibraniumOre(String name, float hardness, float resistance) {
-	super(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance).build());
+	super(FabricBlockSettings.of(Material.STONE).breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance));
 	Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
 	Registry.register(Registry.ITEM,new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
 

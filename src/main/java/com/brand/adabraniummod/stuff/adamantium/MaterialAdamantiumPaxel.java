@@ -27,7 +27,7 @@ public class MaterialAdamantiumPaxel implements ToolMaterial
     @Override
     public int getMiningLevel()
     {
-        return 4;
+        return 3;
     }
 
     @Override
