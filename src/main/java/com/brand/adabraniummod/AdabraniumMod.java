@@ -10,9 +10,11 @@ import com.brand.adabraniummod.stuff.FullStuffs;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 
 public class AdabraniumMod implements ModInitializer {
@@ -26,11 +28,14 @@ public class AdabraniumMod implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.init();
 		
-		for (Biome biome : Biome.BIOMES)
+		for (Biome biome : Registry.BIOME)
 		{
 		Gen.addCoolOres(biome);
 		Gen.addHeartShapedHerb(biome);
 		}
+		
+		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> Gen.addCoolOres(biome));
+		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> Gen.addHeartShapedHerb(biome));
 		
 		new ModItems();
 		new ModPotions();
