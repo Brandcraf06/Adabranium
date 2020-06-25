@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Mixin(ShovelItem.class)
 public interface ShovelItemAccessor {
-	@Accessor("PATH_BLOCKSTATES")
+	@Accessor("PATH_STATES")
 	public static Map<Block, BlockState> getEffectiveBlocks() {
 		return null;
 	}
