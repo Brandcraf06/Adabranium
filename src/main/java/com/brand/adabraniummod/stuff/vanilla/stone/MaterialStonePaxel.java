@@ -9,7 +9,7 @@ public class MaterialStonePaxel implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 131;
+        return 395;
     }
 
     @Override

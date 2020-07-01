@@ -9,7 +9,7 @@ public class MaterialWoodenPaxel implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 59;
+        return 177;
     }
 
     @Override
