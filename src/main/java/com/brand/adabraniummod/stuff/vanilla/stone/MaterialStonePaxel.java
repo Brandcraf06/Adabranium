@@ -1,15 +1,15 @@
 package com.brand.adabraniummod.stuff.vanilla.stone;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.tag.ItemTags;
 
 public class MaterialStonePaxel implements ToolMaterial
 {
     @Override
     public int getDurability()
     {
-        return 131;
+        return 395;
     }
 
     @Override
@@ -39,6 +39,6 @@ public class MaterialStonePaxel implements ToolMaterial
     @Override
     public Ingredient getRepairIngredient()
     {
-        return Ingredient.ofItems(Items.COBBLESTONE);
+        return Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS);
     }
 }

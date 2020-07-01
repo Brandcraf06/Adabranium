@@ -28,7 +28,6 @@ public class AdabraniumMod implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		ModBlocks.init();
 		
 		for (Biome biome : Registry.BIOME)
 		{
@@ -39,6 +38,7 @@ public class AdabraniumMod implements ModInitializer {
 		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> Gen.addCoolOres(biome));
 		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> Gen.addHeartShapedHerb(biome));
 		
+		new ModBlocks();		
 		new ModItems();
 		new ModPotions();
 		new FullStuffs();
