@@ -2,7 +2,7 @@
   "parent": "adabraniummod:root",
   "display": {
     "icon": {
-      "item": "adabraniummod:netherite_paxel",
+      "item": "adabraniummod:diamond_paxel",
       "nbt": "{Damage:0}"
     },
     "title": {

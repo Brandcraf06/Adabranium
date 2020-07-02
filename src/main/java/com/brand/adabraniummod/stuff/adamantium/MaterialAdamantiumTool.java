@@ -9,7 +9,7 @@ public class MaterialAdamantiumTool implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 25000;
+        return 4280;
     }
 
     @Override

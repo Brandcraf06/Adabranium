@@ -9,7 +9,7 @@ public class MaterialVibraniumTool implements ToolMaterial
     @Override
     public int getDurability()
     {
-        return 8500;
+        return 2990;
     }
 
     @Override

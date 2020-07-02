@@ -20,7 +20,7 @@ public class MaterialAdamantiumArmor implements ArmorMaterial
     @Override
     public int getDurability(EquipmentSlot equipmentSlot)
     {
-        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 2500;
+        return BASE_DURABILITY[equipmentSlot.getEntitySlotId()] * 428;
     }
 
     @Override
