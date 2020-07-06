@@ -4,32 +4,47 @@
 
  
 
-- You can find the Vibranium Ore rarely below layer 25 and the Adamantine Ore rarely below layer 16 in the overworld.
+- You can find the Vibranium Ore rarely below layer 20 and the Adamantine Ore rarely below layer 20~ in the overworld.
 
            Theses two ores need a diamond pickaxe (or an equal level) to mine and drop, Adamantite ore takes much longer to mine.
+           Adamantine ore never spawn incontact with air (Same as Ancient Debris in the Nether).
 
 - Vibranium and adamantine must be processed to be used :
 
-           You can make Vibranium Ingots with Vibranium and Obsidian
-
-           You can make Adamantium Ingots with Adamantine and Vibranium Ingots or with Vibranium and Obsidian
+         You can make Vibranium Ingots with Vibranium and Obsidian
+         You can make Adamantium Ingots with Adamantine and Vibranium Ingots or with Vibranium and Obsidian
 
  
 
 - You can now create powerful swords, tools and armor !
 
-           Vibranium tools/sword need an Obsidian Rod as a handle.
-
-           Adamantium tools/sword need an Adamantium Rod as a handle.
-
- 
-
-- Vibranium Sets are better than diamonds (and Netherite) and mine faster and make lot of damage! The durability for tools and sword is 8500.
-
-- Adamantium Sets are the best equipment, mine faster than vibranium and do again more damage! The durability for tools and sword is 25000, Adamantium is widely known to be almost indestructible.
+         Vibranium tools/sword need an Obsidian Rod as a handle.
+         Adamantium tools/sword need an Adamantium Rod as a handle.
 
  
+- Vibranium Sets are better than diamonds (and Netherite), mine faster and make lot of damage! The durability for tools and sword is 2990.
+- Adamantium Sets is the best equipment, mine faster than vibranium and do again more damage! The durability for tools and sword is 4280.
 
-- You can melt Vibranium Ingot in a blast furnace to make Vibranium Dust
+- You can melt Vibranium in a blast furnace to make Vibranium Dust
 
-           Vibranium Dust can make a Toughness Potion (Resistance I) in a brewing stand
+- You can find Heart Shaped Plants in jungles to obtain Heart Shaped Herb!
+
+         Heart Shaped Herb can make a Toughness Potion (Resistance I) in a brewing stand
+         You can make a powerful Vibranium Soup with some Heart Shaped Herbs and a vibranium dust.
+
+- You can also make Nether Tools, Sword and Armor
+
+         Nether set is an iron set upgrade that can't burn and floats on lava (Warning : can burn in 1.15.2 version)
+         He can be made with an iron tool/sword/armor with a Nether Brick in a Smithing Table
+         Does exactly the same damage and protects like iron but has a little greater durability and mine as fast as diamond
+
+- You can make Paxels made from Wood, Stone, Gold, Iron, Diamond, Netherite, Vibranium, Adamantium and Netherbrick
+
+         Obtained by combining an axe, a pickaxe and a shovel in a corresponding material
+         Has 3x the base durability, some even have a few bonus durability points!
+         Can mine everything that an axe, pickaxe, shovel and hoe can.
+         Can strip logs like an axe and make path like a shovel!
+         Can also "crack" stone blocks like.... herself.
+         And can instant mine all leaves and cobweb and mine wool faster !
+         
+- The Oneshotium Sword is obviously unobtainable in survival
