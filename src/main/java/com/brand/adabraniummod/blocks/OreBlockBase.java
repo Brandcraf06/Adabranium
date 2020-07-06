@@ -13,11 +13,11 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.World;
 
 import com.brand.adabraniummod.content.ModBlocks;
 
@@ -38,12 +38,12 @@ public OreBlockBase(String name, float hardness, float resistance) {
      }
   }
  
- public void onStacksDropped(BlockState state, ServerWorld serverWorld, BlockPos pos, ItemStack stack) {
-     super.onStacksDropped(state, serverWorld, pos, stack);
+ public void onStacksDropped(BlockState state, World world, BlockPos pos, ItemStack stack) {
+     super.onStacksDropped(state, world, pos, stack);
      if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-        int i = this.getExperienceWhenMined(serverWorld.random);
+        int i = this.getExperienceWhenMined(world.random);
         if (i > 0) {
-           this.dropExperience(serverWorld, pos, i);
+           this.dropExperience(world, pos, i);
         }
      }
 
