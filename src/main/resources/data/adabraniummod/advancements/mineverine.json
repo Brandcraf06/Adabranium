@@ -11,10 +11,13 @@
     "description": {
       "translate": "advancements.adabranium.adamantium_armor.description"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
+  },
+  "rewards": {
+    "experience": 60
   },
   "criteria": {
     "adamantium_helmet": {

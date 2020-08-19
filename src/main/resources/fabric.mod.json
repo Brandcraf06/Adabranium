@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "com.brand.adabraniummod.AdabraniumMod"
+	],
+    "cloth-early-init": [
+      "com.brand.adabraniummod.AdabraniumMod"
     ],
 	"client": [
 	  "com.brand.adabraniummod.AdabraniumClient"
