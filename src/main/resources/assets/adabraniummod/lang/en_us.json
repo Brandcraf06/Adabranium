@@ -1,5 +1,5 @@
 {   
-    "itemGroup.adabraniummod.adabranium_group": "The Adabranium Mod",
+    "itemGroup.adabraniummod.adabranium_group": "Adabranium",
 	"block.adabraniummod.vibranium_ore": "Vibranium Ore",
 	"block.adabraniummod.vibranium_block": "Vibranium Block",
 	"block.adabraniummod.adamantine_ore": "Adamantine Ore",
@@ -52,31 +52,16 @@
 	"item.adabraniummod.nether_hoe": "Nether Hoe",
 	"item.adabraniummod.nether_sword": "Nether Sword",
 	
-	"item.adabraniummod.wooden_paxel": "Wooden Paxel",
-	"item.adabraniummod.golden_paxel": "Golden Paxel",
-	"item.adabraniummod.stone_paxel": "Stone Paxel",
-	"item.adabraniummod.iron_paxel": "Iron Paxel",
-	"item.adabraniummod.diamond_paxel": "Diamond Paxel",
-	"item.adabraniummod.netherite_paxel": "Netherite Paxel",
-	
-	"item.adabraniummod.vibranium_paxel": "Vibranium Paxel",
-	"item.adabraniummod.adamantium_paxel": "Adamantium Paxel",
-	"item.adabraniummod.nether_paxel": "Nether Paxel",
-	
 	"item.adabraniummod.oneshotium_sword": "Oneshotium Sword",
 	
 	"advancements.adabranium.root.title": "Adabranium",
 	"advancements.adabranium.root.description": "Marvel powerful materials",
 	"advancements.adabranium.adamantium_pickaxe.title": "The Strongest Pick",
 	"advancements.adabranium.adamantium_pickaxe.description": "Craft an adamantium pickaxe",
-	"advancements.adabranium.adamantium_paxel.title": "Paxelizator 3000",
-	"advancements.adabranium.adamantium_paxel.description": "Craft an adamantium paxel",
 	"advancements.adabranium.adamantium_armor.title": "Mineverine",
 	"advancements.adabranium.adamantium_armor.description": "Craft a piece of adamantium armor",
 	"advancements.adabranium.panther_powers.title": "Panther Powers",
 	"advancements.adabranium.panther_powers.description": "Collect some heart shaped herbs in a jungle to craft a vibranium soup",
-	"advancements.adabranium.pickaxaxovel.title": "Pickaxaxovel",
-	"advancements.adabranium.pickaxaxovel.description": "Craft a paxel",
 	"advancements.adabranium.premium_hoe.title": "Premium Hoe",
 	"advancements.adabranium.premium_hoe.description": "Craft a useful adamantium hoe",
 	"advancements.adabranium.purple_panther.title": "Purple Panther",

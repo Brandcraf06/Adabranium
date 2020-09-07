@@ -52,17 +52,6 @@
 	"item.adabraniummod.nether_hoe": "下界锄",
 	"item.adabraniummod.nether_sword": "下界剑",
 	
-	"item.adabraniummod.wooden_paxel": "木制全能工具",
-	"item.adabraniummod.golden_paxel": "金制全能工具",
-	"item.adabraniummod.stone_paxel": "石制全能工具",
-	"item.adabraniummod.iron_paxel": "铁制全能工具",
-	"item.adabraniummod.diamond_paxel": "钻石全能工具",
-	"item.adabraniummod.netherite_paxel": "下界合金全能工具",
-	
-	"item.adabraniummod.vibranium_paxel": "振金全能工具",
-	"item.adabraniummod.adamantium_paxel": "艾德曼合金全能工具",
-	"item.adabraniummod.nether_paxel": "下界全能工具",
-	
 	"item.adabraniummod.oneshotium_sword": "一击必杀神剑",
 	
 	"advancements.adabranium.root.title": "艾德曼合金与振金",
@@ -73,8 +62,6 @@
 	"advancements.adabranium.adamantium_armor.description": "制作一件艾德曼合金护甲",
 	"advancements.adabranium.panther_powers.title": "豹力",
 	"advancements.adabranium.panther_powers.description": "在丛林里收集一些心形药草来制作一碗振金汤",
-	"advancements.adabranium.pickaxaxovel.title": "镐+铲+斧",
-	"advancements.adabranium.pickaxaxovel.description": "制作一件全能工具",
 	"advancements.adabranium.premium_hoe.title": "高级锄头",
 	"advancements.adabranium.premium_hoe.description": "制作一件有用的艾德曼合金锄",
 	"advancements.adabranium.purple_panther.title": "紫豹",

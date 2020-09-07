@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
+	"adabraniummod:nether_sword",
 	"adabraniummod:vibranium_sword",
-	"adabraniummod:adamantium_sword"
+	"adabraniummod:adamantium_sword",
+  	"adabraniummod:oneshotium_sword"
   ]
 }

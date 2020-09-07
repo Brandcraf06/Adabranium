@@ -1,5 +1,5 @@
 {   
-    "itemGroup.adabraniummod.adabranium_group": "The Adabranium Mod",
+    "itemGroup.adabraniummod.adabranium_group": "Adabranium",
 	"block.adabraniummod.vibranium_ore": "Руда Вибраниума",
 	"block.adabraniummod.vibranium_block": "Блок Вибраниума",
 	"block.adabraniummod.adamantine_ore": "Адамантиновая Руда",
@@ -47,17 +47,6 @@
 	"item.adabraniummod.nether_shovel": "Лопата Незера",
 	"item.adabraniummod.nether_hoe": "Мотыга Незера",
 	"item.adabraniummod.nether_sword": "Меч Незера",
-	
-	"item.adabraniummod.wooden_paxel": "Деревянный Паксель",
-	"item.adabraniummod.golden_paxel": "Золотой Паксель",
-	"item.adabraniummod.stone_paxel": "Каменный Паксель",
-	"item.adabraniummod.iron_paxel": "Железный Паксель",
-	"item.adabraniummod.diamond_paxel": "Алмазный Паксель",
-	"item.adabraniummod.netherite_paxel": "Незеритовый Паксель",
-	
-	"item.adabraniummod.vibranium_paxel": "Вибраниумовый Паксель",
-	"item.adabraniummod.adamantium_paxel": "Aдамантиновый Паксель",
-	"item.adabraniummod.nether_paxel": "Паксель Незера",
 	
 	"item.adabraniummod.oneshotium_sword": "Онешотиумный Меч"
 
