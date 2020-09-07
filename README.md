@@ -37,14 +37,5 @@
          Nether set is an iron set upgrade that can't burn and floats on lava (Warning : can burn in 1.15.2 version)
          He can be made with an iron tool/sword/armor with a Nether Brick in a Smithing Table
          Does exactly the same damage and protects like iron but has a little greater durability and mine as fast as diamond
-
-- You can make Paxels made from Wood, Stone, Gold, Iron, Diamond, Netherite, Vibranium, Adamantium and Netherbrick
-
-         Obtained by combining an axe, a pickaxe and a shovel in a corresponding material
-         Has 3x the base durability, some even have a few bonus durability points!
-         Can mine everything that an axe, pickaxe, shovel and hoe can.
-         Can strip logs like an axe and make path like a shovel!
-         Can also "crack" stone blocks like.... herself.
-         And can instant mine all leaves and cobweb and mine wool faster !
          
 - The Oneshotium Sword is obviously unobtainable in survival
