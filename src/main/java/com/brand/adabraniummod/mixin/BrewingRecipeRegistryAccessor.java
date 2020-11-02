@@ -10,12 +10,8 @@ import net.minecraft.recipe.BrewingRecipeRegistry;
 @Mixin(BrewingRecipeRegistry.class)
 public interface BrewingRecipeRegistryAccessor{
 
-    @Invoker
-    public static void invokeRegisterPotionRecipe(Potion potion, Item item, Potion potion2){
-    }
+	@Invoker
+	public static void invokeRegisterPotionRecipe(Potion potion, Item item, Potion potion2){
+	}
 
 }
-
-
-	
-

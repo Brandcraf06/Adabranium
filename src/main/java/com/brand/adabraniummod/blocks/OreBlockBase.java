@@ -23,29 +23,29 @@ import com.brand.adabraniummod.content.ModBlocks;
 
 public class OreBlockBase extends Block {
 
-public OreBlockBase(String name, float hardness, float resistance) {
-	super(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance));
-	Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
-	Registry.register(Registry.ITEM,new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
+	public OreBlockBase(String name, float hardness, float resistance) {
+		super(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance));
+		Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
+		Registry.register(Registry.ITEM,new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
 
-    }
- 
- protected int getExperienceWhenMined(Random random) {
-     if (this == ModBlocks.ADAMANTINE_ORE) {
-        return MathHelper.nextInt(random, 7, 17);
-     } else {
-        return this == ModBlocks.VIBRANIUM_ORE ? MathHelper.nextInt(random, 7, 14) : 0;
-     }
-  }
- 
- public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
-     super.onStacksDropped(state, world, pos, stack);
-     if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-        int i = this.getExperienceWhenMined(world.random);
-        if (i > 0) {
-           this.dropExperience(world, pos, i);
-        }
-     }
+	}
 
-  }
+	protected int getExperienceWhenMined(Random random) {
+		if (this == ModBlocks.ADAMANTINE_ORE) {
+			return MathHelper.nextInt(random, 7, 17);
+		} else {
+			return this == ModBlocks.VIBRANIUM_ORE ? MathHelper.nextInt(random, 7, 14) : 0;
+		}
+	}
+
+	public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
+		super.onStacksDropped(state, world, pos, stack);
+		if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
+			int i = this.getExperienceWhenMined(world.random);
+			if (i > 0) {
+				this.dropExperience(world, pos, i);
+			}
+		}
+
+	}
 }

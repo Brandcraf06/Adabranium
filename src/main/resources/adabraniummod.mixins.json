@@ -1,14 +1,15 @@
 {
-    "required": true,
+	"required": true,
     "package": "com.brand.adabraniummod.mixin",
     "compatibilityLevel": "JAVA_8",
-    "minVersion": "0.7.11-SNAPSHOT",
+	"minVersion": "0.8",
     "mixins": [
 		"BrewingRecipeRegistryAccessor",
 		"AxeItemAccessor",
+		"BootstrapMixin",
 		"ShovelItemAccessor"
     ],
     "injectors": {
         "defaultRequire": 1
-    }
+	}
 }

@@ -10,13 +10,13 @@ import net.minecraft.potion.Potions;
 
 public class PotionsRecipes {
 
-    public static void registerRecipes() {
-        register("toughness", Potions.AWKWARD, ModItems.HEART_SHAPED_HERB, ModPotions.TOUGHNESS);
-        register("toughness", ModPotions.TOUGHNESS, Items.GLOWSTONE_DUST, ModPotions.STRONG_TOUGHNESS);
-        register("toughness", ModPotions.TOUGHNESS, Items.REDSTONE, ModPotions.LONG_TOUGHNESS);
-        }
+	public static void registerRecipes() {
+		register("toughness", Potions.AWKWARD, ModItems.HEART_SHAPED_HERB, ModPotions.TOUGHNESS);
+		register("toughness", ModPotions.TOUGHNESS, Items.GLOWSTONE_DUST, ModPotions.STRONG_TOUGHNESS);
+		register("toughness", ModPotions.TOUGHNESS, Items.REDSTONE, ModPotions.LONG_TOUGHNESS);
+	}
 
-    private static void register(String configKey, Potion base, Item ingredient, Potion result) {
-        BrewingRecipeRegistryAccessor.invokeRegisterPotionRecipe(base, ingredient, result);
-    }
+	private static void register(String configKey, Potion base, Item ingredient, Potion result) {
+		BrewingRecipeRegistryAccessor.invokeRegisterPotionRecipe(base, ingredient, result);
+	}
 }
