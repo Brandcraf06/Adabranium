@@ -10,9 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Bootstrap.class)
 public class BootstrapMixin {
 
-	@Inject(method = "initialize", at = @At(value = "TAIL"), require = 1, allow = 1)
-	private static void afterInitialize(CallbackInfo ci) {
-		AdabraniumConfiguredFeatures.registerAndAddConfiguredFeatures();
-	}
+    @Inject(method = "initialize", at = @At(value = "TAIL"), require = 1, allow = 1)
+    private static void afterInitialize(CallbackInfo ci) {
+        AdabraniumConfiguredFeatures.registerAndAddConfiguredFeatures();
+    }
 
 }
