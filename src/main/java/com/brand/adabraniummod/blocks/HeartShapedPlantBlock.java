@@ -1,6 +1,6 @@
 package com.brand.adabraniummod.blocks;
 
-import com.brand.adabraniummod.AdabraniumMod;
+import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.content.ModBlocks;
 import com.brand.adabraniummod.items.ModItems;
 import net.fabricmc.api.EnvType;
@@ -41,8 +41,8 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
 
     public HeartShapedPlantBlock(String name, float hardness, float resistance) {
         super(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.GRASS).ticksRandomly().noCollision().breakInstantly().luminance(10).strength(hardness, resistance));
-        Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
-        Registry.register(Registry.ITEM, new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(Adabranium.MOD_ID, name), this);
+        Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }
 

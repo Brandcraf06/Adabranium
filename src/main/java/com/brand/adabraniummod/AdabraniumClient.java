@@ -9,9 +9,6 @@ public class AdabraniumClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HEART_SHAPED_PLANT, RenderLayer.getCutoutMipped());
-
-
     }
 }

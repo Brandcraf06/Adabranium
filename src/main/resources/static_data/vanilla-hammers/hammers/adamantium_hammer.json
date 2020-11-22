@@ -1,0 +1,10 @@
+{
+  "id": "adamantium",
+  "miningLevel": 4,
+  "durability": 4280,
+  "blockBreakSpeed": 7.1,
+  "attackDamage": 18,
+  "attackSpeed": -3,
+  "enchantability": 12,
+  "repairIngredient": "adabraniummod:adamantium_ingot"
+}
