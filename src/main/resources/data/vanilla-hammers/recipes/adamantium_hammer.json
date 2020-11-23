@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DdD",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "D": {
+      "item": "adabraniummod:adamantium_block"
+    },
+    "d": {
+      "item": "adabraniummod:adamantium_ingot"
+    },
+    "s": {
+      "item": "adabraniummod:adamantium_rod"
+    }
+  },
+  "result": {
+    "item": "vanilla-hammers:adamantium_hammer"
+  }
+}

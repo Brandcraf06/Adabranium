@@ -9,10 +9,10 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum AdabraniumToolMaterials implements ToolMaterial {
-    VIBRANIUM(4, 2990, 20.0F, 8.0F, 12, () -> {
+    VIBRANIUM(4, 2990, 17.0F, 8.0F, 12, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
-    ADAMANTIUM(4, 4280, 35.0F, 14.0F, 10, () -> {
+    ADAMANTIUM(4, 4280, 25.0F, 13.0F, 10, () -> {
         return Ingredient.ofItems(ModItems.ADAMANTIUM_INGOT);
     }),
     NETHER_BRICK(2, 381, 8.0F, 2.0F, 15, () -> {

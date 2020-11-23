@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-	"adabraniummod:nether_axe",
-	"adabraniummod:vibranium_axe",
-	"adabraniummod:adamantium_axe"
+    "adabraniummod:nether_axe",
+    "adabraniummod:vibranium_axe",
+    "adabraniummod:adamantium_axe"
   ]
 }

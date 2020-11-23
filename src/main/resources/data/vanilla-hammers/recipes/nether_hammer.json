@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "vanilla-hammers:iron_hammer"
+  },
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "result": {
+    "item": "vanilla-hammers:nether_hammer"
+  }
+}

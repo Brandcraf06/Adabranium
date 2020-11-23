@@ -1,6 +1,6 @@
 package com.brand.adabraniummod.blocks;
 
-import com.brand.adabraniummod.AdabraniumMod;
+import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.content.ModBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -24,8 +24,8 @@ public class OreBlockBase extends Block {
 
     public OreBlockBase(String name, float hardness, float resistance) {
         super(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance));
-        Registry.register(Registry.BLOCK, new Identifier(AdabraniumMod.MOD_ID, name), this);
-        Registry.register(Registry.ITEM, new Identifier(AdabraniumMod.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(AdabraniumMod.ADABRANIUM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(Adabranium.MOD_ID, name), this);
+        Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
 
     }
 

@@ -1,6 +1,6 @@
 package com.brand.adabraniummod.world;
 
-import com.brand.adabraniummod.AdabraniumMod;
+import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.blocks.HeartShapedPlantBlock;
 import com.brand.adabraniummod.content.ModBlocks;
 import com.google.common.collect.ImmutableList;
@@ -50,15 +50,15 @@ public class AdabraniumConfiguredFeatures {
     }
 
     public static void registerConfiguredFeature() {
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(AdabraniumMod.MOD_ID, "vibranium_ore"), VIBRANIUM_ORE);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(AdabraniumMod.MOD_ID, "adamantine_ore"), ADAMANTINE_ORE);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(AdabraniumMod.MOD_ID, "heart_shaped_plant"), HEART_SHAPED_PLANT);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Adabranium.MOD_ID, "vibranium_ore"), VIBRANIUM_ORE);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Adabranium.MOD_ID, "adamantine_ore"), ADAMANTINE_ORE);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier(Adabranium.MOD_ID, "heart_shaped_plant"), HEART_SHAPED_PLANT);
     }
 
     public static void registerAndAddConfiguredFeatures() {
         for (Map.Entry<RegistryKey<Biome>, Biome> entry : BuiltinRegistries.BIOME.getEntries()) {
-            AdabraniumGen.addCoolOres(entry.getKey(), entry.getValue());
-            AdabraniumGen.addHeartShapedHerb(entry.getKey(), entry.getValue());
+            AdabraniumGen.addCoolOres(entry.getValue());
+            AdabraniumGen.addHeartShapedHerb(entry.getValue());
         }
     }
 }

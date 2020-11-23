@@ -1,8 +1,8 @@
 {
   "replace": false,
   "values": [
-	"adabraniummod:nether_shovel",
-	"adabraniummod:vibranium_shovel",
-	"adabraniummod:adamantium_shovel"
+    "adabraniummod:nether_shovel",
+    "adabraniummod:vibranium_shovel",
+    "adabraniummod:adamantium_shovel"
   ]
 }

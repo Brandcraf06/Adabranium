@@ -1,0 +1,10 @@
+{
+  "id": "vibranium",
+  "miningLevel": 4,
+  "durability": 2990,
+  "blockBreakSpeed": 4.8,
+  "attackDamage": 15,
+  "attackSpeed": -3,
+  "enchantability": 10,
+  "repairIngredient": "adabraniummod:vibranium_ingot"
+}
