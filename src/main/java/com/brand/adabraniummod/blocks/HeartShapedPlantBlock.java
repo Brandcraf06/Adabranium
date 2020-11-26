@@ -1,18 +1,13 @@
 package com.brand.adabraniummod.blocks;
 
-import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.content.ModBlocks;
-import com.brand.adabraniummod.items.ModItems;
+import com.brand.adabraniummod.content.ModItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -20,11 +15,9 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -39,10 +32,8 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
         AGE = Properties.AGE_2;
     }
 
-    public HeartShapedPlantBlock(String name, float hardness, float resistance) {
-        super(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.GRASS).ticksRandomly().noCollision().breakInstantly().luminance(10).strength(hardness, resistance));
-        Registry.register(Registry.BLOCK, new Identifier(Adabranium.MOD_ID, name), this);
-        Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
+    public HeartShapedPlantBlock(Settings settings) {
+        super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }
 

@@ -1,6 +1,7 @@
-package com.brand.adabraniummod.stuff.armors;
+package com.brand.adabraniummod.content.stuff.armor;
 
 import com.brand.adabraniummod.Adabranium;
+import com.brand.adabraniummod.content.stuff.materials.AdabraniumArmorMaterials;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;

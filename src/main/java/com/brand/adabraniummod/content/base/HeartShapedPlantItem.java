@@ -1,4 +1,4 @@
-package com.brand.adabraniummod.items.base;
+package com.brand.adabraniummod.content.base;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
