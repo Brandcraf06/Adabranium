@@ -1,6 +1,6 @@
-package com.brand.adabraniummod.stuff.tools;
+package com.brand.adabraniummod.content.stuff.materials;
 
-import com.brand.adabraniummod.items.ModItems;
+import com.brand.adabraniummod.content.ModItems;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;

@@ -1,7 +1,8 @@
-package com.brand.adabraniummod.stuff.tools;
+package com.brand.adabraniummod.content.stuff.tools;
 
 import com.brand.adabraniummod.Adabranium;
-import com.brand.adabraniummod.stuff.base.BaseAxe;
+import com.brand.adabraniummod.content.stuff.base.BaseAxe;
+import com.brand.adabraniummod.content.stuff.materials.AdabraniumToolMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.registry.Registry;

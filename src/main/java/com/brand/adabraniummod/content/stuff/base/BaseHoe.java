@@ -1,4 +1,4 @@
-package com.brand.adabraniummod.stuff.base;
+package com.brand.adabraniummod.content.stuff.base;
 
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ToolMaterial;

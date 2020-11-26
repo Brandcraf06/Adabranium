@@ -1,6 +1,6 @@
-package com.brand.adabraniummod.stuff.armors;
+package com.brand.adabraniummod.content.stuff.materials;
 
-import com.brand.adabraniummod.items.ModItems;
+import com.brand.adabraniummod.content.ModItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;

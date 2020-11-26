@@ -1,32 +1,21 @@
 package com.brand.adabraniummod.blocks;
 
-import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.content.ModBlocks;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.registry.Registry;
 
 import java.util.Random;
 
-public class OreBlockBase extends Block {
+public class AdabraniumOreBlock extends Block {
 
-    public OreBlockBase(String name, float hardness, float resistance) {
-        super(FabricBlockSettings.of(Material.STONE).requiresTool().breakByTool(FabricToolTags.PICKAXES, 3).strength(hardness, resistance));
-        Registry.register(Registry.BLOCK, new Identifier(Adabranium.MOD_ID, name), this);
-        Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
-
+    public AdabraniumOreBlock(Settings settings) {
+        super(settings);
     }
 
     protected int getExperienceWhenMined(Random random) {

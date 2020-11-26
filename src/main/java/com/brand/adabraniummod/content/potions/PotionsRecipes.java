@@ -1,7 +1,7 @@
-package com.brand.adabraniummod.items.potions;
+package com.brand.adabraniummod.content.potions;
 
-import com.brand.adabraniummod.items.ModItems;
-import com.brand.adabraniummod.items.ModPotions;
+import com.brand.adabraniummod.content.ModItems;
+import com.brand.adabraniummod.content.ModPotions;
 import com.brand.adabraniummod.mixin.BrewingRecipeRegistryAccessor;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

@@ -1,7 +1,7 @@
-package com.brand.adabraniummod.items;
+package com.brand.adabraniummod.content;
 
 import com.brand.adabraniummod.Adabranium;
-import com.brand.adabraniummod.items.base.HeartShapedPlantItem;
+import com.brand.adabraniummod.content.base.HeartShapedPlantItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
@@ -33,7 +33,7 @@ public class ModItems {
     // dusts
     public static final Item VIBRANIUM_DUST = register("vibranium_dust", new Item(new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
 
-    public static Item register(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, name), item);
+    public static Item register(String id, Item item) {
+        return Registry.register(Registry.ITEM, new Identifier(Adabranium.MOD_ID, id), item);
     }
 }

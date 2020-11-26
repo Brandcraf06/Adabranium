@@ -1,13 +1,12 @@
 package com.brand.adabraniummod;
 
 import com.brand.adabraniummod.content.ModBlocks;
-import com.brand.adabraniummod.items.ModItems;
-import com.brand.adabraniummod.items.ModPotions;
-import com.brand.adabraniummod.items.potions.PotionsRecipes;
-import com.brand.adabraniummod.stuff.armors.RegisterArmors;
-import com.brand.adabraniummod.stuff.tools.*;
+import com.brand.adabraniummod.content.ModItems;
+import com.brand.adabraniummod.content.ModPotions;
+import com.brand.adabraniummod.content.potions.PotionsRecipes;
+import com.brand.adabraniummod.content.stuff.armor.RegisterArmors;
+import com.brand.adabraniummod.content.stuff.tools.*;
 import com.brand.adabraniummod.world.AdabraniumConfiguredFeatures;
-import me.shedaniel.cloth.api.dynamic.registry.v1.EarlyInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -22,7 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @SuppressWarnings("deprecation")
-public class Adabranium implements ModInitializer, EarlyInitializer {
+public class Adabranium implements ModInitializer {
 
     public static final String MOD_ID = "adabraniummod";
     public static final Logger LOGGER = LogManager.getLogger();
@@ -56,10 +55,6 @@ public class Adabranium implements ModInitializer, EarlyInitializer {
                 .add(ModificationPhase.ADDITIONS,
                         BiomeSelectors.foundInOverworld().and(BiomeSelectors.categories(Biome.Category.JUNGLE)),
                         context -> context.getGenerationSettings().addBuiltInFeature(GenerationStep.Feature.VEGETAL_DECORATION, AdabraniumConfiguredFeatures.HEART_SHAPED_PLANT));
-    }
-
-    @Override
-    public void onEarlyInitialization() {
 
     }
 }

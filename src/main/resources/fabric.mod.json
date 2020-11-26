@@ -19,9 +19,6 @@
     "main": [
       "com.brand.adabraniummod.Adabranium"
     ],
-    "cloth-early-init": [
-      "com.brand.adabraniummod.Adabranium"
-    ],
     "client": [
       "com.brand.adabraniummod.AdabraniumClient"
     ]
