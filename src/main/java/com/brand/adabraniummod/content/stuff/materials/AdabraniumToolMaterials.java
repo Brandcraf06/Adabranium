@@ -1,5 +1,6 @@
 package com.brand.adabraniummod.content.stuff.materials;
 
+import com.brand.adabraniummod.Adabranium;
 import com.brand.adabraniummod.content.ModItems;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -9,13 +10,13 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum AdabraniumToolMaterials implements ToolMaterial {
-    VIBRANIUM(4, 2990, 17.0F, 8.0F, 12, () -> {
+    VIBRANIUM(4, Adabranium.CONFIG.vibraniumToolDurability, Adabranium.CONFIG.vibraniumToolMiningSpeed, Adabranium.CONFIG.vibraniumToolAttackDamage, Adabranium.CONFIG.vibraniumToolEnchantability, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
-    ADAMANTIUM(4, 4280, 25.0F, 13.0F, 10, () -> {
+    ADAMANTIUM(4, Adabranium.CONFIG.adamantiumToolDurability, Adabranium.CONFIG.adamantiumToolMiningSpeed, Adabranium.CONFIG.adamantiumToolAttackDamage, Adabranium.CONFIG.adamantiumToolEnchantability, () -> {
         return Ingredient.ofItems(ModItems.ADAMANTIUM_INGOT);
     }),
-    NETHER_BRICK(2, 381, 8.0F, 2.0F, 15, () -> {
+    NETHER_BRICK(2, Adabranium.CONFIG.netherToolDurability, Adabranium.CONFIG.netherToolMiningSpeed, Adabranium.CONFIG.netherToolAttackDamage, Adabranium.CONFIG.netherToolEnchantability, () -> {
         return Ingredient.ofItems(Items.NETHER_BRICK);
     }),
     ONESHOTIUM(3, 1000000, 23.0F, 999999.0F, 100, () -> {

@@ -1,5 +1,6 @@
 package com.brand.adabraniummod;
 
+import com.brand.adabraniummod.config.AdabraniumConfig;
 import com.brand.adabraniummod.content.ModBlocks;
 import com.brand.adabraniummod.content.ModItems;
 import com.brand.adabraniummod.content.ModPotions;
@@ -7,6 +8,8 @@ import com.brand.adabraniummod.content.potions.PotionsRecipes;
 import com.brand.adabraniummod.content.stuff.armor.RegisterArmors;
 import com.brand.adabraniummod.content.stuff.tools.*;
 import com.brand.adabraniummod.world.AdabraniumConfiguredFeatures;
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -24,6 +27,7 @@ import org.apache.logging.log4j.Logger;
 public class Adabranium implements ModInitializer {
 
     public static final String MOD_ID = "adabraniummod";
+    public static AdabraniumConfig CONFIG = AutoConfig.register(AdabraniumConfig.class, GsonConfigSerializer::new).getConfig();
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup ADABRANIUM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adabranium_group"), () -> new ItemStack(ModItems.VIBRANIUM_INGOT));
 

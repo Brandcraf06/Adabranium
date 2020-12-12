@@ -21,6 +21,9 @@
     ],
     "client": [
       "com.brand.adabraniummod.AdabraniumClient"
+    ],
+    "modmenu": [
+      "com.brand.adabraniummod.config.ModMenuIntegration"
     ]
   },
   "mixins": [
