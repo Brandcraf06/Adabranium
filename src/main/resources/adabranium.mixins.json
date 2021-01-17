@@ -4,8 +4,7 @@
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.8",
   "mixins": [
-    "BrewingRecipeRegistryAccessor",
-    "BootstrapMixin"
+    "BrewingRecipeRegistryAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

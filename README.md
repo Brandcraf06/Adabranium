@@ -1,4 +1,4 @@
-                      Adabranium is a 1.16 mod made using Fabric API.
+                      Adabranium is a 1.17 mod made using Fabric API.
 
         The mod adds powerful Marvel materials: the Vibranium from my "Nether Things" mod and the Adamantium
 
@@ -34,7 +34,7 @@
 
 - You can also make Nether Tools, Sword and Armor
 
-         Nether set is an iron set upgrade that can't burn and floats on lava (Warning : can burn in 1.15.2 version)
+         Nether set is an iron set upgrade that can't burn and floats on lava
          He can be made with an iron tool/sword/armor with a Nether Brick in a Smithing Table
          Does exactly the same damage and protects like iron but has a little greater durability and mine as fast as diamond
          
