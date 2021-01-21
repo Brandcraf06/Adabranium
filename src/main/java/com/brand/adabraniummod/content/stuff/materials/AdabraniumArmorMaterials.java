@@ -1,7 +1,6 @@
 package com.brand.adabraniummod.content.stuff.materials;
 
 import com.brand.adabraniummod.Adabranium;
-import com.brand.adabraniummod.config.AdabraniumConfig;
 import com.brand.adabraniummod.content.ModItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
