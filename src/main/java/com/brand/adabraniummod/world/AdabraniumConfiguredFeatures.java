@@ -22,29 +22,23 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
 public class AdabraniumConfiguredFeatures {
 
-    private static final BlockState AIR;
-    private static final BlockState GRASS_BLOCK;
-    private static final BlockState GRASS;
-    private static final BlockState FERN;
-    private static final BlockState JUNGLE_LEAVES;
-    private static final BlockState VINE;
-    private static final BlockState HEART_SHAPED_PLANT_CONFIG;
+    public static final ImmutableList<OreFeatureConfig.Target> VIBRANIUM_ORE_TARGETS;
+    public static final ImmutableList<OreFeatureConfig.Target> ADAMANTINE_ORE_TARGETS;
     public static final ConfiguredFeature<?, ?> VIBRANIUM_ORE;
     public static final ConfiguredFeature<?, ?> ADAMANTINE_ORE;
+    public static final BlockState HEART_SHAPED_PLANT_CONFIG;
     public static final ConfiguredFeature<?, ?> HEART_SHAPED_PLANT;
 
     static {
-        AIR = Blocks.AIR.getDefaultState();
-        GRASS_BLOCK = Blocks.GRASS_BLOCK.getDefaultState();
-        GRASS = Blocks.GRASS.getDefaultState();
-        FERN = Blocks.FERN.getDefaultState();
-        JUNGLE_LEAVES = Blocks.JUNGLE_LEAVES.getDefaultState();
-        VINE = Blocks.VINE.getDefaultState();
+        VIBRANIUM_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
+        ADAMANTINE_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.ADAMANTINE_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.getDefaultState()));
+        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(VIBRANIUM_ORE_TARGETS, 4)).averageDepth(YOffset.getBottom(), 84).spreadHorizontally().repeat(2);
+        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(ADAMANTINE_ORE_TARGETS, 3, 1.0F)).averageDepth(YOffset.fixed(0), 24).spreadHorizontally().repeat(1);
         HEART_SHAPED_PLANT_CONFIG = ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2);
-
-        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.VIBRANIUM_ORE.getDefaultState(), 4)).averageDepth(YOffset.getBottom(), 84).spreadHorizontally().repeat(2);
-        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ADAMANTINE_ORE.getDefaultState(), 3)).averageDepth(YOffset.fixed(0), 24).spreadHorizontally().repeat(1);
-        HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(new SimpleBlockStateProvider(HEART_SHAPED_PLANT_CONFIG), ImmutableList.of(GRASS_BLOCK), ImmutableList.of(AIR, GRASS, FERN), ImmutableList.of(AIR, JUNGLE_LEAVES, VINE))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(0, 0.35F, 4)));
+        HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(new SimpleBlockStateProvider(HEART_SHAPED_PLANT_CONFIG),
+                ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState()),
+                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.GRASS.getDefaultState(), Blocks.FERN.getDefaultState()),
+                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.JUNGLE_LEAVES.getDefaultState(), Blocks.VINE.getDefaultState()))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(0, 0.35F, 4)));
     }
 
     public static void registerConfiguredFeature() {
