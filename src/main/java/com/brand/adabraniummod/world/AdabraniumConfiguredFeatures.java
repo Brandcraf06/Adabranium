@@ -32,8 +32,8 @@ public class AdabraniumConfiguredFeatures {
     static {
         VIBRANIUM_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
         ADAMANTINE_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.ADAMANTINE_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.getDefaultState()));
-        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(VIBRANIUM_ORE_TARGETS, 4)).averageDepth(YOffset.getBottom(), 84).spreadHorizontally().repeat(2);
-        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(ADAMANTINE_ORE_TARGETS, 3, 1.0F)).averageDepth(YOffset.fixed(0), 24).spreadHorizontally().repeat(1);
+        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(VIBRANIUM_ORE_TARGETS, 4)).method_36296(YOffset.getBottom(), YOffset.fixed(20)).spreadHorizontally().repeat(2);
+        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(ADAMANTINE_ORE_TARGETS, 3, 1.0F)).method_36297(YOffset.fixed(0), YOffset.fixed(24)).spreadHorizontally().repeat(1);
         HEART_SHAPED_PLANT_CONFIG = ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2);
         HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(new SimpleBlockStateProvider(HEART_SHAPED_PLANT_CONFIG),
                 ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState()),
