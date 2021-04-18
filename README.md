@@ -4,9 +4,9 @@
 
  
 
-- You can find the Vibranium Ore rarely below layer 20 and the Adamantine Ore rarely below layer 20~ in the overworld.
+- You can find the Vibranium Ore rarely below layer 20, and the Adamantine Ore rarely below layer 20~ in the overworld.
 
-           Theses two ores need a diamond pickaxe (or an equal level) to mine and drop, Adamantite ore takes much longer to mine.
+           Theses two ores need a diamond pickaxe (or an equal level) to mine and drop, Adamantine ore takes much longer to mine.
            Adamantine ore never spawn incontact with air (Same as Ancient Debris in the Nether).
 
 - Vibranium and adamantine must be processed to be used :
@@ -22,7 +22,7 @@
          Adamantium tools/sword need an Adamantium Rod as a handle.
 
  
-- Vibranium Sets are better than diamonds (and Netherite), mine faster and make lot of damage! The durability for tools and sword is 2990.
+- Vibranium Sets are better than diamonds (and Netherite), mine faster and make a lot of damage! The durability for tools and sword is 2990.
 - Adamantium Sets is the best equipment, mine faster than vibranium and do again more damage! The durability for tools and sword is 4280.
 
 - You can melt Vibranium in a blast furnace to make Vibranium Dust
