@@ -26,7 +26,7 @@ public class AdabraniumConfig implements ConfigData {
     // Vibranium
 
     @ConfigEntry.Category("vibranium")
-    public float vibraniumToolAttackDamage = 6.0f;
+    public float vibraniumBaseAttackDamage = 6.0f;
 
     @ConfigEntry.Category("vibranium")
     public float vibraniumToolMiningSpeed = 17.0f;
@@ -43,7 +43,7 @@ public class AdabraniumConfig implements ConfigData {
     // Adamantium
 
     @ConfigEntry.Category("adamantium")
-    public float adamantiumToolAttackDamage = 9.0f;
+    public float adamantiumBaseAttackDamage = 9.0f;
 
     @ConfigEntry.Category("adamantium")
     public float adamantiumToolMiningSpeed = 25.0f;

@@ -15,7 +15,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum AdabraniumArmorMaterials implements ArmorMaterial {
-    VIBRANIUM("vibranium", Adabranium.CONFIG.vibraniumArmorDurabilityMultiplier, new int[]{5, 8, 10, 5}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, 0.0F, () -> {
+    VIBRANIUM("vibranium", Adabranium.CONFIG.vibraniumArmorDurabilityMultiplier, new int[]{5, 10, 8, 5}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
     ADAMANTIUM("adamantium", Adabranium.CONFIG.adamantiumArmorDurabilityMultiplier, new int[]{6, 10, 12, 6}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, 0.0F, () -> {

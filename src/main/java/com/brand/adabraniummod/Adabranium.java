@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 public class Adabranium implements ModInitializer {
 
     public static final String MOD_ID = "adabraniummod";
-    public static AdabraniumConfig CONFIG = AutoConfig.register(AdabraniumConfig.class, GsonConfigSerializer::new).getConfig();
+    public static AdabraniumConfig CONFIG;
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup ADABRANIUM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adabranium_group"), () -> new ItemStack(ModItems.VIBRANIUM_INGOT));
 
@@ -32,6 +32,9 @@ public class Adabranium implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
+        AutoConfig.register(AdabraniumConfig.class, GsonConfigSerializer::new).getConfig();
+        CONFIG = AutoConfig.getConfigHolder(AdabraniumConfig.class).getConfig();
 
         new ModBlocks();
         new ModItems();

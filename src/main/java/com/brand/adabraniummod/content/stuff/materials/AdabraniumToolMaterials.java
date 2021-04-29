@@ -10,10 +10,10 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum AdabraniumToolMaterials implements ToolMaterial {
-    VIBRANIUM(4, Adabranium.CONFIG.vibraniumToolDurability, Adabranium.CONFIG.vibraniumToolMiningSpeed, Adabranium.CONFIG.vibraniumToolAttackDamage, Adabranium.CONFIG.vibraniumToolEnchantability, () -> {
+    VIBRANIUM(4, Adabranium.CONFIG.vibraniumToolDurability, Adabranium.CONFIG.vibraniumToolMiningSpeed, Adabranium.CONFIG.vibraniumBaseAttackDamage, Adabranium.CONFIG.vibraniumToolEnchantability, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
-    ADAMANTIUM(4, Adabranium.CONFIG.adamantiumToolDurability, Adabranium.CONFIG.adamantiumToolMiningSpeed, Adabranium.CONFIG.adamantiumToolAttackDamage, Adabranium.CONFIG.adamantiumToolEnchantability, () -> {
+    ADAMANTIUM(4, Adabranium.CONFIG.adamantiumToolDurability, Adabranium.CONFIG.adamantiumToolMiningSpeed, Adabranium.CONFIG.adamantiumBaseAttackDamage, Adabranium.CONFIG.adamantiumToolEnchantability, () -> {
         return Ingredient.ofItems(ModItems.ADAMANTIUM_INGOT);
     }),
     NETHER_BRICK(2, Adabranium.CONFIG.netherToolDurability, Adabranium.CONFIG.netherToolMiningSpeed, Adabranium.CONFIG.netherToolAttackDamage, Adabranium.CONFIG.netherToolEnchantability, () -> {
