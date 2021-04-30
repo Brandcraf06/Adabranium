@@ -13,7 +13,7 @@
 
 - Vibranium and adamantine must be processed to be used :
   - You can make Vibranium Ingots with Vibranium and Obsidian
-  - You can make Adamantium Ingots with Adamantine and Vibranium Ingots or with Vibranium and Obsidian
+  - You can make Adamantium Ingots with Adamantine and Vibranium Ingots or with Adamantine, Vibranium and Obsidian
 
 - You can now create powerful swords, tools and armor !
   - Vibranium tools/sword need an Obsidian Rod as a handle.
