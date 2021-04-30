@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "adabraniummod:vibranium"
+    "item": "adabraniummod:vibranium_ingot"
   },
   "result": "adabraniummod:vibranium_dust",
-  "experience": 1.0,
+  "experience": 0.50,
   "cookingtime": 200
 }

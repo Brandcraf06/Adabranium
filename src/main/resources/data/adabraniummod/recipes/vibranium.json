@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "adabraniummod:vibranium_ore"
+  },
+  "result": "adabraniummod:vibranium",
+  "experience": 1.0,
+  "cookingtime": 200
+}

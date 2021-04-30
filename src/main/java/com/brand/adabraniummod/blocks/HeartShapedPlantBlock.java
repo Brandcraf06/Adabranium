@@ -7,16 +7,21 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -24,13 +29,9 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
+public class HeartShapedPlantBlock extends PlantBlock {
     public static final IntProperty AGE;
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D);
-
-    static {
-        AGE = Properties.AGE_2;
-    }
+    protected static final VoxelShape[] AGE_TO_SHAPE;
 
     public HeartShapedPlantBlock(Settings settings) {
         super(settings);
@@ -43,12 +44,14 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Vec3d vec3d = state.getModelOffset(world, pos);
-        return SHAPE.offset(vec3d.x, vec3d.y, vec3d.z);
+        return AGE_TO_SHAPE[state.get(this.getAgeProperty())];
     }
 
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        super.scheduledTick(state, world, pos, random);
+    public IntProperty getAgeProperty() {
+        return AGE;
+    }
+
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         int i = state.get(AGE);
         if (i < 2 && random.nextInt(5) == 0 && world.getBaseLightLevel(pos.up(), 0) >= 10) {
             world.setBlockState(pos, state.with(AGE, i + 1), 2);
@@ -72,10 +75,6 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
         builder.add(AGE);
     }
 
-    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        return false;
-    }
-
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
         return true;
     }
@@ -85,5 +84,8 @@ public class HeartShapedPlantBlock extends PlantBlock implements Fertilizable {
         world.setBlockState(pos, state.with(AGE, i), 2);
     }
 
-}
-
+    static {
+            AGE = Properties.AGE_2;
+            AGE_TO_SHAPE = new VoxelShape[]{Block.createCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 10.0D, 10.0D), Block.createCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 12.0D, 12.0D), Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 15.0D, 14.0D)};
+        }
+    }
