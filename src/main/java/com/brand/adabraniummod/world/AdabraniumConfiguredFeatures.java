@@ -13,8 +13,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
@@ -36,7 +34,7 @@ public class AdabraniumConfiguredFeatures {
         HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(new SimpleBlockStateProvider(HEART_SHAPED_PLANT_CONFIG),
                 ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState()),
                 ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.GRASS.getDefaultState(), Blocks.FERN.getDefaultState()),
-                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.JUNGLE_LEAVES.getDefaultState(), Blocks.VINE.getDefaultState()))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(0, 0.35F, 4)));
+                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.JUNGLE_LEAVES.getDefaultState(), Blocks.VINE.getDefaultState()))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).repeat(7);
     }
 
     public static void registerConfiguredFeature() {

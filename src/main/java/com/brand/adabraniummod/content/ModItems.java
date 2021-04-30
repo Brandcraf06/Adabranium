@@ -26,9 +26,9 @@ public class ModItems {
 
     public static final Item HEART_SHAPED_HERB = register("heart_shaped_herb", new HeartShapedHerbItem(new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
     public static final Item VIBRANIUM_SOUP = register("vibranium_soup", new MushroomStewItem(new Item.Settings().maxCount(1).group(Adabranium.ADABRANIUM_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.6F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 2400, 1, true, false, true), 1.0F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 3600, 1, true, false, true), 1.0F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2400, 1, true, false, true), 1.0F).alwaysEdible().build())));
+            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1800, 1, true, false, true), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 3000, 1, true, false, true), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 1, true, false, true), 1.0F).alwaysEdible().build())));
 
     // dusts
     public static final Item VIBRANIUM_DUST = register("vibranium_dust", new Item(new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
