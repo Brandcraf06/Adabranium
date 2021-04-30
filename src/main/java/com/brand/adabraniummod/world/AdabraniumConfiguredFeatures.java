@@ -12,10 +12,7 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.CountExtraDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.decorator.DepthAverageDecoratorConfig;
-import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
+import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.*;
 
 public class AdabraniumConfiguredFeatures {
@@ -31,7 +28,6 @@ public class AdabraniumConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> ADAMANTINE_ORE;
     public static final ConfiguredFeature<?, ?> HEART_SHAPED_PLANT;
 
-    // Will run when registerAndAddConfiguredFeatures is called
     static {
         AIR = Blocks.AIR.getDefaultState();
         GRASS_BLOCK = Blocks.GRASS_BLOCK.getDefaultState();
@@ -43,7 +39,7 @@ public class AdabraniumConfiguredFeatures {
 
         VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.VIBRANIUM_ORE.getDefaultState(), 4)).rangeOf(24).spreadHorizontally().repeat(2);
         ADAMANTINE_ORE = Feature.NO_SURFACE_ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ADAMANTINE_ORE.getDefaultState(), 3)).decorate(Decorator.DEPTH_AVERAGE.configure(new DepthAverageDecoratorConfig(12, 12)).spreadHorizontally().repeat(2));
-        HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(HEART_SHAPED_PLANT_CONFIG, ImmutableList.of(GRASS_BLOCK), ImmutableList.of(AIR, GRASS, FERN), ImmutableList.of(AIR, JUNGLE_LEAVES, VINE))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(0, 0.35F, 4)));
+        HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(HEART_SHAPED_PLANT_CONFIG, ImmutableList.of(GRASS_BLOCK), ImmutableList.of(AIR, GRASS, FERN), ImmutableList.of(AIR, JUNGLE_LEAVES, VINE))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).repeat(7);
 
     }
 

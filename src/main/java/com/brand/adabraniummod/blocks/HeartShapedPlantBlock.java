@@ -44,7 +44,12 @@ public class HeartShapedPlantBlock extends PlantBlock {
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return AGE_TO_SHAPE[state.get(this.getAgeProperty())];
+        Vec3d vec3d = state.getModelOffset(world, pos);
+        return AGE_TO_SHAPE[state.get(this.getAgeProperty())].offset(vec3d.x, vec3d.y, vec3d.z);
+    }
+
+    public OffsetType getOffsetType() {
+        return OffsetType.XZ;
     }
 
     public IntProperty getAgeProperty() {

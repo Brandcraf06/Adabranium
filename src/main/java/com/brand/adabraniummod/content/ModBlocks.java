@@ -20,7 +20,7 @@ public class ModBlocks {
     public static final Block ADAMANTINE_ORE = register("adamantine_ore", new AdabraniumOreBlock(FabricBlockSettings.of(Material.STONE).strength(25.0f, 300.0f).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool()));
     public static final Block VIBRANIUM_BLOCK = register("vibranium_block", new Block(FabricBlockSettings.of(Material.METAL, MaterialColor.PURPLE).strength(4.0f, 600.0f).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool()));
     public static final Block ADAMANTIUM_BLOCK = register("adamantium_block", new Block(FabricBlockSettings.of(Material.METAL, MaterialColor.GREEN).strength(50.0f, 1200.0f).breakByTool(FabricToolTags.PICKAXES, 3).requiresTool()));
-    public static final Block HEART_SHAPED_PLANT = register("heart_shaped_plant", new HeartShapedPlantBlock(FabricBlockSettings.of(Material.PLANT).strength(0).sounds(BlockSoundGroup.GRASS).luminance(9).ticksRandomly().noCollision().breakInstantly()));
+    public static final Block HEART_SHAPED_PLANT = register("heart_shaped_plant", new HeartShapedPlantBlock(FabricBlockSettings.of(Material.PLANT).strength(0).sounds(BlockSoundGroup.GRASS).luminance(8).ticksRandomly().noCollision().breakInstantly()));
 
     public static Block register(String id, Block block, boolean registerItem) {
         Identifier identifier = new Identifier(Adabranium.MOD_ID, id);
