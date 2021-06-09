@@ -1,33 +1,28 @@
 plugins {
-	id 'fabric-loom' version '0.6-SNAPSHOT'
+	id 'fabric-loom' version '0.8-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = "${mod_version}+${minecraft_version}"
 group = project.maven_group
 
-// This field defines the Java version your mod target.
-// The Minecraft launcher currently installs Java 8 for users, so your mod probably wants to target Java 8 too.
-def targetJavaVersion = 8
-
 repositories {
 	maven {
-		name = "Fabric"
-		url = "https://maven.fabricmc.net/"
+		name = "Cotton"
+		url = "https://server.bbkr.space/artifactory/libs-release"
 	}
 	maven {
-		name = "Cotton"
-		url = "https://server.bbkr.space/artifactory/libs-release/"
+		name = "Curse"
+		url = "https://www.cursemaven.com"
 	}
 	maven {
 		name = "Jitpack"
 		url = "https://jitpack.io"
 	}
-	jcenter()
 }
 
 dependencies {
@@ -47,21 +42,6 @@ dependencies {
 	include 'io.github.cottonmc:LibCD:3.0.3+1.16.3'
 }
 
-java {
-	sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
-	targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
-
-	withSourcesJar()
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-
-	if (JavaVersion.current().isJava9Compatible()) {
-		it.options.release.set(targetJavaVersion)
-	}
-}
-
 processResources {
 	inputs.property "version", project.version
 
@@ -70,30 +50,15 @@ processResources {
 	}
 }
 
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+
+	it.options.release = 16
+}
+
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}" }
-	}
-}
-
-// configure the maven publication
-publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
-			}
-		}
-	}
-
-	// select the repositories you want to publish to
-	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
 	}
 }
   

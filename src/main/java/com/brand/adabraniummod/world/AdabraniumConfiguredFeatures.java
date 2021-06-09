@@ -10,9 +10,13 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.decorator.ConfiguredDecorator;
+import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.decorator.HeightmapDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
@@ -26,15 +30,15 @@ public class AdabraniumConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> HEART_SHAPED_PLANT;
 
     static {
-        VIBRANIUM_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
-        ADAMANTINE_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.create(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.ADAMANTINE_ORE.getDefaultState()), OreFeatureConfig.create(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.getDefaultState()));
-        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(VIBRANIUM_ORE_TARGETS, 4)).method_36296(YOffset.getBottom(), YOffset.fixed(24)).spreadHorizontally().repeat(2);
-        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(ADAMANTINE_ORE_TARGETS, 3, 1.0F)).method_36297(YOffset.fixed(0), YOffset.fixed(24)).spreadHorizontally().repeat(2);
+        VIBRANIUM_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.createTarget(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
+        ADAMANTINE_ORE_TARGETS = ImmutableList.of(OreFeatureConfig.createTarget(OreFeatureConfig.Rules.STONE_ORE_REPLACEABLES, ModBlocks.ADAMANTINE_ORE.getDefaultState()), OreFeatureConfig.createTarget(OreFeatureConfig.Rules.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.getDefaultState()));
+        VIBRANIUM_ORE = Feature.ORE.configure(new OreFeatureConfig(VIBRANIUM_ORE_TARGETS, 4)).uniformRange(YOffset.getBottom(), YOffset.fixed(24)).spreadHorizontally().repeat(2);
+        ADAMANTINE_ORE = Feature.SCATTERED_ORE.configure(new OreFeatureConfig(ADAMANTINE_ORE_TARGETS, 3, 1.0F)).uniformRange(YOffset.fixed(0), YOffset.fixed(24)).spreadHorizontally().repeat(2);
         HEART_SHAPED_PLANT_CONFIG = ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2);
         HEART_SHAPED_PLANT = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(new SimpleBlockStateProvider(HEART_SHAPED_PLANT_CONFIG),
                 ImmutableList.of(Blocks.GRASS_BLOCK.getDefaultState()),
                 ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.GRASS.getDefaultState(), Blocks.FERN.getDefaultState()),
-                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.JUNGLE_LEAVES.getDefaultState(), Blocks.VINE.getDefaultState()))).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).repeat(7);
+                ImmutableList.of(Blocks.AIR.getDefaultState(), Blocks.JUNGLE_LEAVES.getDefaultState(), Blocks.VINE.getDefaultState()))).decorate(Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).decorate(Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE).repeat(7);
     }
 
     public static void registerConfiguredFeature() {
@@ -51,5 +55,15 @@ public class AdabraniumConfiguredFeatures {
         BuiltinRegistries.CONFIGURED_FEATURE.getKey(HEART_SHAPED_PLANT)
                 .ifPresent(key -> BiomeModifications.addFeature(ctx -> ctx.getBiome().getCategory() == Biome.Category.JUNGLE,
                         GenerationStep.Feature.VEGETAL_DECORATION, key));
+    }
+
+    public static final class Decorators {
+        public static final ConfiguredDecorator<HeightmapDecoratorConfig> HEIGHTMAP_SPREAD_DOUBLE;
+        public static final ConfiguredDecorator<?> SQUARE_HEIGHTMAP_SPREAD_DOUBLE;
+
+        static {
+            HEIGHTMAP_SPREAD_DOUBLE = Decorator.HEIGHTMAP_SPREAD_DOUBLE.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING));
+            SQUARE_HEIGHTMAP_SPREAD_DOUBLE = (ConfiguredDecorator)HEIGHTMAP_SPREAD_DOUBLE.spreadHorizontally();
+        }
     }
 }
