@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:adamantium_ingot"
+            "items": ["adabraniummod:adamantium_ingot"]
           }
         ]
       }
