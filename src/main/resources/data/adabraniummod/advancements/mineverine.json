@@ -25,7 +25,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:adamantium_helmet"
+            "items": ["adabraniummod:adamantium_helmet"]
           }
         ]
       }
@@ -35,7 +35,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:adamantium_chestplate"
+            "items": ["adabraniummod:adamantium_chestplate"]
           }
         ]
       }
@@ -45,7 +45,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:adamantium_leggings"
+            "items": ["adabraniummod:adamantium_leggings"]
           }
         ]
       }
@@ -55,7 +55,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:adamantium_boots"
+            "items": ["adabraniummod:adamantium_boots"]
           }
         ]
       }

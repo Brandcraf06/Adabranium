@@ -22,7 +22,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:vibranium_helmet"
+            "items": ["adabraniummod:vibranium_helmet"]
           }
         ]
       }
@@ -32,7 +32,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:vibranium_chestplate"
+            "items": ["adabraniummod:vibranium_chestplate"]
           }
         ]
       }
@@ -42,7 +42,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:vibranium_leggings"
+            "items": ["adabraniummod:vibranium_leggings"]
           }
         ]
       }
@@ -52,7 +52,7 @@
       "conditions": {
         "items": [
           {
-            "item": "adabraniummod:vibranium_boots"
+            "items": ["adabraniummod:vibranium_boots"]
           }
         ]
       }
