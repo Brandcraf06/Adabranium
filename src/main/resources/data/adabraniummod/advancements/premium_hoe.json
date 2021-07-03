@@ -25,7 +25,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["adabraniummod:adamantium_hoe"]
+            "item": "adabraniummod:adamantium_hoe"
           }
         ]
       }

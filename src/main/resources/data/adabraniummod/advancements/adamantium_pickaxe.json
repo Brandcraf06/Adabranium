@@ -22,7 +22,7 @@
       "conditions": {
         "items": [
           {
-            "items": ["adabraniummod:adamantium_pickaxe"]
+            "item": "adabraniummod:adamantium_pickaxe"
           }
         ]
       }
