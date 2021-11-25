@@ -40,7 +40,6 @@ public class Adabranium implements ModInitializer {
         RegisterArmors.register();
         PotionsRecipes.registerRecipes();
         AdabraniumConfiguredFeatures.registerConfiguredFeature();
-        AdabraniumConfiguredFeatures.registerBiomeModifications();
 
     }
 }

@@ -1,17 +1,17 @@
 
-# Adabranium is a 1.17 mod made using Fabric API.
+# Adabranium is a 1.18 mod made using Fabric API.
 
 ##### The mod adds powerful Marvel materials: the Vibranium from my "Nether Things" mod and the Adamantium
 
-- You can find **Vibranium Ore** rarely below layer 24 and **Adamantine Ore** rarely below layer 22~ in the overworld.
+- You can find **Vibranium Ore** rarely below layer 8 and **Adamantine Ore** rarely below layer 8 in the overworld.
 
-  - Theses two ores need a diamond pickaxe (or an equal level) to mine and drop, Adamantine ore takes much longer to
+  - Adamantine Ore is completely buried (never spawn incontact with air) and Vibranium Ore is partially buried.
+  - They are generated as spread, the more you go deeper the more likely you are to find them.
+  - They need a diamond pickaxe (or an equal level) to mine and drop, Adamantine ore takes much longer to
     mine.
-  - Adamantine ore never spawn incontact with air (Same as Ancient Debris in the Nether).
-  - Vibranium and Adamantine Ore are replaced by Deepslate variant when generated in deepslate blobs below layer 16
+  - They are replaced by Deepslate ones when generated below layer 0
   
   
-
 - Vibranium and adamantine must be processed to be used :
   - You can make Vibranium Ingots with Vibranium and Obsidian
   - You can make Adamantium Ingots with Adamantine and Vibranium Ingot or with Adamantine, Vibranium and Obsidian
