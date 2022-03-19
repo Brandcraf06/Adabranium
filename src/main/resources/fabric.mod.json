@@ -27,9 +27,8 @@
     "adabranium.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.7",
-    "fabric": "*",
-    "libcd": "*",
+    "fabricloader": ">=0.13.2",
+    "fabric": ">=0.46.0",
     "minecraft": "1.18.x",
     "java": ">=17"
   },

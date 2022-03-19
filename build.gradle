@@ -11,18 +11,8 @@ version = "${mod_version}+${minecraft_version}"
 group = project.maven_group
 
 repositories {
-	maven {
-		name = "Cotton"
-		url = "https://server.bbkr.space/artifactory/libs-release"
-	}
-	maven {
-		name = "Curse"
-		url = "https://www.cursemaven.com"
-	}
-	maven {
-		name = "Jitpack"
-		url = "https://jitpack.io"
-	}
+	maven { url 'https://server.bbkr.space/artifactory/libs-release' }
+	maven { url 'https://www.cursemaven.com' }
 }
 
 dependencies {
@@ -33,10 +23,6 @@ dependencies {
 
 	// Fabric API
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	// LibCD
-	modImplementation "io.github.cottonmc:LibCD:${project.libcd_version}"
-	include "io.github.cottonmc:LibCD:${project.libcd_version}"
 }
 
 processResources {
@@ -48,8 +34,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-
+	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
 	it.options.release = 17
 }
 

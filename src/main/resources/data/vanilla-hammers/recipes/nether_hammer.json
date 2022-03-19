@@ -8,5 +8,13 @@
   },
   "result": {
     "item": "vanilla-hammers:nether_hammer"
-  }
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "vanilla-hammers"
+      ]
+    }
+  ]
 }
