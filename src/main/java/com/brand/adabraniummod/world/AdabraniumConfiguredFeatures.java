@@ -5,6 +5,7 @@ import com.brand.adabraniummod.blocks.HeartShapedPlantBlock;
 import com.brand.adabraniummod.content.ModBlocks;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.tag.BiomeTags;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
@@ -34,7 +35,6 @@ public class AdabraniumConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreVibranium);
 
         // adamantium
-
         ConfiguredFeature<?, ?> ORE_ADAMANTINE = new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(ADAMANTINE_ORES, 5, 1.0F));
 
         RegistryKey<PlacedFeature> oreAdamantine = RegistryKey.of(Registry.PLACED_FEATURE_KEY, Adabranium.id("ore_adamantine"));
@@ -42,14 +42,14 @@ public class AdabraniumConfiguredFeatures {
         Registry.register(BuiltinRegistries.PLACED_FEATURE, oreAdamantine.getValue(), new PlacedFeature(RegistryEntry.of(ORE_ADAMANTINE), List.of(new PlacementModifier[]{SquarePlacementModifier.of(), HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-72), YOffset.aboveBottom(72)), BiomePlacementModifier.of()})));
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAdamantine);
 
-        // heart shaped plant
 
+        // heart shaped plant
         ConfiguredFeature<?, ?> HEART_SHAPED_PLANT = new ConfiguredFeature<>(Feature.FLOWER, new RandomPatchFeatureConfig(64, 0, 0, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2))))));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, Adabranium.id("heart_shaped_plant"), HEART_SHAPED_PLANT);
 
         RegistryKey<PlacedFeature> heartShapedPlant = RegistryKey.of(Registry.PLACED_FEATURE_KEY, Adabranium.id("heart_shaped_plant"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, heartShapedPlant.getValue(), new PlacedFeature(RegistryEntry.of(HEART_SHAPED_PLANT), List.of(new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()})));
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, heartShapedPlant);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, heartShapedPlant);
 
     }
 

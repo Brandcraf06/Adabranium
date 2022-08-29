@@ -9,8 +9,8 @@ import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 
@@ -25,17 +25,19 @@ public class ModBlocks {
     public static final Block HEART_SHAPED_PLANT = register("heart_shaped_plant", new HeartShapedPlantBlock(FabricBlockSettings.of(Material.PLANT).strength(0).sounds(BlockSoundGroup.GRASS).luminance(8).ticksRandomly().noCollision().breakInstantly()));
 
 
-    public static Block register(String id, Block block, boolean registerItem) {
-        Identifier identifier = new Identifier(Adabranium.MOD_ID, id);
-        Block registeredBlock = Registry.register(Registry.BLOCK, identifier, block);
-        if (registerItem) {
-            Registry.register(Registry.ITEM, identifier, new BlockItem(registeredBlock, new Item.Settings().maxCount(64).group(Adabranium.ADABRANIUM_GROUP)));
-        }
-        return registeredBlock;
+    public static Block register(String id, Block block, BlockItem item) {
+        Registry.register(Registry.BLOCK, Adabranium.id(id), block);
+        Registry.register(Registry.ITEM, Adabranium.id(id), item);
+
+        return block;
+    }
+
+    public static Block register(String id, Block block, ItemGroup itemGroup) {
+        return register(id, block, new BlockItem(block, new Item.Settings().group(itemGroup)));
     }
 
     public static Block register(String id, Block block) {
-        return register(id, block, true);
+        return register(id, block, Adabranium.ADABRANIUM_GROUP);
     }
 }
 

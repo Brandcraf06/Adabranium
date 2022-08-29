@@ -22,9 +22,6 @@ public class Adabranium implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final ItemGroup ADABRANIUM_GROUP = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "adabranium_group"), () -> new ItemStack(ModItems.VIBRANIUM_INGOT));
 
-    public static Identifier id(String name) {
-        return new Identifier(MOD_ID, name);
-    }
 
     @Override
     public void onInitialize() {
@@ -42,5 +39,9 @@ public class Adabranium implements ModInitializer {
         AdabraniumConfiguredFeatures.registerConfiguredFeature();
 
     }
+    public static Identifier id(String name) {
+        return new Identifier(MOD_ID, name);
+    }
 }
+
 
