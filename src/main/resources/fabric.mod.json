@@ -5,7 +5,7 @@
   "name": "Adabranium",
   "description": "A mod that adds powerful fictional materials: Vibranium & Adamantium",
   "authors": [
-    "Brandcraft06"
+    "Brandcraft"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/adabranium",
@@ -13,23 +13,26 @@
     "issues": "https://github.com/Brandcraf06/Adabranium/issues"
   },
   "license": "GPLv3",
-  "icon": "assets/adabraniummod/icon.png",
+  "icon": "assets/adabranium/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.brand.adabraniummod.Adabranium"
+      "com.brand.adabranium.Adabranium"
     ],
     "client": [
-      "com.brand.adabraniummod.AdabraniumClient"
+      "com.brand.adabranium.AdabraniumClient"
+    ],
+    "fabric-datagen": [
+      "com.brand.adabranium.data.AdabraniumDatagen"
     ]
   },
   "mixins": [
     "adabranium.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.9",
+    "fabricloader": ">=0.14.11",
     "fabric-api": "*",
-    "minecraft": "1.19.x",
+    "minecraft": "~1.19.3",
     "java": ">=17"
   },
   "suggests": {

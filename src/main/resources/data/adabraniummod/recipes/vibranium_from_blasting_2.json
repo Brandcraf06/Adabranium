@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "adabraniummod:deepslate_vibranium_ore"
-  },
-  "result": "adabraniummod:vibranium",
-  "experience": 1.0,
-  "cookingtime": 100
-}

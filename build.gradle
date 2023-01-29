@@ -1,6 +1,6 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
-	id 'maven-publish'
+    id 'fabric-loom' version '1.1-SNAPSHOT'
+    id 'maven-publish'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -11,37 +11,62 @@ version = "${mod_version}+${minecraft_version}"
 group = project.maven_group
 
 repositories {
-	maven { url 'https://server.bbkr.space/artifactory/libs-release' }
-	maven { url 'https://www.cursemaven.com' }
+    maven { url 'https://server.bbkr.space/artifactory/libs-release' }
+    maven { url 'https://www.cursemaven.com' }
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    // To change the versions see the gradle.properties file
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    // Fabric API
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+loom {
+    runs {
+        datagen {
+            server()
+
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.modid=adabraniummod"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+
+            runDir "build/datagen"
+        }
+    }
+}
+assemble.dependsOn(runDatagen)
+
+sourceSets {
+    main {
+        resources {
+            srcDirs += [
+                    "src/main/generated"
+            ]
+        }
+    }
 }
 
 processResources {
-	inputs.property "version", project.version
+    inputs.property "version", project.version
 
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
-	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
-	it.options.release = 17
+    it.options.release = 17
 }
 
 jar {
-	from("LICENSE") {
-		rename { "${it}_${project.archivesBaseName}" }
-	}
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
 }
   
   
