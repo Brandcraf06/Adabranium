@@ -5,8 +5,7 @@ import com.brand.adabranium.content.base.HeartShapedHerbItem;
 import com.brand.adabranium.content.stuff.base.BaseSword;
 import com.brand.adabranium.content.stuff.materials.AdabraniumArmorMaterials;
 import com.brand.adabranium.content.stuff.materials.AdabraniumToolMaterials;
-import com.brand.adabranium.content.stuff.types.ModStuffs;
-import com.brand.adabranium.content.stuff.types.NetherStuff;
+import com.brand.adabranium.content.stuff.full.FullStuffs;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
@@ -27,9 +26,24 @@ public class ModItems {
     public static final Item VIBRANIUM_DUST = register("vibranium_dust", new Item(new Item.Settings().maxCount(64)));
 
     // stuffs
-    public static final ModStuffs VIBRANIUM_STUFF = new ModStuffs("vibranium", AdabraniumArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM, -6);
-    public static final ModStuffs ADAMANTIUM_STUFF = new ModStuffs("adamantium", AdabraniumArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM, -9);
-    public static final NetherStuff NETHER_STUFF = new NetherStuff("nether");
+    public static final FullStuffs VIBRANIUM_STUFF = new FullStuffs("vibranium",
+            AdabraniumArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM,
+            5.0F, -3.0F,
+            -6, -0.0F,
+            false);
+
+    public static final FullStuffs ADAMANTIUM_STUFF = new FullStuffs("adamantium",
+            AdabraniumArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM,
+            5.0F, -3.0F,
+            -9, -0.0F,
+            false);
+
+    public static final FullStuffs NETHER_STUFF = new FullStuffs("nether",
+            AdabraniumArmorMaterials.NETHER_BRICK, AdabraniumToolMaterials.NETHER_BRICK,
+            6.0F, -3.1F,
+            -2, -1.0F,
+            true);
+
     public static final Item ONESHOTIUM_SWORD = register("oneshotium_sword", new BaseSword(AdabraniumToolMaterials.ONESHOTIUM, 0, 0.0f, new Item.Settings()));
 
 

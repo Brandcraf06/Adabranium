@@ -1,8 +1,7 @@
 package com.brand.adabranium.content;
 
 import com.brand.adabranium.Adabranium;
-import com.brand.adabranium.content.stuff.types.ModStuffs;
-import com.brand.adabranium.content.stuff.types.NetherStuff;
+import com.brand.adabranium.content.stuff.full.FullStuffs;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -31,19 +30,7 @@ public class AdabraniumGroup {
                 entries.add(ModItems.OBSIDIAN_ROD);
                 entries.add(ModItems.ADAMANTIUM_ROD);
 
-                for (ModStuffs stuff : ModStuffs.values()) {
-                    entries.add(stuff.helmet);
-                    entries.add(stuff.chestplate);
-                    entries.add(stuff.leggings);
-                    entries.add(stuff.boots);
-                    entries.add(stuff.sword);
-                    entries.add(stuff.shovel);
-                    entries.add(stuff.pickaxe);
-                    entries.add(stuff.axe);
-                    entries.add(stuff.hoe);
-                }
-
-                for (NetherStuff stuff : NetherStuff.values()) {
+                for (FullStuffs stuff : FullStuffs.values()) {
                     entries.add(stuff.helmet);
                     entries.add(stuff.chestplate);
                     entries.add(stuff.leggings);
