@@ -3,6 +3,7 @@ package com.brand.adabranium.data;
 import com.brand.adabranium.content.ModBlocks;
 import com.brand.adabranium.content.ModItems;
 import com.google.common.collect.ImmutableList;
+import com.ibm.icu.text.UnicodeSetSpanner;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
@@ -11,6 +12,8 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.item.trim.ArmorTrim;
+import net.minecraft.item.trim.ArmorTrimMaterials;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 

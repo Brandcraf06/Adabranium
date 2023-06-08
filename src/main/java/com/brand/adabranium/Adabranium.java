@@ -23,8 +23,7 @@ public class Adabranium implements ModInitializer {
         new ModBlocks();
         new ModItems();
 
-        Reflection.initialize(AdabraniumGroup.class);
-
+        AdabraniumGroup.init();
 
         PotionsRecipes.registerRecipes();
         AdabraniumWorldgenFeatures.registerConfiguredFeature();

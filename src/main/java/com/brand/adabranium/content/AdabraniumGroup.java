@@ -3,54 +3,63 @@ package com.brand.adabranium.content;
 import com.brand.adabranium.Adabranium;
 import com.brand.adabranium.content.stuff.full.FullStuffs;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class AdabraniumGroup {
 
-    private static final ItemGroup ADABRANIUM_GROUP = FabricItemGroup.builder(new Identifier(Adabranium.MOD_ID, "adabranium_group"))
-            .displayName(Text.literal("Adabranium"))
-            .icon(() -> new ItemStack(ModItems.VIBRANIUM_INGOT))
-            .entries((enabledFeatures, entries, operatorEnabled) -> {
+    public static final RegistryKey<ItemGroup> ADABRANIUM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(Adabranium.MOD_ID, "adabranium_group"));
 
-                entries.add(ModBlocks.VIBRANIUM_ORE);
-                entries.add(ModBlocks.DEEPSLATE_VIBRANIUM_ORE);
-                entries.add(ModBlocks.ADAMANTINE_ORE);
-                entries.add(ModBlocks.DEEPSLATE_ADAMANTINE_ORE);
-                entries.add(ModItems.VIBRANIUM);
-                entries.add(ModItems.VIBRANIUM_INGOT);
-                entries.add(ModItems.VIBRANIUM_DUST);
-                entries.add(ModBlocks.VIBRANIUM_BLOCK);
-                entries.add(ModItems.ADAMANTINE);
-                entries.add(ModItems.ADAMANTIUM_INGOT);
-                entries.add(ModBlocks.ADAMANTIUM_BLOCK);
+    public static void init() {
+        Registry.register(Registries.ITEM_GROUP, ADABRANIUM_GROUP, FabricItemGroup.builder()
+                .displayName(Text.translatable("itemGroup.adabraniummod.adabranium_group"))
+                .icon(() -> new ItemStack(ModItems.VIBRANIUM_INGOT))
+                .build()
+        );
 
-                entries.add(ModItems.OBSIDIAN_ROD);
-                entries.add(ModItems.ADAMANTIUM_ROD);
+        ItemGroupEvents.modifyEntriesEvent(ADABRANIUM_GROUP).register((entries) -> {
+            entries.add(ModBlocks.VIBRANIUM_ORE);
+            entries.add(ModBlocks.DEEPSLATE_VIBRANIUM_ORE);
+            entries.add(ModBlocks.ADAMANTINE_ORE);
+            entries.add(ModBlocks.DEEPSLATE_ADAMANTINE_ORE);
+            entries.add(ModItems.VIBRANIUM);
+            entries.add(ModItems.VIBRANIUM_INGOT);
+            entries.add(ModItems.VIBRANIUM_DUST);
+            entries.add(ModBlocks.VIBRANIUM_BLOCK);
+            entries.add(ModItems.ADAMANTINE);
+            entries.add(ModItems.ADAMANTIUM_INGOT);
+            entries.add(ModBlocks.ADAMANTIUM_BLOCK);
 
-                for (FullStuffs stuff : FullStuffs.values()) {
-                    entries.add(stuff.helmet);
-                    entries.add(stuff.chestplate);
-                    entries.add(stuff.leggings);
-                    entries.add(stuff.boots);
-                    entries.add(stuff.sword);
-                    entries.add(stuff.shovel);
-                    entries.add(stuff.pickaxe);
-                    entries.add(stuff.axe);
-                    entries.add(stuff.hoe);
-                }
+            entries.add(ModItems.OBSIDIAN_ROD);
+            entries.add(ModItems.ADAMANTIUM_ROD);
 
-                entries.add(ModBlocks.HEART_SHAPED_PLANT);
-                entries.add(ModItems.HEART_SHAPED_HERB);
-                entries.add(ModItems.VIBRANIUM_SOUP);
+            for (FullStuffs stuff : FullStuffs.values()) {
+                entries.add(stuff.helmet);
+                entries.add(stuff.chestplate);
+                entries.add(stuff.leggings);
+                entries.add(stuff.boots);
+                entries.add(stuff.sword);
+                entries.add(stuff.shovel);
+                entries.add(stuff.pickaxe);
+                entries.add(stuff.axe);
+                entries.add(stuff.hoe);
+            }
 
-                entries.add(ModItems.ONESHOTIUM_SWORD);
+            entries.add(ModBlocks.HEART_SHAPED_PLANT);
+            entries.add(ModItems.HEART_SHAPED_HERB);
+            entries.add(ModItems.VIBRANIUM_SOUP);
 
-            })
-            .build();
+            entries.add(ModItems.ONESHOTIUM_SWORD);
 
+        });
+    }
 }
-
 
