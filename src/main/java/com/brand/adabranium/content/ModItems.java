@@ -8,10 +8,7 @@ import com.brand.adabranium.content.stuff.materials.AdabraniumToolMaterials;
 import com.brand.adabranium.content.stuff.full.FullStuffs;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.StewItem;
+import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -22,7 +19,7 @@ public class ModItems {
     // materials
     public static final Item VIBRANIUM = register("vibranium", new Item(new Item.Settings().maxCount(64)));
     public static final Item VIBRANIUM_INGOT = register("vibranium_ingot", new Item(new Item.Settings().maxCount(64)));
-    public static final Item ADAMANTINE = register("adamantine", new Item(new Item.Settings().maxCount(64)));
+    public static final Item ADAMANTIUM = register("adamantium", new Item(new Item.Settings().maxCount(64)));
     public static final Item ADAMANTIUM_INGOT = register("adamantium_ingot", new Item(new Item.Settings().maxCount(64)));
     public static final Item VIBRANIUM_DUST = register("vibranium_dust", new Item(new Item.Settings().maxCount(64)));
 

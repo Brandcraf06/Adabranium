@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "age=0": { "model": "adabraniummod:block/heart_shaped_plant_stage0" },
-        "age=1": { "model": "adabraniummod:block/heart_shaped_plant_stage1" },
-        "age=2": { "model": "adabraniummod:block/heart_shaped_plant_stage2" }
-    }
-}

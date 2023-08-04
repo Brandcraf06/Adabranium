@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -28,13 +27,13 @@ public class AdabraniumGroup {
         ItemGroupEvents.modifyEntriesEvent(ADABRANIUM_GROUP).register((entries) -> {
             entries.add(ModBlocks.VIBRANIUM_ORE);
             entries.add(ModBlocks.DEEPSLATE_VIBRANIUM_ORE);
-            entries.add(ModBlocks.ADAMANTINE_ORE);
-            entries.add(ModBlocks.DEEPSLATE_ADAMANTINE_ORE);
+            entries.add(ModBlocks.ADAMANTIUM_ORE);
+            entries.add(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
             entries.add(ModItems.VIBRANIUM);
             entries.add(ModItems.VIBRANIUM_INGOT);
             entries.add(ModItems.VIBRANIUM_DUST);
             entries.add(ModBlocks.VIBRANIUM_BLOCK);
-            entries.add(ModItems.ADAMANTINE);
+            entries.add(ModItems.ADAMANTIUM);
             entries.add(ModItems.ADAMANTIUM_INGOT);
             entries.add(ModBlocks.ADAMANTIUM_BLOCK);
 

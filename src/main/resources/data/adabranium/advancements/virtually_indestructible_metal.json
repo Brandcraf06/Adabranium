@@ -1,0 +1,35 @@
+{
+  "parent": "adabranium:wakanda_forever",
+  "display": {
+    "icon": {
+      "item": "adabranium:adamantium_ingot"
+    },
+    "title": {
+      "translate": "advancements.adabranium.adamantium_ingot.title"
+    },
+    "description": {
+      "translate": "advancements.adabranium.adamantium_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adamantium_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["adabranium:adamantium_ingot"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_ingot"
+    ]
+  ]
+}

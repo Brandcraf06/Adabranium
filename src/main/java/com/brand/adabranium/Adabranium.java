@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 @SuppressWarnings("deprecation")
 public class Adabranium implements ModInitializer {
 
-    public static final String MOD_ID = "adabraniummod";
+    public static final String MOD_ID = "adabranium";
     public static final Logger LOGGER = LogManager.getLogger();
 
     @Override

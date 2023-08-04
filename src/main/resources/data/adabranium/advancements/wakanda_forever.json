@@ -1,0 +1,35 @@
+{
+  "parent": "adabranium:root",
+  "display": {
+    "icon": {
+      "item": "adabranium:vibranium"
+    },
+    "title": {
+      "translate": "advancements.adabranium.wakanda_forever.title"
+    },
+    "description": {
+      "translate": "advancements.adabranium.wakanda_forever.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "vibranium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["adabranium:vibranium"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "vibranium"
+    ]
+  ]
+}

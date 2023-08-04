@@ -6,5 +6,5 @@
   "attackDamage": 15,
   "attackSpeed": -3,
   "enchantability": 10,
-  "repairIngredient": "adabraniummod:vibranium_ingot"
+  "repairIngredient": "adabranium:vibranium_ingot"
 }

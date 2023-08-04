@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "adabranium:block/heart_shaped_plant_stage1"
+    }
+}

@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "adabraniummod:item/obsidian_rod"
-    }
-}

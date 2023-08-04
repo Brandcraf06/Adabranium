@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "adabranium:block/vibranium_ore"
+    }
+}

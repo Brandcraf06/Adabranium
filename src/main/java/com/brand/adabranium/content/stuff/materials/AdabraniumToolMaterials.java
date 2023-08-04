@@ -15,7 +15,7 @@ public enum AdabraniumToolMaterials implements ToolMaterial {
     ADAMANTIUM(4, 4280, 25.0F, 9.0F, 10, () -> {
         return Ingredient.ofItems(ModItems.ADAMANTIUM_INGOT);
     }),
-    NETHER_BRICK(2, 381, 8.0F, 2.0F, 15, () -> {
+    NETHER_BRICK(2, 381, 9.0F, 2.0F, 15, () -> {
         return Ingredient.ofItems(Items.NETHER_BRICK);
     }),
     ONESHOTIUM(3, 1000000, 23.0F, 999999.0F, 100, () -> {

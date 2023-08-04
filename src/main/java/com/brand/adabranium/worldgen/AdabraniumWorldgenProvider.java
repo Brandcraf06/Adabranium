@@ -26,7 +26,7 @@ public class AdabraniumWorldgenProvider extends FabricDynamicRegistryProvider {
     RuleTest stone = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
     RuleTest deepslate = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
     List<Target> vibranium_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
-    List<Target> adamantine_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.ADAMANTINE_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_ADAMANTINE_ORE.getDefaultState()));
+    List<Target> adamantine_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.ADAMANTIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.getDefaultState()));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
