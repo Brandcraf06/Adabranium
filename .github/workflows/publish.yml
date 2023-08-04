@@ -21,6 +21,8 @@ jobs:
         with:
           context: changelog
           workflow_id: publish.yml
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
       - uses: gradle/wrapper-validation-action@v1
       - run: ./gradlew checkVersion build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
         env:
