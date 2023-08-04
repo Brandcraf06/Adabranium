@@ -1,4 +1,4 @@
-package com.brand.adabranium.data;
+package com.brand.adabranium.data.providers;
 
 import com.brand.adabranium.content.ModBlocks;
 import com.brand.adabranium.content.ModItems;
@@ -97,7 +97,7 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
     }
 
     public static void offerNetherStuffRecipe(Consumer<RecipeJsonProvider> exporter, Item input, Item result) {
-        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_BRICK}), Ingredient.ofItems(new ItemConvertible[]{input}), Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_BRICK}), RecipeCategory.TOOLS, result).criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK)).offerTo(exporter, getItemPath(result));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHER_BRICK), Ingredient.ofItems(input), Ingredient.ofItems(Items.NETHER_BRICK), RecipeCategory.TOOLS, result).criterion(hasItem(Items.NETHER_BRICK), conditionsFromItem(Items.NETHER_BRICK)).offerTo(exporter, getItemPath(result));
     }
 
     static {

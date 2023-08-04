@@ -1,16 +1,14 @@
 package com.brand.adabranium.data;
 
+import com.brand.adabranium.data.providers.AdabraniumBlockTagProvider;
+import com.brand.adabranium.data.providers.AdabraniumItemTagProvider;
+import com.brand.adabranium.data.providers.AdabraniumModelProvider;
+import com.brand.adabranium.data.providers.AdabraniumRecipesProvider;
 import com.brand.adabranium.worldgen.AdabraniumWorldgenProvider;
-import com.google.gson.JsonElement;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
-import net.minecraft.util.Identifier;
-
-import java.util.function.BiConsumer;
-import java.util.function.Supplier;
 
 public class AdabraniumDatagen implements DataGeneratorEntrypoint {
 
@@ -21,6 +19,8 @@ public class AdabraniumDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(AdabraniumRecipesProvider::new);
         pack.addProvider(AdabraniumWorldgenProvider::new);
         pack.addProvider(AdabraniumModelProvider::new);
+        AdabraniumBlockTagProvider blockTags = pack.addProvider(AdabraniumBlockTagProvider::new);
+        pack.addProvider((output, registries) -> new AdabraniumItemTagProvider(output, registries, blockTags));
 
     }
 

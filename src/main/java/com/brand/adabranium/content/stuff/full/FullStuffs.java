@@ -2,10 +2,10 @@ package com.brand.adabranium.content.stuff.full;
 
 import com.brand.adabranium.content.ModItems;
 import com.brand.adabranium.content.stuff.base.*;
-import net.minecraft.block.SmithingTableBlock;
-import net.minecraft.data.server.recipe.SmithingTrimRecipeJsonBuilder;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterial;
 
 import java.util.ArrayList;
 

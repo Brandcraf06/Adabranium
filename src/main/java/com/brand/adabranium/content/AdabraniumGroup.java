@@ -19,7 +19,7 @@ public class AdabraniumGroup {
 
     public static void init() {
         Registry.register(Registries.ITEM_GROUP, ADABRANIUM_GROUP, FabricItemGroup.builder()
-                .displayName(Text.translatable("itemGroup.adabraniummod.adabranium_group"))
+                .displayName(Text.translatable("itemGroup.adabranium.adabranium_group"))
                 .icon(() -> new ItemStack(ModItems.VIBRANIUM_INGOT))
                 .build()
         );

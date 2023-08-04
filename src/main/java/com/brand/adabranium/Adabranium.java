@@ -5,7 +5,6 @@ import com.brand.adabranium.content.ModBlocks;
 import com.brand.adabranium.content.ModItems;
 import com.brand.adabranium.content.stuff.potions.PotionsRecipes;
 import com.brand.adabranium.worldgen.AdabraniumWorldgenFeatures;
-import com.google.common.reflect.Reflection;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;

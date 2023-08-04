@@ -1,27 +1,12 @@
-package com.brand.adabranium.data;
+package com.brand.adabranium.data.providers;
 
-import com.brand.adabranium.content.ModItems;
 import com.brand.adabranium.content.stuff.full.FullStuffs;
-import com.brand.adabranium.content.stuff.materials.AdabraniumArmorMaterials;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.*;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.item.*;
-import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
-
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.BiConsumer;
-import java.util.function.Supplier;
 
 public class AdabraniumModelProvider extends FabricModelProvider {
 
