@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "adabraniummod:item/nether_pickaxe"
+        "layer0": "adabranium:item/nether_pickaxe"
     }
 }
