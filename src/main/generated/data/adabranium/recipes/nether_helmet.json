@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "base": {
+    "item": "minecraft:iron_helmet"
+  },
+  "result": {
+    "item": "adabranium:nether_helmet"
+  },
+  "template": {
+    "item": "minecraft:nether_brick"
+  }
+}

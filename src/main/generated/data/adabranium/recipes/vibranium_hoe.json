@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "adabranium:obsidian_rod"
+    },
+    "X": {
+      "item": "adabranium:vibranium_ingot"
+    }
+  },
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "result": {
+    "item": "adabranium:vibranium_hoe"
+  },
+  "show_notification": true
+}

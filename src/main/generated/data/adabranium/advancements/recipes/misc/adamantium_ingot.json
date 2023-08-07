@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_adamantium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adabranium:adamantium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "adabranium:adamantium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_adamantium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "adabranium:adamantium_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "adabranium:vibranium"
+    },
+    "B": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "adabranium:vibranium_ingot"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "adamantium",
+  "ingredient": {
+    "item": "adabranium:deepslate_adamantium_ore"
+  },
+  "result": "adabranium:adamantium"
+}

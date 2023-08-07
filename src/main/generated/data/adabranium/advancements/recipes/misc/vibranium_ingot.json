@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "adabranium:vibranium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "adabranium:vibranium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_vibranium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "adabranium:vibranium_ingot"
+    ]
+  },
+  "sends_telemetry_event": false
+}

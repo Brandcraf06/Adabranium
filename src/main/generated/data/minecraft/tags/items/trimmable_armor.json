@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "adabranium:vibranium_helmet",
+    "adabranium:vibranium_chestplate",
+    "adabranium:vibranium_leggings",
+    "adabranium:vibranium_boots",
+    "adabranium:adamantium_helmet",
+    "adabranium:adamantium_chestplate",
+    "adabranium:adamantium_leggings",
+    "adabranium:adamantium_boots",
+    "adabranium:nether_helmet",
+    "adabranium:nether_chestplate",
+    "adabranium:nether_leggings",
+    "adabranium:nether_boots"
+  ]
+}

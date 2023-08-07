@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "adabranium:heart_shaped_herb"
+    },
+    "B": {
+      "item": "adabranium:vibranium_dust"
+    },
+    "C": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "AAA",
+    " C "
+  ],
+  "result": {
+    "item": "adabranium:vibranium_soup"
+  },
+  "show_notification": true
+}

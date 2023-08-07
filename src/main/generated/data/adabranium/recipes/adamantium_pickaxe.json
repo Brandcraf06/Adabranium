@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "adabranium:adamantium_rod"
+    },
+    "X": {
+      "item": "adabranium:adamantium_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "adabranium:adamantium_pickaxe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "adabranium:adamantium_ingot"
+    }
+  },
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "result": {
+    "item": "adabranium:adamantium_chestplate"
+  },
+  "show_notification": true
+}

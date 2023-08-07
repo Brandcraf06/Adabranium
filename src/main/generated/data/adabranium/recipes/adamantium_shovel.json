@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "adabranium:adamantium_rod"
+    },
+    "X": {
+      "item": "adabranium:adamantium_ingot"
+    }
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "item": "adabranium:adamantium_shovel"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "result": {
+    "item": "adabranium:nether_sword"
+  },
+  "template": {
+    "item": "minecraft:nether_brick"
+  }
+}

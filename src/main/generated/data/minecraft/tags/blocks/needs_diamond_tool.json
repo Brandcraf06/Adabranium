@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "adabranium:vibranium_ore",
+    "adabranium:deepslate_vibranium_ore",
+    "adabranium:adamantium_block",
+    "adabranium:adamantium_ore",
+    "adabranium:deepslate_adamantium_ore",
+    "adabranium:vibranium_block",
+    "adabranium:adamantium_block"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "feature": "adabranium:ore_adamantium",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:trapezoid",
+        "max_inclusive": {
+          "above_bottom": 72
+        },
+        "min_inclusive": {
+          "above_bottom": -72
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

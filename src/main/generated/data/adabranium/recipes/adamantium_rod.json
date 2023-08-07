@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "adabranium:adamantium"
+    },
+    "B": {
+      "item": "adabranium:vibranium"
+    },
+    "C": {
+      "item": "adabranium:obsidian_rod"
+    }
+  },
+  "pattern": [
+    "A",
+    "B",
+    "C"
+  ],
+  "result": {
+    "count": 2,
+    "item": "adabranium:adamantium_rod"
+  },
+  "show_notification": true
+}
