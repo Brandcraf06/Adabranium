@@ -21,8 +21,8 @@ public class AdabraniumWorldgenFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_VIBRANIUM = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Adabranium.id("ore_vibranium"));
     public static final RegistryKey<PlacedFeature> PLACED_VIBRANIUM = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("ore_vibranium"));
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ADAMANTINE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Adabranium.id("ore_adamantine"));
-    public static final RegistryKey<PlacedFeature> PLACED_ADAMANTINE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("ore_adamantine"));
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ADAMANTINE = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Adabranium.id("ore_adamantium"));
+    public static final RegistryKey<PlacedFeature> PLACED_ADAMANTINE = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("ore_adamantium"));
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> HEART_SHAPED_PLANT = RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Adabranium.id("heart_shaped_plant"));
     public static final RegistryKey<PlacedFeature> PLACED_HEART_SHAPED_PLANT = RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("heart_shaped_plant"));
@@ -38,7 +38,7 @@ public class AdabraniumWorldgenFeatures {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("ore_adamantine")));
+                RegistryKey.of(RegistryKeys.PLACED_FEATURE, Adabranium.id("ore_adamantium")));
 
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(BiomeTags.IS_JUNGLE),
