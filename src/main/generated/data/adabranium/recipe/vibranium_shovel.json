@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "adabranium:obsidian_rod",
+    "X": "adabranium:vibranium_ingot"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "adabranium:vibranium_shovel"
+  }
+}

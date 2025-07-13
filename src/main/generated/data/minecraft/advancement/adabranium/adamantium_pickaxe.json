@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adabranium/adamantium_ingot",
+  "criteria": {
+    "adamantium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:adamantium_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.adamantium_pickaxe.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:adamantium_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.adabranium.adamantium_pickaxe.title"
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

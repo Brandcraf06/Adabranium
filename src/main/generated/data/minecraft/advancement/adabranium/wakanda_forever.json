@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adabranium/root",
+  "criteria": {
+    "vibranium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.wakanda_forever.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:vibranium_ingot"
+    },
+    "title": {
+      "translate": "advancements.adabranium.wakanda_forever.title"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

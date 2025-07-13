@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "netherite_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:netherite_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "adabranium:textures/adv_background.png",
+    "description": {
+      "translate": "advancements.adabranium.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:vibranium"
+    },
+    "title": {
+      "translate": "advancements.adabranium.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "netherite_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

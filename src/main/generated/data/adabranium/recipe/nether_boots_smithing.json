@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#adabranium:nether_brick_materials",
+  "base": "minecraft:iron_boots",
+  "result": {
+    "id": "adabranium:nether_boots"
+  },
+  "template": "minecraft:nether_brick"
+}

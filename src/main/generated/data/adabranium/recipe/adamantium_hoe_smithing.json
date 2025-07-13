@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:adamantium_ingot",
+  "base": "adabranium:vibranium_hoe",
+  "result": {
+    "id": "adabranium:adamantium_hoe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

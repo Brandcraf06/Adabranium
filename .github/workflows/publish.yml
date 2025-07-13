@@ -1,5 +1,5 @@
 name: Publish
-on: [pull_request, workflow_dispatch] # Manual trigger
+on: [workflow_dispatch] # Manual trigger
 
 permissions:
   contents: write
@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     container:
-      image: eclipse-temurin:20-jdk
+      image: mcr.microsoft.com/openjdk/jdk:21-ubuntu
       options: --user root
     steps:
       - run: apt update && apt install git -y && git --version
@@ -24,7 +24,7 @@ jobs:
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
       - uses: gradle/wrapper-validation-action@v1
-      - run: ./gradlew checkVersion build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
+      - run: ./gradlew build publish publishMods --stacktrace -Porg.gradle.parallel.threads=4
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}

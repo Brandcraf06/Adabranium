@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:adamantium_ingot",
+  "base": "adabranium:vibranium_shovel",
+  "result": {
+    "id": "adabranium:adamantium_shovel"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

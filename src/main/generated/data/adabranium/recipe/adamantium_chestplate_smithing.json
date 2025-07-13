@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:adamantium_ingot",
+  "base": "adabranium:vibranium_chestplate",
+  "result": {
+    "id": "adabranium:adamantium_chestplate"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

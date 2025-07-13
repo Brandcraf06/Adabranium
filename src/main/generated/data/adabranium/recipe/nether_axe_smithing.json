@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#adabranium:nether_brick_materials",
+  "base": "minecraft:iron_axe",
+  "result": {
+    "id": "adabranium:nether_axe"
+  },
+  "template": "minecraft:nether_brick"
+}

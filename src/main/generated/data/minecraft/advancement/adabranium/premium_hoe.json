@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:adabranium/adamantium_ingot",
+  "criteria": {
+    "adamantium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:adamantium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.premium_hoe.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "adabranium:adamantium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.adabranium.premium_hoe.title"
+    }
+  },
+  "requirements": [
+    [
+      "adamantium_hoe"
+    ]
+  ],
+  "rewards": {
+    "experience": 15
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,66 @@
+{
+  "parent": "minecraft:adabranium/wakanda_forever",
+  "criteria": {
+    "vibranium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "vibranium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "vibranium_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "vibranium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.purple_panther.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:vibranium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.adabranium.purple_panther.title"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium_helmet",
+      "vibranium_chestplate",
+      "vibranium_leggings",
+      "vibranium_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

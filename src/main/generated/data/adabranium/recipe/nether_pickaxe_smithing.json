@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#adabranium:nether_brick_materials",
+  "base": "minecraft:iron_pickaxe",
+  "result": {
+    "id": "adabranium:nether_pickaxe"
+  },
+  "template": "minecraft:nether_brick"
+}
