@@ -1,6 +1,7 @@
 package com.brand.adabranium.datagen.providers;
 
 import com.brand.adabranium.registry.content.ModBlocks;
+import com.brand.adabranium.registry.content.ModItems;
 import com.brand.adabranium.registry.tag.AdabraniumItemTags;
 import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -38,17 +39,15 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
             @Override
             public void generate() {
 
-
-                offerStuffRecipes(VIBRANIUM_INGOT, OBSIDIAN_ROD,
-                        VIBRANIUM_STUFF.helmet,
-                        VIBRANIUM_STUFF.chestplate,
-                        VIBRANIUM_STUFF.leggings,
-                        VIBRANIUM_STUFF.boots,
-                        VIBRANIUM_STUFF.shovel,
-                        VIBRANIUM_STUFF.pickaxe,
-                        VIBRANIUM_STUFF.axe,
-                        VIBRANIUM_STUFF.hoe,
-                        VIBRANIUM_STUFF.sword);
+                offerVibraniumStuffRecipe(Items.NETHERITE_HELMET, VIBRANIUM_STUFF.helmet);
+                offerVibraniumStuffRecipe(Items.NETHERITE_CHESTPLATE, VIBRANIUM_STUFF.chestplate);
+                offerVibraniumStuffRecipe(Items.NETHERITE_LEGGINGS, VIBRANIUM_STUFF.leggings);
+                offerVibraniumStuffRecipe(Items.NETHERITE_BOOTS, VIBRANIUM_STUFF.boots);
+                offerVibraniumStuffRecipe(Items.NETHERITE_SHOVEL, VIBRANIUM_STUFF.shovel);
+                offerVibraniumStuffRecipe(Items.NETHERITE_PICKAXE, VIBRANIUM_STUFF.pickaxe);
+                offerVibraniumStuffRecipe(Items.NETHERITE_AXE, VIBRANIUM_STUFF.axe);
+                offerVibraniumStuffRecipe(Items.NETHERITE_HOE, VIBRANIUM_STUFF.hoe);
+                offerVibraniumStuffRecipe(Items.NETHERITE_SWORD, VIBRANIUM_STUFF.sword);
 
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.helmet, ADAMANTIUM_STUFF.helmet);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.chestplate, ADAMANTIUM_STUFF.chestplate);
@@ -82,9 +81,10 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerReversibleCompactingRecipesWithReverseRecipeGroup(RecipeCategory.MISC, ADAMANTIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_BLOCK, "adamantium_ingot_from_adamantium_block", "adamantium_ingot");
                 createShapeless(RecipeCategory.MISC, ADAMANTIUM_INGOT).input(ADAMANTIUM, 4).input(VIBRANIUM_INGOT, 4).group("adamantium_ingot").criterion(hasItem(ADAMANTIUM), conditionsFromItem(ADAMANTIUM)).offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, OBSIDIAN_ROD, 4).input('#', Blocks.OBSIDIAN).pattern("#").pattern("#").criterion(hasItem(Blocks.OBSIDIAN), conditionsFromItem(Blocks.OBSIDIAN)).offerTo(exporter);
-
                 createShaped(RecipeCategory.MISC, VIBRANIUM_SOUP).input('A', HEART_SHAPED_HERB).input('B', VIBRANIUM_DUST).input('C', Items.BOWL).pattern("ABA").pattern("AAA").pattern(" C ").criterion(hasItem(HEART_SHAPED_HERB), conditionsFromItem(HEART_SHAPED_HERB)).offerTo(exporter);
+
+                this.offerSmithingTemplateCopyingRecipe(VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.AMETHYST_BLOCK);
+                this.offerSmithingTemplateCopyingRecipe(ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.SCULK);
             }
 
             public void offerStuffRecipes(ItemConvertible material, ItemConvertible rod, ItemConvertible helmet, ItemConvertible chestplate, ItemConvertible leggings, ItemConvertible boots, ItemConvertible shovel, ItemConvertible pickaxe, ItemConvertible axe, ItemConvertible hoe, ItemConvertible sword) {
@@ -103,8 +103,12 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItem(template), Ingredient.ofItem(input), material, RecipeCategory.TOOLS, result).criterion("has_" + name, condition).offerTo(exporter, this.getItemPath(result) + "_smithing");
             }
 
+            public void offerVibraniumStuffRecipe(Item input, Item result) {
+                createUpgradeRecipe(input, Ingredient.ofItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT), result, ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, "vibranium_ingot");
+            }
+
             public void offerAdamantiumStuffRecipe(Item input, Item result) {
-                createUpgradeRecipe(input, Ingredient.ofItem(ADAMANTIUM_INGOT), conditionsFromItem(ADAMANTIUM_INGOT), result, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, "adamantium_plate");
+                createUpgradeRecipe(input, Ingredient.ofItem(ADAMANTIUM_INGOT), conditionsFromItem(ADAMANTIUM_INGOT), result, ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, "adamantium_ingot");
             }
 
             public void offerNetherStuffRecipe(Item input, Item result) {

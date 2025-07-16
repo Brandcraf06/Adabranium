@@ -19,15 +19,6 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
-        advancement(translationBuilder, "root", "Adabranium", "Marvel powerful materials");
-        advancement(translationBuilder, "wakanda_forever", "Wakanda Forever", "Obtain vibranium and be the King of Wakanda");
-        advancement(translationBuilder, "vibranium_pickaxe", "A Strong Pick", "Craft a vibranium pickaxe");
-        advancement(translationBuilder, "adamantium_ingot", "Virtually Indestructible Metal", "Make an adamantium ingot with adamantium and vibranium ingots");
-        advancement(translationBuilder, "purple_panther", "Purple Panther", "Craft a piece of vibranium armor");
-        advancement(translationBuilder, "panther_powers", "Panther Powers", "Collect some heart shaped herbs in a jungle to craft a vibranium soup");
-        advancement(translationBuilder, "adamantium_pickaxe", "The Strongest Pick", "Craft an adamantium pickaxe");
-        advancement(translationBuilder, "adamantium_armor", "Mineverine", "Craft a piece of adamantium armor");
-        advancement(translationBuilder, "premium_hoe", "Premium Hoe", "Craft a useful adamantium hoe");
 
         translationBuilder.add(AdabraniumGroup.ADABRANIUM_GROUP, "Adabranium");
 
@@ -45,8 +36,6 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.VIBRANIUM_DUST, "Vibranium Dust");
         translationBuilder.add(ModBlocks.VIBRANIUM_BLOCK, "Vibranium Block");
 
-        translationBuilder.add(ModItems.OBSIDIAN_ROD, "Obsidian Rod");
-
         translationBuilder.add(ModBlocks.HEART_SHAPED_PLANT, "Heart Shaped Plant");
         translationBuilder.add(ModItems.HEART_SHAPED_HERB, "Heart Shaped Herb");
         translationBuilder.add(ModItems.VIBRANIUM_SOUP, "Vibranium Soup");
@@ -63,10 +52,36 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
             translationBuilder.add(fullStuffs.sword, name(fullStuffs.equipmentKey.getValue().getPath() + " Sword"));
         }
         translationBuilder.add(ModItems.ONESHOTIUM_SWORD, "Oneshotium Sword");
+
+        // Potions
         translationBuilder.add("item.minecraft.potion.effect.toughness", "Potion of Toughness");
         translationBuilder.add("item.minecraft.splash_potion.effect.toughness", "Splash Potion of Toughness");
         translationBuilder.add("item.minecraft.lingering_potion.effect.toughness", "Lingering Potion of Toughness");
         translationBuilder.add("item.minecraft.tipped_arrow.effect.toughness", "Arrow Potion of Toughness");
+
+        // Smithing Template
+        translationBuilder.add("item.adabranium.smithing_template.vibranium_upgrade.applies_to", "Netherite Equipment");
+        translationBuilder.add("item.adabranium.smithing_template.vibranium_upgrade.ingredients", "Vibranium Ingot");
+        translationBuilder.add("item.adabranium.smithing_template.vibranium_upgrade.base_slot_description", "Add netherite armor, weapon, or tool");
+        translationBuilder.add("item.adabranium.smithing_template.vibranium_upgrade.additions_slot_description", "Add Vibranium Ingot");
+        translationBuilder.add(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, "Vibranium Upgrade");
+
+        translationBuilder.add("item.adabranium.smithing_template.adamantium_upgrade.applies_to", "Vibranium Equipment");
+        translationBuilder.add("item.adabranium.smithing_template.adamantium_upgrade.ingredients", "Adamantium Ingot");
+        translationBuilder.add("item.adabranium.smithing_template.adamantium_upgrade.base_slot_description", "Add vibranium armor, weapon, or tool");
+        translationBuilder.add("item.adabranium.smithing_template.adamantium_upgrade.additions_slot_description", "Add Adamantium Ingot");
+        translationBuilder.add(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, "Adamantium Upgrade");
+
+        // Advancements
+        advancement(translationBuilder, "root", "Adabranium", "Marvel powerful materials");
+        advancement(translationBuilder, "wakanda_forever", "Wakanda Forever", "Obtain vibranium and be the King of Wakanda");
+        advancement(translationBuilder, "vibranium_pickaxe", "A Strong Pick", "Craft a vibranium pickaxe");
+        advancement(translationBuilder, "adamantium_ingot", "Virtually Indestructible Metal", "Make an adamantium ingot with adamantium and vibranium ingots");
+        advancement(translationBuilder, "purple_panther", "Purple Panther", "Craft a piece of vibranium armor");
+        advancement(translationBuilder, "panther_powers", "Panther Powers", "Collect some heart shaped herbs in a jungle to craft a vibranium soup");
+        advancement(translationBuilder, "adamantium_pickaxe", "The Strongest Pick", "Craft an adamantium pickaxe");
+        advancement(translationBuilder, "adamantium_armor", "Mineverine", "Craft a piece of adamantium armor");
+        advancement(translationBuilder, "premium_hoe", "Premium Hoe", "Craft a useful adamantium hoe");
 
     }
 

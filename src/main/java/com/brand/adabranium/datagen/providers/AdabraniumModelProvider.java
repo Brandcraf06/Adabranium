@@ -7,7 +7,6 @@ import com.brand.adabranium.registry.stuff.full.FullStuffs;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
-import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
@@ -37,9 +36,11 @@ public class AdabraniumModelProvider extends FabricModelProvider {
         modelGenerator.register(ModItems.VIBRANIUM.asItem(), Models.GENERATED);
         modelGenerator.register(ModItems.VIBRANIUM_INGOT.asItem(), Models.GENERATED);
         modelGenerator.register(ModItems.VIBRANIUM_DUST.asItem(), Models.GENERATED);
-        modelGenerator.register(ModItems.OBSIDIAN_ROD.asItem(), Models.GENERATED);
         modelGenerator.register(ModItems.HEART_SHAPED_HERB.asItem(), Models.GENERATED);
         modelGenerator.register(ModItems.VIBRANIUM_SOUP.asItem(), Models.GENERATED);
+        modelGenerator.register(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        modelGenerator.register(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+
 
         for (FullStuffs fullStuffs : FullStuffs.values()) {
             modelGenerator.registerArmor(fullStuffs.helmet.asItem(), fullStuffs.equipmentKey, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);

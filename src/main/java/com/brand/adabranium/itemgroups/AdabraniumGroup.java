@@ -38,7 +38,8 @@ public class AdabraniumGroup {
             entries.add(ModItems.ADAMANTIUM_INGOT);
             entries.add(ModBlocks.ADAMANTIUM_BLOCK);
 
-            entries.add(ModItems.OBSIDIAN_ROD);
+            entries.add(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE);
+            entries.add(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE);
 
             for (FullStuffs stuff : FullStuffs.values()) {
                 entries.add(stuff.helmet);

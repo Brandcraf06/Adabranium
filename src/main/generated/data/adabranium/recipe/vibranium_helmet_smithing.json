@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:vibranium_ingot",
+  "base": "minecraft:netherite_helmet",
+  "result": {
+    "id": "adabranium:vibranium_helmet"
+  },
+  "template": "adabranium:vibranium_upgrade_smithing_template"
+}

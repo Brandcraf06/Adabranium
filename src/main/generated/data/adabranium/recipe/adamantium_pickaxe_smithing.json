@@ -5,5 +5,5 @@
   "result": {
     "id": "adabranium:adamantium_pickaxe"
   },
-  "template": "minecraft:netherite_upgrade_smithing_template"
+  "template": "adabranium:adamantium_upgrade_smithing_template"
 }

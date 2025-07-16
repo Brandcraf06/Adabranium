@@ -4,7 +4,6 @@ import com.brand.adabranium.registry.stuff.equipment.AdaEquipmentAssetKeys;
 import com.brand.adabranium.registry.tag.AdabraniumItemTags;
 import com.google.common.collect.Maps;
 import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.item.equipment.ArmorMaterials;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.sound.SoundEvents;
 

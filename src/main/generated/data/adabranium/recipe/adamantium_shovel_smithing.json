@@ -5,5 +5,5 @@
   "result": {
     "id": "adabranium:adamantium_shovel"
   },
-  "template": "minecraft:netherite_upgrade_smithing_template"
+  "template": "adabranium:adamantium_upgrade_smithing_template"
 }
