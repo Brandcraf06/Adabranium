@@ -41,7 +41,7 @@ public class AdabraniumWorldgenProvider extends FabricDynamicRegistryProvider {
         List<OreFeatureConfig.Target> vibranium_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> adamantium_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.ADAMANTIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.getDefaultState()));
 
-        ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.ORE_VIBRANIUM, Feature.ORE, new OreFeatureConfig(vibranium_list, 5, 0f));
+        ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.ORE_VIBRANIUM, Feature.ORE, new OreFeatureConfig(vibranium_list, 4, 0.2f));
         ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.ORE_ADAMANTIUM, Feature.ORE, new OreFeatureConfig(adamantium_list, 5, 1.0F));
         ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT, Feature.FLOWER, new RandomPatchFeatureConfig(64, 0, 0, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2))))));
     }

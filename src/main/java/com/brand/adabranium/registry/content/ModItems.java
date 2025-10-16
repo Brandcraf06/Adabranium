@@ -2,7 +2,7 @@ package com.brand.adabranium.registry.content;
 
 import com.brand.adabranium.Adabranium;
 import com.brand.adabranium.items.HeartShapedHerbItem;
-import com.brand.adabranium.registry.stuff.equipment.AdaEquipmentAssetKeys;
+import com.brand.adabranium.registry.stuff.equipment.AdabraniumEquipmentAssetKeys;
 import com.brand.adabranium.registry.stuff.full.FullStuffs;
 import com.brand.adabranium.registry.stuff.materials.AdabraniumArmorMaterials;
 import com.brand.adabranium.registry.stuff.materials.AdabraniumToolMaterials;
@@ -62,19 +62,19 @@ public class ModItems {
             AdabraniumArmorMaterials.ArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM,
             5.0F, -3.0F,
             -6, -0.0F,
-            true, AdaEquipmentAssetKeys.VIBRANIUM);
+            true, AdabraniumEquipmentAssetKeys.VIBRANIUM);
 
     public static final FullStuffs ADAMANTIUM_STUFF = new FullStuffs("adamantium",
             AdabraniumArmorMaterials.ArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM,
             5.0F, -3.0F,
             -8, -0.0F,
-            true, AdaEquipmentAssetKeys.ADAMANTIUM);
+            true, AdabraniumEquipmentAssetKeys.ADAMANTIUM);
 
     public static final FullStuffs NETHER_STUFF = new FullStuffs("nether",
             AdabraniumArmorMaterials.ArmorMaterials.NETHER_BRICK, AdabraniumToolMaterials.NETHER_BRICK,
             6.0F, -3.1F,
             -2, -1.0F,
-            true, AdaEquipmentAssetKeys.NETHER_BRICK);
+            true, AdabraniumEquipmentAssetKeys.NETHER_BRICK);
 
     public static final Item ONESHOTIUM_SWORD = register("oneshotium_sword", (new Item.Settings()).sword(AdabraniumToolMaterials.ONESHOTIUM, 0, 0.0F));
 
