@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:nether_brick"
+  },
+  "base": {
+    "item": "minecraft:iron_hoe"
+  },
+  "result": {
+    "count": 1,
+    "id": "adabranium:nether_hoe"
+  },
+  "template": {
+    "item": "minecraft:nether_brick"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:adabranium/wakanda_forever",
+  "criteria": {
+    "vibranium_soup": {
+      "conditions": {
+        "item": {
+          "items": "adabranium:vibranium_soup"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.panther_powers.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:vibranium_soup"
+    },
+    "title": {
+      "translate": "advancements.adabranium.panther_powers.title"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium_soup"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

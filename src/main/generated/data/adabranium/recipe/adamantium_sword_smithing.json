@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "adabranium:adamantium_ingot"
+  },
+  "base": {
+    "item": "adabranium:vibranium_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "adabranium:adamantium_sword"
+  },
+  "template": {
+    "item": "adabranium:adamantium_upgrade_smithing_template"
+  }
+}

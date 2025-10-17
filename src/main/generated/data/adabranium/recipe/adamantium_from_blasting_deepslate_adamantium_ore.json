@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "adamantium",
+  "ingredient": {
+    "item": "adabranium:deepslate_adamantium_ore"
+  },
+  "result": {
+    "id": "adabranium:adamantium"
+  }
+}

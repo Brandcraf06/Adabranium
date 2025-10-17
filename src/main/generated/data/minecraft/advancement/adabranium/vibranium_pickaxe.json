@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adabranium/wakanda_forever",
+  "criteria": {
+    "vibranium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "adabranium:vibranium_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.adabranium.vibranium_pickaxe.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "adabranium:vibranium_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.adabranium.vibranium_pickaxe.title"
+    }
+  },
+  "requirements": [
+    [
+      "vibranium_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

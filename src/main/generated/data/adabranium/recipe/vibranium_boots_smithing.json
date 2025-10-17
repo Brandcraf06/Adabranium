@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "adabranium:vibranium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "adabranium:vibranium_boots"
+  },
+  "template": {
+    "item": "adabranium:vibranium_upgrade_smithing_template"
+  }
+}
