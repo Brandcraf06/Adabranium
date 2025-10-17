@@ -45,10 +45,6 @@ public class FullStuffs {
         LIST.add(this);
     }
 
-    public FullStuffs(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, int hoeattackDamage, float hoeattackSpeed, RegistryKey<EquipmentAsset> equipmentKey) {
-        this(type, armorMaterial, toolMaterial, axeattackDamage, axeattackSpeed, hoeattackDamage, hoeattackSpeed, false, equipmentKey);
-    }
-
     public static ArrayList<FullStuffs> values() {
         return LIST;
     }
