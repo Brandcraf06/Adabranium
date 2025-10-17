@@ -23,7 +23,7 @@
 
 - Vibranium sets are better than Netherite, mine faster and the sword inflict 10 attack damage. The
   durability for tools and sword is 2701.
-- Adamantium Sets is the best equipment, mine faster than vibranium and the sword inflict 13 attack damage. The
+- Adamantium Sets is the best equipment, mine faster than vibranium and the sword inflict 12 attack damage. The
   durability for tools and sword is 3346.
 
 - You can melt Vibranium Ingot in a blast furnace to make Vibranium Dust
