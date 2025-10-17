@@ -6,10 +6,11 @@
 * Vibranium ingot is now crafted using 4 vibraniums & 4 obsidians
 * Adamantium ingot is now crafted using 4 adamantiums & 4 vibraniums
 * Vibranium stuff is now obtained by upgrading netherite stuff
-  * Vibranium Upgrade can be found in Jungle Temples and Desert Pyramids chests
+  * Vibranium Upgrade can be found in jungle temples and desert pyramids chests
 * Adamantium stuff is now obtained by upgrading vibranium stuff
-  * Adamantium Upgrade can be found in Ancient Cities chests
+  * Adamantium Upgrade can be found in ancient cities chests
 * Removed now unused obsidian & adamantium rods
 * Reduced vibranium & adamantium stuff durability
   * Vibranium tools/sword: 2990 -> 2701
   * Adamantium tools/sword: 4280 -> 3346
+* Reduced adamantium stuff attack damage
