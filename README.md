@@ -3,7 +3,7 @@
 
 ##### The mod adds powerful Marvel materials: the Vibranium from my "Nether Things" mod and the Adamantium
 
-- You can find **Vibranium Ore** rarely below layer 8 and **Adamantium Ore** rarely below layer 8 in the overworld.
+- You can find **Vibranium Ore** and **Adamantium Ore** rarely below layer 8 in the overworld.
 
   - Adamantium Ore is completely buried (never spawn incontact with air) and Vibranium Ore is partially buried.
   - They are generated as spread, the more you go deeper the more likely you are to find them.
@@ -26,7 +26,7 @@
 - Adamantium Sets is the best equipment, mine faster than vibranium and the sword inflict 12 attack damage. The
   durability for tools and sword is 3346.
 
-- You can melt Vibranium Ingot in a blast furnace to make Vibranium Dust
+- You can melt Vibranium in a blast furnace to make Vibranium Dust
 - You can find Heart Shaped Plant in jungles to obtain Heart Shaped Herb
   - Heart Shaped Herb can make a Toughness Potion (Resistance I) in a brewing stand
   - You can make a Vibranium Soup with some Heart Shaped Herbs and a vibranium dust.
