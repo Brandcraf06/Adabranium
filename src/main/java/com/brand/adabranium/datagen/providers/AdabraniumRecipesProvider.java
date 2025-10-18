@@ -71,7 +71,7 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
         offerSmelting(exporter, ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 200, "adamantium");
         offerBlasting(exporter, ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 100, "adamantium");
         offerReversibleCompactingRecipesWithReverseRecipeGroup(exporter, RecipeCategory.MISC, ADAMANTIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_BLOCK, "adamantium_ingot_from_adamantium_block", "adamantium_ingot");
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ADAMANTIUM_INGOT).input(ADAMANTIUM, 4).input(Blocks.OBSIDIAN, 4).group("adamantium_ingot").criterion(hasItem(ADAMANTIUM), conditionsFromItem(ADAMANTIUM)).offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ADAMANTIUM_INGOT).input(ADAMANTIUM, 4).input(VIBRANIUM_INGOT, 4).group("adamantium_ingot").criterion(hasItem(ADAMANTIUM), conditionsFromItem(ADAMANTIUM)).offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, VIBRANIUM_SOUP).input('A', HEART_SHAPED_HERB).input('B', VIBRANIUM_DUST).input('C', Items.BOWL).pattern("ABA").pattern("AAA").pattern(" C ").criterion(hasItem(HEART_SHAPED_HERB), conditionsFromItem(HEART_SHAPED_HERB)).offerTo(exporter);
 

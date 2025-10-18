@@ -4,7 +4,7 @@
   * Vibranium blobs are now slightly smaller
   * Generates less in contact with air
 * Vibranium ingot is now crafted using 4 vibraniums & 4 obsidians
-* Adamantium ingot is now crafted using 4 adamantiums & 4 vibraniums
+* Adamantium ingot is now crafted using 4 adamantiums & 4 vibranium ingots
 * Vibranium stuff is now obtained by upgrading netherite stuff
   * Vibranium Upgrade can be found in jungle temples and desert pyramids chests
 * Adamantium stuff is now obtained by upgrading vibranium stuff
