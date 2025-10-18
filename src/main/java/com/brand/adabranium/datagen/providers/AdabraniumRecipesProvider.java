@@ -71,8 +71,8 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
 
                 offerSmelting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 200, "vibranium");
                 offerBlasting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 100, "vibranium");
-                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(VIBRANIUM_INGOT), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 200).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_smelting");
-                CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(VIBRANIUM_INGOT), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 100).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_blasting");
+                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 200).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_smelting");
+                CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 100).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_blasting");
                 createShapeless(RecipeCategory.MISC, VIBRANIUM_INGOT).input(VIBRANIUM, 4).input(Blocks.OBSIDIAN, 4).group("vibranium_ingot").criterion(hasItem(VIBRANIUM), conditionsFromItem(VIBRANIUM)).offerTo(exporter);
                 offerReversibleCompactingRecipesWithReverseRecipeGroup(RecipeCategory.MISC, VIBRANIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIBRANIUM_BLOCK, "vibranium_ingot_from_vibranium_block", "vibranium_ingot");
 

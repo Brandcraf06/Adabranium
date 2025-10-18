@@ -3,7 +3,7 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.7,
-  "ingredient": "adabranium:vibranium_ingot",
+  "ingredient": "adabranium:vibranium",
   "result": {
     "id": "adabranium:vibranium_dust"
   }
