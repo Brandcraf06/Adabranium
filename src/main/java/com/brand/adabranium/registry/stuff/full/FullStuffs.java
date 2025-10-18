@@ -44,10 +44,6 @@ public class FullStuffs {
         LIST.add(this);
     }
 
-    public FullStuffs(String type, int armorDurabilityMultiplier, RegistryEntry<ArmorMaterial> armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, int hoeattackDamage, float hoeattackSpeed) {
-        this(type, armorDurabilityMultiplier, armorMaterial, toolMaterial, axeattackDamage, axeattackSpeed, hoeattackDamage, hoeattackSpeed, false);
-    }
-
     public static ArrayList<FullStuffs> values() {
         return LIST;
     }

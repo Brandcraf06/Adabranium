@@ -79,18 +79,6 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
         offerSmithingTemplateCopyingRecipe(exporter, ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.SCULK);
     }
 
-    public static void offerStuffRecipes(RecipeExporter exporter, ItemConvertible material, ItemConvertible rod, ItemConvertible helmet, ItemConvertible chestplate, ItemConvertible leggings, ItemConvertible boots, ItemConvertible shovel, ItemConvertible pickaxe, ItemConvertible axe, ItemConvertible hoe, ItemConvertible sword) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, helmet).input('X', material).pattern("XXX").pattern("X X").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, chestplate).input('X', material).pattern("X X").pattern("XXX").pattern("XXX").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, leggings).input('X', material).pattern("XXX").pattern("X X").pattern("X X").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, boots).input('X', material).pattern("X X").pattern("X X").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, shovel).input('#', rod).input('X', material).pattern("X").pattern("#").pattern("#").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, pickaxe).input('#', rod).input('X', material).pattern("XXX").pattern(" # ").pattern(" # ").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, axe).input('#', rod).input('X', material).pattern("XX").pattern("X#").pattern(" #").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, hoe).input('#', rod).input('X', material).pattern("XX").pattern(" #").pattern(" #").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, sword).input('#', rod).input('X', material).pattern("X").pattern("X").pattern("#").criterion(hasItem(material), conditionsFromItem(material)).offerTo(exporter);
-    }
-
     public void createUpgradeRecipe(RecipeExporter exporter, Item input, Ingredient material, AdvancementCriterion<?> condition, Item result, Item template, String name) {
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(template), Ingredient.ofItems(input), material, RecipeCategory.TOOLS, result).criterion("has_" + name, condition).offerTo(exporter, getItemPath(result) + "_smithing");
     }

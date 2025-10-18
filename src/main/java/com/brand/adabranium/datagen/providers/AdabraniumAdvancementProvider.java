@@ -116,7 +116,7 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
         AdvancementEntry premiumHoe = Advancement.Builder.create()
                 .parent(adamantiumIngot)
                 .display(
-                        ModItems.ADAMANTIUM_STUFF.chestplate,
+                        ModItems.ADAMANTIUM_STUFF.hoe,
                         title("premium_hoe"), description("premium_hoe"), null,
                         AdvancementFrame.CHALLENGE, true, true, true
                 )
@@ -127,7 +127,7 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
     }
 
     private Identifier background(String name) {
-        return Adabranium.id("textures/" + name + ".png");
+        return Adabranium.id(name);
     }
 
     public Text title(String name) {

@@ -78,14 +78,14 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
 
         // Advancements
         advancement(translationBuilder, "root", "Adabranium", "Marvel powerful materials");
-        advancement(translationBuilder, "wakanda_forever", "Wakanda Forever", "Obtain vibranium and be the King of Wakanda");
-        advancement(translationBuilder, "vibranium_pickaxe", "A Strong Pick", "Craft a vibranium pickaxe");
+        advancement(translationBuilder, "wakanda_forever", "Wakanda Forever", "Craft a vibranium ingot, with vibranium and obsidian, and be the King of Wakanda");
+        advancement(translationBuilder, "vibranium_pickaxe", "A Strong Pick", "Upgrade a Netherite pickaxe to vibranium");
         advancement(translationBuilder, "adamantium_ingot", "Virtually Indestructible Metal", "Make an adamantium ingot with adamantium and vibranium ingots");
-        advancement(translationBuilder, "purple_panther", "Purple Panther", "Craft a piece of vibranium armor");
+        advancement(translationBuilder, "purple_panther", "Purple Panther", "Upgrade a piece of Netherite armor to vibranium");
         advancement(translationBuilder, "panther_powers", "Panther Powers", "Collect some heart shaped herbs in a jungle to craft a vibranium soup");
-        advancement(translationBuilder, "adamantium_pickaxe", "The Strongest Pick", "Craft an adamantium pickaxe");
-        advancement(translationBuilder, "adamantium_armor", "Mineverine", "Craft a piece of adamantium armor");
-        advancement(translationBuilder, "premium_hoe", "Premium Hoe", "Craft a useful adamantium hoe");
+        advancement(translationBuilder, "adamantium_pickaxe", "The Strongest Pick", "Upgrade a vibranium pickaxe to adamantium");
+        advancement(translationBuilder, "adamantium_armor", "Mineverine", "Upgrade a full vibranium armor to adamantium");
+        advancement(translationBuilder, "premium_hoe", "Premium Hoe", "Make a useful adamantium hoe");
 
     }
 

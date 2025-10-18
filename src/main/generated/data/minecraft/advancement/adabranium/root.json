@@ -12,7 +12,7 @@
     }
   },
   "display": {
-    "background": "adabranium:textures/adv_background.png",
+    "background": "adabranium:adv_background",
     "description": {
       "translate": "advancements.adabranium.root.description"
     },
