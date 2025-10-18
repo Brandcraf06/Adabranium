@@ -9,6 +9,7 @@
   * Vibranium Upgrade can be found in jungle temples and desert pyramids chests
 * Adamantium stuff is now obtained by upgrading vibranium stuff
   * Adamantium Upgrade can be found in ancient cities chests
+* Vibranium dust now require vibranium instead of vibranium ingot
 * Removed now unused obsidian & adamantium rods
 * Reduced vibranium & adamantium stuff durability
   * Vibranium tools/sword: 2990 -> 2701
