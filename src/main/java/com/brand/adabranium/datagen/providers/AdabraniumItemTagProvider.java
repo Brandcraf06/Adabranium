@@ -5,31 +5,31 @@ import com.brand.adabranium.registry.stuff.full.FullStuffs;
 import com.brand.adabranium.registry.tag.AdabraniumItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
 public class AdabraniumItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public AdabraniumItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture, BlockTagProvider blockTagProvider) {
+    public AdabraniumItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture, BlockTagProvider blockTagProvider) {
         super(output, registriesFuture, blockTagProvider);
     }
 
     private void copy(Identifier id) {
-        TagKey<Block> blockTag = TagKey.of(RegistryKeys.BLOCK, id);
-        TagKey<Item> itemTag = TagKey.of(RegistryKeys.ITEM, id);
+        TagKey<Block> blockTag = TagKey.create(Registries.BLOCK, id);
+        TagKey<Item> itemTag = TagKey.create(Registries.ITEM, id);
 
         this.copy(blockTag, itemTag);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup registries) {
+    protected void addTags(HolderLookup.Provider registries) {
 
         this.valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(ModItems.VIBRANIUM_INGOT)

@@ -1,9 +1,9 @@
 package com.brand.adabranium.registry.tag;
 
 import com.brand.adabranium.Adabranium;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 
 public final class AdabraniumItemTags {
 
@@ -15,6 +15,6 @@ public final class AdabraniumItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, Adabranium.id(id));
+        return TagKey.create(Registries.ITEM, Adabranium.id(id));
     }
 }

@@ -6,18 +6,14 @@ import com.brand.adabranium.registry.tag.AdabraniumItemTags;
 import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.advancement.AdvancementCriterion;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
-import net.minecraft.data.recipe.RecipeExporter;
-import net.minecraft.data.recipe.RecipeGenerator;
-import net.minecraft.data.recipe.SmithingTransformRecipeJsonBuilder;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.advancements.Criterion;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,18 +22,18 @@ import static com.brand.adabranium.registry.content.ModItems.*;
 public class AdabraniumRecipesProvider extends FabricRecipeProvider {
 
 
-    public AdabraniumRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public AdabraniumRecipesProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registryLookup, RecipeExporter exporter) {
-        return new RecipeGenerator(registryLookup, exporter) {
-            private static final ImmutableList<ItemConvertible> VIBRANIUM_ORES = ImmutableList.of(ModBlocks.VIBRANIUM_ORE, ModBlocks.DEEPSLATE_VIBRANIUM_ORE);
-            private static final ImmutableList<ItemConvertible> ADAMANTIUM_ORES = ImmutableList.of(ModBlocks.ADAMANTIUM_ORE, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registryLookup, RecipeOutput exporter) {
+        return new RecipeProvider(registryLookup, exporter) {
+            private static final ImmutableList<ItemLike> VIBRANIUM_ORES = ImmutableList.of(ModBlocks.VIBRANIUM_ORE, ModBlocks.DEEPSLATE_VIBRANIUM_ORE);
+            private static final ImmutableList<ItemLike> ADAMANTIUM_ORES = ImmutableList.of(ModBlocks.ADAMANTIUM_ORE, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE);
 
             @Override
-            public void generate() {
+            public void buildRecipes() {
 
                 offerVibraniumStuffRecipe(Items.NETHERITE_HELMET, VIBRANIUM_STUFF.helmet);
                 offerVibraniumStuffRecipe(Items.NETHERITE_CHESTPLATE, VIBRANIUM_STUFF.chestplate);
@@ -69,38 +65,38 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerNetherStuffRecipe(Items.IRON_HOE, NETHER_STUFF.hoe);
                 offerNetherStuffRecipe(Items.IRON_SWORD, NETHER_STUFF.sword);
 
-                offerSmelting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 200, "vibranium");
-                offerBlasting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 100, "vibranium");
-                CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 200).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_smelting");
-                CookingRecipeJsonBuilder.createBlasting(Ingredient.ofItems(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 100).criterion(hasItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT)).offerTo(exporter, getItemPath(VIBRANIUM_DUST) + "_from_blasting");
-                createShapeless(RecipeCategory.MISC, VIBRANIUM_INGOT).input(VIBRANIUM, 4).input(Blocks.OBSIDIAN, 4).group("vibranium_ingot").criterion(hasItem(VIBRANIUM), conditionsFromItem(VIBRANIUM)).offerTo(exporter);
-                offerReversibleCompactingRecipesWithReverseRecipeGroup(RecipeCategory.MISC, VIBRANIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIBRANIUM_BLOCK, "vibranium_ingot_from_vibranium_block", "vibranium_ingot");
+                oreSmelting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 200, "vibranium");
+                oreBlasting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 100, "vibranium");
+                SimpleCookingRecipeBuilder.smelting(Ingredient.of(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 200).unlockedBy(getHasName(VIBRANIUM_INGOT), has(VIBRANIUM_INGOT)).save(output, getItemName(VIBRANIUM_DUST) + "_from_smelting");
+                SimpleCookingRecipeBuilder.blasting(Ingredient.of(VIBRANIUM), RecipeCategory.MISC, VIBRANIUM_DUST, 0.7F, 100).unlockedBy(getHasName(VIBRANIUM_INGOT), has(VIBRANIUM_INGOT)).save(output, getItemName(VIBRANIUM_DUST) + "_from_blasting");
+                shapeless(RecipeCategory.MISC, VIBRANIUM_INGOT).requires(VIBRANIUM, 4).requires(Blocks.OBSIDIAN, 4).group("vibranium_ingot").unlockedBy(getHasName(VIBRANIUM), has(VIBRANIUM)).save(output);
+                nineBlockStorageRecipesRecipesWithCustomUnpacking(RecipeCategory.MISC, VIBRANIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIBRANIUM_BLOCK, "vibranium_ingot_from_vibranium_block", "vibranium_ingot");
 
-                offerSmelting(ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 200, "adamantium");
-                offerBlasting(ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 100, "adamantium");
-                offerReversibleCompactingRecipesWithReverseRecipeGroup(RecipeCategory.MISC, ADAMANTIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_BLOCK, "adamantium_ingot_from_adamantium_block", "adamantium_ingot");
-                createShapeless(RecipeCategory.MISC, ADAMANTIUM_INGOT).input(ADAMANTIUM, 4).input(VIBRANIUM_INGOT, 4).group("adamantium_ingot").criterion(hasItem(ADAMANTIUM), conditionsFromItem(ADAMANTIUM)).offerTo(exporter);
+                oreSmelting(ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 200, "adamantium");
+                oreBlasting(ADAMANTIUM_ORES, RecipeCategory.MISC, ADAMANTIUM, 1.0F, 100, "adamantium");
+                nineBlockStorageRecipesRecipesWithCustomUnpacking(RecipeCategory.MISC, ADAMANTIUM_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_BLOCK, "adamantium_ingot_from_adamantium_block", "adamantium_ingot");
+                shapeless(RecipeCategory.MISC, ADAMANTIUM_INGOT).requires(ADAMANTIUM, 4).requires(VIBRANIUM_INGOT, 4).group("adamantium_ingot").unlockedBy(getHasName(ADAMANTIUM), has(ADAMANTIUM)).save(output);
 
-                createShaped(RecipeCategory.MISC, VIBRANIUM_SOUP).input('A', HEART_SHAPED_HERB).input('B', VIBRANIUM_DUST).input('C', Items.BOWL).pattern("ABA").pattern("AAA").pattern(" C ").criterion(hasItem(HEART_SHAPED_HERB), conditionsFromItem(HEART_SHAPED_HERB)).offerTo(exporter);
+                shaped(RecipeCategory.MISC, VIBRANIUM_SOUP).define('A', HEART_SHAPED_HERB).define('B', VIBRANIUM_DUST).define('C', Items.BOWL).pattern("ABA").pattern("AAA").pattern(" C ").unlockedBy(getHasName(HEART_SHAPED_HERB), has(HEART_SHAPED_HERB)).save(output);
 
-                this.offerSmithingTemplateCopyingRecipe(VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.AMETHYST_BLOCK);
-                this.offerSmithingTemplateCopyingRecipe(ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.SCULK);
+                this.copySmithingTemplate(VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.AMETHYST_BLOCK);
+                this.copySmithingTemplate(ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, Blocks.SCULK);
             }
 
-            public void createUpgradeRecipe(Item input, Ingredient material, AdvancementCriterion<?> condition, Item result, Item template, String name) {
-                SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItem(template), Ingredient.ofItem(input), material, RecipeCategory.TOOLS, result).criterion("has_" + name, condition).offerTo(exporter, this.getItemPath(result) + "_smithing");
+            public void createUpgradeRecipe(Item input, Ingredient material, Criterion<?> condition, Item result, Item template, String name) {
+                SmithingTransformRecipeBuilder.smithing(Ingredient.of(template), Ingredient.of(input), material, RecipeCategory.TOOLS, result).unlocks("has_" + name, condition).save(output, this.getItemName(result) + "_smithing");
             }
 
             public void offerVibraniumStuffRecipe(Item input, Item result) {
-                createUpgradeRecipe(input, Ingredient.ofItem(VIBRANIUM_INGOT), conditionsFromItem(VIBRANIUM_INGOT), result, ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, "vibranium_ingot");
+                createUpgradeRecipe(input, Ingredient.of(VIBRANIUM_INGOT), has(VIBRANIUM_INGOT), result, ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, "vibranium_ingot");
             }
 
             public void offerAdamantiumStuffRecipe(Item input, Item result) {
-                createUpgradeRecipe(input, Ingredient.ofItem(ADAMANTIUM_INGOT), conditionsFromItem(ADAMANTIUM_INGOT), result, ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, "adamantium_ingot");
+                createUpgradeRecipe(input, Ingredient.of(ADAMANTIUM_INGOT), has(ADAMANTIUM_INGOT), result, ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, "adamantium_ingot");
             }
 
             public void offerNetherStuffRecipe(Item input, Item result) {
-                createUpgradeRecipe(input, this.ingredientFromTag(AdabraniumItemTags.NETHER_BRICK_MATERIALS), this.conditionsFromTag(AdabraniumItemTags.NETHER_BRICK_MATERIALS), result, Items.NETHER_BRICK, "nether_brick");
+                createUpgradeRecipe(input, this.tag(AdabraniumItemTags.NETHER_BRICK_MATERIALS), this.has(AdabraniumItemTags.NETHER_BRICK_MATERIALS), result, Items.NETHER_BRICK, "nether_brick");
             }
         };
     }

@@ -4,125 +4,125 @@ import com.brand.adabranium.Adabranium;
 import com.brand.adabranium.registry.content.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
-import net.minecraft.advancement.*;
-import net.minecraft.advancement.criterion.ConsumeItemCriterion;
-import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.advancements.*;
+import net.minecraft.advancements.criterion.ConsumeItemTrigger;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
-    public final RegistryWrapper.WrapperLookup registryLookup;
+    public final HolderLookup.Provider registryLookup;
 
-    public AdabraniumAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public AdabraniumAdvancementProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(output, registryLookup);
         this.registryLookup = registryLookup.join();
     }
 
     @Override
-    public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
-        AdvancementEntry root = Advancement.Builder.create()
+    public void generateAdvancement(HolderLookup.Provider registryLookup, Consumer<AdvancementHolder> consumer) {
+        AdvancementHolder root = Advancement.Builder.advancement()
                 .display(
                         ModItems.VIBRANIUM,
                         title("root"), description("root"), background("adv_background"),
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("netherite_pickaxe", InventoryChangedCriterion.Conditions.items(Items.NETHERITE_PICKAXE))
-                .build(consumer, Adabranium.MOD_ID + "/root");
+                .addCriterion("netherite_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHERITE_PICKAXE))
+                .save(consumer, Adabranium.MOD_ID + "/root");
 
-        AdvancementEntry vibraniumIngot = Advancement.Builder.create()
+        AdvancementHolder vibraniumIngot = Advancement.Builder.advancement()
                 .parent(root)
                 .display(
                         ModItems.VIBRANIUM_INGOT,
                         title("wakanda_forever"), description("wakanda_forever"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("vibranium_ingot", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_INGOT))
-                .build(consumer, Adabranium.MOD_ID + "/wakanda_forever");
+                .addCriterion("vibranium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_INGOT))
+                .save(consumer, Adabranium.MOD_ID + "/wakanda_forever");
 
-        AdvancementEntry vibraniumPickaxe = Advancement.Builder.create()
+        AdvancementHolder vibraniumPickaxe = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
                         ModItems.VIBRANIUM_STUFF.pickaxe,
                         title("vibranium_pickaxe"), description("vibranium_pickaxe"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("vibranium_pickaxe", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_STUFF.pickaxe))
-                .build(consumer, Adabranium.MOD_ID + "/vibranium_pickaxe");
+                .addCriterion("vibranium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.pickaxe))
+                .save(consumer, Adabranium.MOD_ID + "/vibranium_pickaxe");
 
-        AdvancementEntry adamantiumIngot = Advancement.Builder.create()
+        AdvancementHolder adamantiumIngot = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
                         ModItems.ADAMANTIUM_INGOT,
                         title("adamantium_ingot"), description("adamantium_ingot"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("adamantium_ingot", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_INGOT))
-                .build(consumer, Adabranium.MOD_ID + "/adamantium_ingot");
+                .addCriterion("adamantium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_INGOT))
+                .save(consumer, Adabranium.MOD_ID + "/adamantium_ingot");
 
-        AdvancementEntry vibraniumArmor = Advancement.Builder.create()
+        AdvancementHolder vibraniumArmor = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
                         ModItems.VIBRANIUM_STUFF.chestplate,
                         title("purple_panther"), description("purple_panther"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("vibranium_helmet", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_STUFF.helmet))
-                .criterion("vibranium_chestplate", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_STUFF.chestplate))
-                .criterion("vibranium_leggings", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_STUFF.leggings))
-                .criterion("vibranium_boots", InventoryChangedCriterion.Conditions.items(ModItems.VIBRANIUM_STUFF.boots))
-                .criteriaMerger(AdvancementRequirements.CriterionMerger.OR)
-                .build(consumer, Adabranium.MOD_ID + "/purple_panther");
+                .addCriterion("vibranium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.helmet))
+                .addCriterion("vibranium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.chestplate))
+                .addCriterion("vibranium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.leggings))
+                .addCriterion("vibranium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.boots))
+                .requirements(AdvancementRequirements.Strategy.OR)
+                .save(consumer, Adabranium.MOD_ID + "/purple_panther");
 
-        AdvancementEntry vibraniumSoup = Advancement.Builder.create()
+        AdvancementHolder vibraniumSoup = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
                         ModItems.VIBRANIUM_SOUP,
                         title("panther_powers"), description("panther_powers"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("vibranium_soup", ConsumeItemCriterion.Conditions.item(Registries.ITEM, ModItems.VIBRANIUM_SOUP))
-                .build(consumer, Adabranium.MOD_ID + "/panther_powers");
+                .addCriterion("vibranium_soup", ConsumeItemTrigger.TriggerInstance.usedItem(BuiltInRegistries.ITEM, ModItems.VIBRANIUM_SOUP))
+                .save(consumer, Adabranium.MOD_ID + "/panther_powers");
 
-        AdvancementEntry adamantiumPickaxe = Advancement.Builder.create()
+        AdvancementHolder adamantiumPickaxe = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
                         ModItems.ADAMANTIUM_STUFF.pickaxe,
                         title("adamantium_pickaxe"), description("adamantium_pickaxe"), null,
-                        AdvancementFrame.TASK, true, true, false
+                        AdvancementType.TASK, true, true, false
                 )
-                .criterion("adamantium_pickaxe", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.pickaxe))
-                .build(consumer, Adabranium.MOD_ID + "/adamantium_pickaxe");
+                .addCriterion("adamantium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.pickaxe))
+                .save(consumer, Adabranium.MOD_ID + "/adamantium_pickaxe");
 
-        AdvancementEntry adamantiumArmor = Advancement.Builder.create()
+        AdvancementHolder adamantiumArmor = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
                         ModItems.ADAMANTIUM_STUFF.chestplate,
                         title("adamantium_armor"), description("adamantium_armor"), null,
-                        AdvancementFrame.CHALLENGE, true, true, false
+                        AdvancementType.CHALLENGE, true, true, false
                 )
-                .criterion("adamantium_helmet", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.helmet))
-                .criterion("adamantium_chestplate", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.chestplate))
-                .criterion("adamantium_leggings", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.leggings))
-                .criterion("adamantium_boots", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.boots))
+                .addCriterion("adamantium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.helmet))
+                .addCriterion("adamantium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.chestplate))
+                .addCriterion("adamantium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.leggings))
+                .addCriterion("adamantium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.boots))
                 .rewards(AdvancementRewards.Builder.experience(60))
-                .build(consumer, Adabranium.MOD_ID + "/adamantium_armor");
+                .save(consumer, Adabranium.MOD_ID + "/adamantium_armor");
 
-        AdvancementEntry premiumHoe = Advancement.Builder.create()
+        AdvancementHolder premiumHoe = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
                         ModItems.ADAMANTIUM_STUFF.hoe,
                         title("premium_hoe"), description("premium_hoe"), null,
-                        AdvancementFrame.CHALLENGE, true, true, true
+                        AdvancementType.CHALLENGE, true, true, true
                 )
-                .criterion("adamantium_hoe", InventoryChangedCriterion.Conditions.items(ModItems.ADAMANTIUM_STUFF.hoe))
+                .addCriterion("adamantium_hoe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.hoe))
                 .rewards(AdvancementRewards.Builder.experience(15))
-                .build(consumer, Adabranium.MOD_ID + "/premium_hoe");
+                .save(consumer, Adabranium.MOD_ID + "/premium_hoe");
 
     }
 
@@ -130,11 +130,11 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
         return Adabranium.id(name);
     }
 
-    public Text title(String name) {
-        return Text.translatable("advancements.adabranium." + name + ".title");
+    public Component title(String name) {
+        return Component.translatable("advancements.adabranium." + name + ".title");
     }
 
-    public Text description(String name) {
-        return Text.translatable("advancements.adabranium." + name + ".description");
+    public Component description(String name) {
+        return Component.translatable("advancements.adabranium." + name + ".description");
     }
 }

@@ -3,20 +3,20 @@ package com.brand.adabranium.datagen.providers;
 import com.brand.adabranium.registry.content.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
 public class AdabraniumBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
-    public AdabraniumBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public AdabraniumBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup registries) {
-        this.valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+    protected void addTags(HolderLookup.Provider registries) {
+        this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.VIBRANIUM_ORE)
                 .add(ModBlocks.DEEPSLATE_VIBRANIUM_ORE)
                 .add(ModBlocks.ADAMANTIUM_BLOCK)

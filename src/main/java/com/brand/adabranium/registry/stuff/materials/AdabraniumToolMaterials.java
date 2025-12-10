@@ -1,11 +1,11 @@
 package com.brand.adabranium.registry.stuff.materials;
 
 import com.brand.adabranium.registry.tag.AdabraniumItemTags;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.level.block.Block;
 
 public record AdabraniumToolMaterials(TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems) {
     public static final ToolMaterial VIBRANIUM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2701, 11.0F, 6.0F, 12, AdabraniumItemTags.VIBRANIUM_MATERIALS);

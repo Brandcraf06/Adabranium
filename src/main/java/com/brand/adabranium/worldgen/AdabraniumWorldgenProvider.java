@@ -4,62 +4,68 @@ import com.brand.adabranium.blocks.HeartShapedPlantBlock;
 import com.brand.adabranium.registry.content.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryEntryLookup;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.structure.rule.TagMatchRuleTest;
-import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placementmodifier.*;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class AdabraniumWorldgenProvider extends FabricDynamicRegistryProvider {
-    public AdabraniumWorldgenProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public AdabraniumWorldgenProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
-        entries.add(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.ORE_VIBRANIUM);
-        entries.add(registries.getOrThrow(RegistryKeys.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_VIBRANIUM);
-        entries.add(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.ORE_ADAMANTIUM);
-        entries.add(registries.getOrThrow(RegistryKeys.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_ADAMANTIUM);
-        entries.add(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT);
-        entries.add(registries.getOrThrow(RegistryKeys.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_HEART_SHAPED_PLANT);
+    protected void configure(HolderLookup.Provider registries, Entries entries) {
+        entries.add(registries.lookupOrThrow(Registries.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.ORE_VIBRANIUM);
+        entries.add(registries.lookupOrThrow(Registries.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_VIBRANIUM);
+        entries.add(registries.lookupOrThrow(Registries.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.ORE_ADAMANTIUM);
+        entries.add(registries.lookupOrThrow(Registries.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_ADAMANTIUM);
+        entries.add(registries.lookupOrThrow(Registries.CONFIGURED_FEATURE), AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT);
+        entries.add(registries.lookupOrThrow(Registries.PLACED_FEATURE), AdabraniumWorldgenFeatures.PLACED_HEART_SHAPED_PLANT);
     }
 
-    public static void bootstrapConfiguredFeatures(Registerable<ConfiguredFeature<?, ?>> registerable) {
-        RuleTest stone = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslate = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
-        List<OreFeatureConfig.Target> vibranium_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.VIBRANIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.getDefaultState()));
-        List<OreFeatureConfig.Target> adamantium_list = List.of(OreFeatureConfig.createTarget(stone, ModBlocks.ADAMANTIUM_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslate, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.getDefaultState()));
+    public static void bootstrapConfiguredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> registerable) {
+        RuleTest stone = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslate = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        List<OreConfiguration.TargetBlockState> vibranium_list = List.of(OreConfiguration.target(stone, ModBlocks.VIBRANIUM_ORE.defaultBlockState()), OreConfiguration.target(deepslate, ModBlocks.DEEPSLATE_VIBRANIUM_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> adamantium_list = List.of(OreConfiguration.target(stone, ModBlocks.ADAMANTIUM_ORE.defaultBlockState()), OreConfiguration.target(deepslate, ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.defaultBlockState()));
 
-        ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.ORE_VIBRANIUM, Feature.ORE, new OreFeatureConfig(vibranium_list, 4, 0.2f));
-        ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.ORE_ADAMANTIUM, Feature.ORE, new OreFeatureConfig(adamantium_list, 5, 1.0F));
-        ConfiguredFeatures.register(registerable, AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT, Feature.FLOWER, new RandomPatchFeatureConfig(64, 0, 0, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.HEART_SHAPED_PLANT.getDefaultState().with(HeartShapedPlantBlock.AGE, 2))))));
+        FeatureUtils.register(registerable, AdabraniumWorldgenFeatures.ORE_VIBRANIUM, Feature.ORE, new OreConfiguration(vibranium_list, 4, 0.2f));
+        FeatureUtils.register(registerable, AdabraniumWorldgenFeatures.ORE_ADAMANTIUM, Feature.ORE, new OreConfiguration(adamantium_list, 5, 1.0F));
+        FeatureUtils.register(registerable, AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT, Feature.FLOWER, new RandomPatchConfiguration(64, 0, 0, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.HEART_SHAPED_PLANT.defaultBlockState().setValue(HeartShapedPlantBlock.AGE, 2))))));
     }
 
-    public static void bootstrapPlacedFeatures(Registerable<PlacedFeature> registerable) {
-        RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatures = registerable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+    public static void bootstrapPlacedFeatures(BootstrapContext<PlacedFeature> registerable) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = registerable.lookup(Registries.CONFIGURED_FEATURE);
 
         // limestone
-        RegistryEntry<ConfiguredFeature<?, ?>> vibranium = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.ORE_VIBRANIUM);
-        PlacedFeatures.register(registerable, AdabraniumWorldgenFeatures.PLACED_VIBRANIUM, vibranium, AdabraniumWorldgenFeatures.modifiersWithCount(4, HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-72), YOffset.aboveBottom(72))));
+        Holder<ConfiguredFeature<?, ?>> vibranium = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.ORE_VIBRANIUM);
+        PlacementUtils.register(registerable, AdabraniumWorldgenFeatures.PLACED_VIBRANIUM, vibranium, AdabraniumWorldgenFeatures.modifiersWithCount(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-72), VerticalAnchor.aboveBottom(72))));
 
         // bluestone
-        RegistryEntry<ConfiguredFeature<?, ?>> adamantium = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.ORE_ADAMANTIUM);
-        PlacedFeatures.register(registerable, AdabraniumWorldgenFeatures.PLACED_ADAMANTIUM, adamantium, List.of(new PlacementModifier[]{SquarePlacementModifier.of(), HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-72), YOffset.aboveBottom(72)), BiomePlacementModifier.of()}));
+        Holder<ConfiguredFeature<?, ?>> adamantium = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.ORE_ADAMANTIUM);
+        PlacementUtils.register(registerable, AdabraniumWorldgenFeatures.PLACED_ADAMANTIUM, adamantium, List.of(new PlacementModifier[]{InSquarePlacement.spread(), HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-72), VerticalAnchor.aboveBottom(72)), BiomeFilter.biome()}));
 
         // rainbow rose
-        RegistryEntry<ConfiguredFeature<?, ?>> heart_shaped_plant = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT);
-        PlacedFeatures.register(registerable, AdabraniumWorldgenFeatures.PLACED_HEART_SHAPED_PLANT, heart_shaped_plant, List.of(new PlacementModifier[]{RarityFilterPlacementModifier.of(32), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()}));
+        Holder<ConfiguredFeature<?, ?>> heart_shaped_plant = configuredFeatures.getOrThrow(AdabraniumWorldgenFeatures.HEART_SHAPED_PLANT);
+        PlacementUtils.register(registerable, AdabraniumWorldgenFeatures.PLACED_HEART_SHAPED_PLANT, heart_shaped_plant, List.of(new PlacementModifier[]{RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()}));
     }
 
     @Override

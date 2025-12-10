@@ -7,11 +7,11 @@ import com.brand.adabranium.registry.stuff.potions.PotionsRecipes;
 import com.brand.adabranium.worldgen.AdabraniumWorldgenFeatures;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.entry.EmptyEntry;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.EmptyLootItem;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,36 +32,36 @@ public class Adabranium implements ModInitializer {
         AdabraniumWorldgenFeatures.registerConfiguredFeature();
 
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(Identifier.ofVanilla("chests/jungle_temple"))) {
-                LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1.0f))
-                        .bonusRolls(ConstantLootNumberProvider.create(0.0f))
-                        .with(EmptyEntry.builder().weight(2))
-                        .with(ItemEntry.builder(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE).weight(1))
+            if (key.identifier().equals(Identifier.withDefaultNamespace("chests/jungle_temple"))) {
+                LootPool pool = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0f))
+                        .setBonusRolls(ConstantValue.exactly(0.0f))
+                        .add(EmptyLootItem.emptyItem().setWeight(2))
+                        .add(LootItem.lootTableItem(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
                         .build();
 
                 tableBuilder.pool(pool);
             }
         });
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(Identifier.ofVanilla("chests/desert_pyramid"))) {
-                LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1.0f))
-                        .bonusRolls(ConstantLootNumberProvider.create(0.0f))
-                        .with(EmptyEntry.builder().weight(6))
-                        .with(ItemEntry.builder(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE).weight(1))
+            if (key.identifier().equals(Identifier.withDefaultNamespace("chests/desert_pyramid"))) {
+                LootPool pool = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0f))
+                        .setBonusRolls(ConstantValue.exactly(0.0f))
+                        .add(EmptyLootItem.emptyItem().setWeight(6))
+                        .add(LootItem.lootTableItem(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
                         .build();
 
                 tableBuilder.pool(pool);
             }
         });
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(Identifier.ofVanilla("chests/ancient_city"))) {
-                LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1.0f))
-                        .bonusRolls(ConstantLootNumberProvider.create(0.0f))
-                        .with(EmptyEntry.builder().weight(5))
-                        .with(ItemEntry.builder(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE).weight(1))
+            if (key.identifier().equals(Identifier.withDefaultNamespace("chests/ancient_city"))) {
+                LootPool pool = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0f))
+                        .setBonusRolls(ConstantValue.exactly(0.0f))
+                        .add(EmptyLootItem.emptyItem().setWeight(5))
+                        .add(LootItem.lootTableItem(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE).setWeight(1))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -70,7 +70,7 @@ public class Adabranium implements ModInitializer {
     }
 
     public static Identifier id(String name) {
-        return Identifier.of(MOD_ID, name);
+        return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }
 }
 
