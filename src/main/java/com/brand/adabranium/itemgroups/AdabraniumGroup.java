@@ -47,6 +47,7 @@ public class AdabraniumGroup {
                 entries.accept(stuff.leggings);
                 entries.accept(stuff.boots);
                 entries.accept(stuff.sword);
+                entries.accept(stuff.spear);
                 entries.accept(stuff.shovel);
                 entries.accept(stuff.pickaxe);
                 entries.accept(stuff.axe);

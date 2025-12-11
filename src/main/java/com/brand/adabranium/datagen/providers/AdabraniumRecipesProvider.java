@@ -44,6 +44,7 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerVibraniumStuffRecipe(Items.NETHERITE_AXE, VIBRANIUM_STUFF.axe);
                 offerVibraniumStuffRecipe(Items.NETHERITE_HOE, VIBRANIUM_STUFF.hoe);
                 offerVibraniumStuffRecipe(Items.NETHERITE_SWORD, VIBRANIUM_STUFF.sword);
+                offerVibraniumStuffRecipe(Items.NETHERITE_SPEAR, VIBRANIUM_STUFF.spear);
 
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.helmet, ADAMANTIUM_STUFF.helmet);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.chestplate, ADAMANTIUM_STUFF.chestplate);
@@ -54,6 +55,7 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.axe, ADAMANTIUM_STUFF.axe);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.hoe, ADAMANTIUM_STUFF.hoe);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.sword, ADAMANTIUM_STUFF.sword);
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.spear, ADAMANTIUM_STUFF.spear);
 
                 offerNetherStuffRecipe(Items.IRON_HELMET, NETHER_STUFF.helmet);
                 offerNetherStuffRecipe(Items.IRON_CHESTPLATE, NETHER_STUFF.chestplate);
@@ -64,6 +66,7 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerNetherStuffRecipe(Items.IRON_AXE, NETHER_STUFF.axe);
                 offerNetherStuffRecipe(Items.IRON_HOE, NETHER_STUFF.hoe);
                 offerNetherStuffRecipe(Items.IRON_SWORD, NETHER_STUFF.sword);
+                offerNetherStuffRecipe(Items.IRON_SPEAR, NETHER_STUFF.spear);
 
                 oreSmelting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 200, "vibranium");
                 oreBlasting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 100, "vibranium");

@@ -36,27 +36,28 @@ public class AdabraniumModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators modelGenerator) {
-        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_INGOT.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.VIBRANIUM.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_INGOT.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_DUST.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.HEART_SHAPED_HERB.asItem(), ModelTemplates.FLAT_ITEM);
-        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_SOUP.asItem(), ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_INGOT, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_INGOT, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_DUST, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.HEART_SHAPED_HERB, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_SOUP, ModelTemplates.FLAT_ITEM);
         modelGenerator.generateFlatItem(ModItems.VIBRANIUM_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
 
         for (FullStuffs fullStuffs : FullStuffs.values()) {
-            modelGenerator.generateTrimmableItem(fullStuffs.helmet.asItem(), fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.chestplate.asItem(), fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.leggings.asItem(), fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.boots.asItem(), fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-            modelGenerator.generateFlatItem(fullStuffs.sword.asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.pickaxe.asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.axe.asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.shovel.asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.hoe.asItem(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateTrimmableItem(fullStuffs.helmet, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.chestplate, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.leggings, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.boots, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+            modelGenerator.generateFlatItem(fullStuffs.sword, ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.pickaxe, ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.axe, ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.shovel, ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.hoe, ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateSpear(fullStuffs.spear);
         }
         modelGenerator.generateFlatItem(ModItems.ONESHOTIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
     }

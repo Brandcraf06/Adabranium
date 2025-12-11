@@ -73,6 +73,11 @@ public class AdabraniumItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .add(ModItems.ADAMANTIUM_STUFF.sword)
                 .add(ModItems.NETHER_STUFF.sword);
 
+        this.valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.VIBRANIUM_STUFF.spear)
+                .add(ModItems.ADAMANTIUM_STUFF.spear)
+                .add(ModItems.NETHER_STUFF.spear);
+
         this.valueLookupBuilder(AdabraniumItemTags.ADAMANTIUM_MATERIALS).add(ModItems.ADAMANTIUM_INGOT);
         this.valueLookupBuilder(AdabraniumItemTags.VIBRANIUM_MATERIALS).add(ModItems.VIBRANIUM_INGOT);
         this.valueLookupBuilder(AdabraniumItemTags.NETHER_BRICK_MATERIALS).add(Items.NETHER_BRICK);

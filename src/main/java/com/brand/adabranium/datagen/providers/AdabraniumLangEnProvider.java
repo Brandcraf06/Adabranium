@@ -50,6 +50,7 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
             translationBuilder.add(fullStuffs.shovel, name(fullStuffs.equipmentKey.identifier().getPath() + " Shovel"));
             translationBuilder.add(fullStuffs.hoe, name(fullStuffs.equipmentKey.identifier().getPath() + " Hoe"));
             translationBuilder.add(fullStuffs.sword, name(fullStuffs.equipmentKey.identifier().getPath() + " Sword"));
+            translationBuilder.add(fullStuffs.spear, name(fullStuffs.equipmentKey.identifier().getPath() + " Spear"));
         }
         translationBuilder.add(ModItems.ONESHOTIUM_SWORD, "Oneshotium Sword");
 

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:adamantium_ingot",
+  "base": "adabranium:vibranium_spear",
+  "result": {
+    "id": "adabranium:adamantium_spear"
+  },
+  "template": "adabranium:adamantium_upgrade_smithing_template"
+}

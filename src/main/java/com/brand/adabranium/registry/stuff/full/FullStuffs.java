@@ -21,10 +21,11 @@ public class FullStuffs {
     public Item pickaxe;
     public Item shovel;
     public Item sword;
+    public Item spear;
     public Item item;
     public ResourceKey<EquipmentAsset> equipmentKey;
 
-    public FullStuffs(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, int hoeattackDamage, float hoeattackSpeed, boolean isFireproof, ResourceKey<EquipmentAsset> equipmentKey) {
+    public FullStuffs(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, float hoeattackDamage, float hoeattackSpeed, float spearSwingDuration, float spearDamageMultiplier, float spearDelayTicks, float spearDismountMaxDurationTicks, float spearDismountMinSpeed, float spearKnockbackMaxDurationTicks, float spearDamageMaxDurationTicks, boolean isFireproof, ResourceKey<EquipmentAsset> equipmentKey) {
 
         this.equipmentKey = equipmentKey;
         Item.Properties itemSettings = new Item.Properties();
@@ -41,6 +42,7 @@ public class FullStuffs {
         this.pickaxe = ModItems.register(type + "_pickaxe", itemSettings.pickaxe(toolMaterial, 1.0F, -2.8F));
         this.hoe = ModItems.register(type + "_hoe", (settings) -> new HoeItem(toolMaterial, hoeattackDamage, hoeattackSpeed, settings), itemSettings);
         this.sword = ModItems.register(type + "_sword", (new Item.Properties()).sword(toolMaterial, 3, -2.4f));
+        this.spear = ModItems.register(type + "_spear", (new Item.Properties()).spear(toolMaterial, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, 5.1F, spearDamageMaxDurationTicks, 4.6F));
 
         LIST.add(this);
     }

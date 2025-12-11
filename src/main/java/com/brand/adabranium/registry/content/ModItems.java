@@ -61,19 +61,22 @@ public class ModItems {
     public static final FullStuffs VIBRANIUM_STUFF = new FullStuffs("vibranium",
             AdabraniumArmorMaterials.ArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM,
             5.0F, -3.0F,
-            -6, -0.0F,
+            -6.0F, -0.0F,
+            1.25F, 1.325F, 0.4F, 2.0F, 6.5F, 5.0F, 7.5F,
             true, AdabraniumEquipmentAssetKeys.VIBRANIUM);
 
     public static final FullStuffs ADAMANTIUM_STUFF = new FullStuffs("adamantium",
             AdabraniumArmorMaterials.ArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM,
             5.0F, -3.0F,
-            -8, -0.0F,
+            -8.0F, -0.0F,
+            1.35F, 1.45F, 0.3F, 2.0F, 6.25F, 4.85F, 6.25F,
             true, AdabraniumEquipmentAssetKeys.ADAMANTIUM);
 
     public static final FullStuffs NETHER_STUFF = new FullStuffs("nether",
             AdabraniumArmorMaterials.ArmorMaterials.NETHER_BRICK, AdabraniumToolMaterials.NETHER_BRICK,
             6.0F, -3.1F,
-            -2, -1.0F,
+            -2.0F, -1.0F,
+            0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 11.25F,
             true, AdabraniumEquipmentAssetKeys.NETHER_BRICK);
 
     public static final Item ONESHOTIUM_SWORD = register("oneshotium_sword", (new Item.Properties()).sword(AdabraniumToolMaterials.ONESHOTIUM, 0, 0.0F));
