@@ -54,6 +54,11 @@ public class AdabraniumGroup {
                 entries.accept(stuff.hoe);
             }
 
+            entries.accept(ModItems.VIBRANIUM_HORSE_ARMOR);
+            entries.accept(ModItems.ADAMANTIUM_HORSE_ARMOR);
+            entries.accept(ModItems.VIBRANIUM_NAUTILUS_ARMOR);
+            entries.accept(ModItems.ADAMANTIUM_NAUTILUS_ARMOR);
+
             entries.accept(ModBlocks.HEART_SHAPED_PLANT);
             entries.accept(ModItems.HEART_SHAPED_HERB);
             entries.accept(ModItems.VIBRANIUM_SOUP);

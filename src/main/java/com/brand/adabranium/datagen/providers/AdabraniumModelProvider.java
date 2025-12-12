@@ -59,6 +59,11 @@ public class AdabraniumModelProvider extends FabricModelProvider {
             modelGenerator.generateFlatItem(fullStuffs.hoe, ModelTemplates.FLAT_HANDHELD_ITEM);
             modelGenerator.generateSpear(fullStuffs.spear);
         }
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.VIBRANIUM_NAUTILUS_ARMOR, ModelTemplates.FLAT_ITEM);
+        modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_NAUTILUS_ARMOR, ModelTemplates.FLAT_ITEM);
+
         modelGenerator.generateFlatItem(ModItems.ONESHOTIUM_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 

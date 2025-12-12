@@ -52,6 +52,11 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
             translationBuilder.add(fullStuffs.sword, name(fullStuffs.equipmentKey.identifier().getPath() + " Sword"));
             translationBuilder.add(fullStuffs.spear, name(fullStuffs.equipmentKey.identifier().getPath() + " Spear"));
         }
+        translationBuilder.add(ModItems.VIBRANIUM_HORSE_ARMOR, "Vibranium Horse Armor");
+        translationBuilder.add(ModItems.ADAMANTIUM_HORSE_ARMOR, "Adamantium Horse Armor");
+        translationBuilder.add(ModItems.VIBRANIUM_NAUTILUS_ARMOR, "Vibranium Nautilus Armor");
+        translationBuilder.add(ModItems.ADAMANTIUM_NAUTILUS_ARMOR, "Adamantium Nautilus Armor");
+
         translationBuilder.add(ModItems.ONESHOTIUM_SWORD, "Oneshotium Sword");
 
         // Potions

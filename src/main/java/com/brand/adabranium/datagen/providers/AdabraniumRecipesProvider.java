@@ -45,6 +45,8 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerVibraniumStuffRecipe(Items.NETHERITE_HOE, VIBRANIUM_STUFF.hoe);
                 offerVibraniumStuffRecipe(Items.NETHERITE_SWORD, VIBRANIUM_STUFF.sword);
                 offerVibraniumStuffRecipe(Items.NETHERITE_SPEAR, VIBRANIUM_STUFF.spear);
+                offerVibraniumStuffRecipe(Items.NETHERITE_HORSE_ARMOR, VIBRANIUM_HORSE_ARMOR);
+                offerVibraniumStuffRecipe(Items.NETHERITE_NAUTILUS_ARMOR, VIBRANIUM_NAUTILUS_ARMOR);
 
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.helmet, ADAMANTIUM_STUFF.helmet);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.chestplate, ADAMANTIUM_STUFF.chestplate);
@@ -56,6 +58,8 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.hoe, ADAMANTIUM_STUFF.hoe);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.sword, ADAMANTIUM_STUFF.sword);
                 offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.spear, ADAMANTIUM_STUFF.spear);
+                offerAdamantiumStuffRecipe(VIBRANIUM_HORSE_ARMOR, ADAMANTIUM_HORSE_ARMOR);
+                offerAdamantiumStuffRecipe(VIBRANIUM_NAUTILUS_ARMOR, ADAMANTIUM_NAUTILUS_ARMOR);
 
                 offerNetherStuffRecipe(Items.IRON_HELMET, NETHER_STUFF.helmet);
                 offerNetherStuffRecipe(Items.IRON_CHESTPLATE, NETHER_STUFF.chestplate);

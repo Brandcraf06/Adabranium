@@ -1,11 +1,21 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "adabranium:adamantium"
+      }
+    ],
     "humanoid": [
       {
         "texture": "adabranium:adamantium"
       }
     ],
     "humanoid_leggings": [
+      {
+        "texture": "adabranium:adamantium"
+      }
+    ],
+    "nautilus_body": [
       {
         "texture": "adabranium:adamantium"
       }

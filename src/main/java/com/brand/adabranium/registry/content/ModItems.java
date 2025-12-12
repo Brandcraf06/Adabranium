@@ -59,21 +59,26 @@ public class ModItems {
 
     // stuffs
     public static final FullStuffs VIBRANIUM_STUFF = new FullStuffs("vibranium",
-            AdabraniumArmorMaterials.ArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM,
+            AdabraniumArmorMaterials.VIBRANIUM, AdabraniumToolMaterials.VIBRANIUM,
             5.0F, -3.0F,
             -6.0F, -0.0F,
             1.25F, 1.325F, 0.4F, 2.0F, 6.5F, 5.0F, 7.5F,
             true, AdabraniumEquipmentAssetKeys.VIBRANIUM);
+    public static final Item VIBRANIUM_HORSE_ARMOR = register("vibranium_horse_armor", (new Item.Properties()).horseArmor(AdabraniumArmorMaterials.VIBRANIUM).fireResistant());
+    public static final Item VIBRANIUM_NAUTILUS_ARMOR = register("vibranium_nautilus_armor", (new Item.Properties()).nautilusArmor(AdabraniumArmorMaterials.VIBRANIUM).fireResistant());
 
     public static final FullStuffs ADAMANTIUM_STUFF = new FullStuffs("adamantium",
-            AdabraniumArmorMaterials.ArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM,
+            AdabraniumArmorMaterials.ADAMANTIUM, AdabraniumToolMaterials.ADAMANTIUM,
             5.0F, -3.0F,
             -8.0F, -0.0F,
             1.35F, 1.45F, 0.3F, 2.0F, 6.25F, 4.85F, 6.25F,
             true, AdabraniumEquipmentAssetKeys.ADAMANTIUM);
 
+    public static final Item ADAMANTIUM_HORSE_ARMOR = register("adamantium_horse_armor", (new Item.Properties()).horseArmor(AdabraniumArmorMaterials.ADAMANTIUM).fireResistant());
+    public static final Item ADAMANTIUM_NAUTILUS_ARMOR = register("adamantium_nautilus_armor", (new Item.Properties()).nautilusArmor(AdabraniumArmorMaterials.ADAMANTIUM).fireResistant());
+
     public static final FullStuffs NETHER_STUFF = new FullStuffs("nether",
-            AdabraniumArmorMaterials.ArmorMaterials.NETHER_BRICK, AdabraniumToolMaterials.NETHER_BRICK,
+            AdabraniumArmorMaterials.NETHER_BRICK, AdabraniumToolMaterials.NETHER_BRICK,
             6.0F, -3.1F,
             -2.0F, -1.0F,
             0.95F, 0.95F, 0.6F, 2.5F, 8.0F, 6.75F, 11.25F,

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "adabranium:adamantium_ingot",
+  "base": "adabranium:vibranium_horse_armor",
+  "result": {
+    "id": "adabranium:adamantium_horse_armor"
+  },
+  "template": "adabranium:adamantium_upgrade_smithing_template"
+}
