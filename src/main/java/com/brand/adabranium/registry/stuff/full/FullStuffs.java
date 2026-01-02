@@ -41,8 +41,8 @@ public class FullStuffs {
         this.axe = ModItems.register(type + "_axe", (settings) -> new AxeItem(toolMaterial, axeattackDamage, axeattackSpeed, settings), itemSettings);
         this.pickaxe = ModItems.register(type + "_pickaxe", itemSettings.pickaxe(toolMaterial, 1.0F, -2.8F));
         this.hoe = ModItems.register(type + "_hoe", (settings) -> new HoeItem(toolMaterial, hoeattackDamage, hoeattackSpeed, settings), itemSettings);
-        this.sword = ModItems.register(type + "_sword", (new Item.Properties()).sword(toolMaterial, 3, -2.4f));
-        this.spear = ModItems.register(type + "_spear", (new Item.Properties()).spear(toolMaterial, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, 5.1F, spearDamageMaxDurationTicks, 4.6F));
+        this.sword = ModItems.register(type + "_sword", (itemSettings.sword(toolMaterial, 3, -2.4f)));
+        this.spear = ModItems.register(type + "_spear", (itemSettings.spear(toolMaterial, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, 5.1F, spearDamageMaxDurationTicks, 4.6F)));
 
         LIST.add(this);
     }
