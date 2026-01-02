@@ -35,42 +35,42 @@ public class AdabraniumRecipesProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
 
-                offerVibraniumStuffRecipe(Items.NETHERITE_HELMET, VIBRANIUM_STUFF.helmet);
-                offerVibraniumStuffRecipe(Items.NETHERITE_CHESTPLATE, VIBRANIUM_STUFF.chestplate);
-                offerVibraniumStuffRecipe(Items.NETHERITE_LEGGINGS, VIBRANIUM_STUFF.leggings);
-                offerVibraniumStuffRecipe(Items.NETHERITE_BOOTS, VIBRANIUM_STUFF.boots);
-                offerVibraniumStuffRecipe(Items.NETHERITE_SHOVEL, VIBRANIUM_STUFF.shovel);
-                offerVibraniumStuffRecipe(Items.NETHERITE_PICKAXE, VIBRANIUM_STUFF.pickaxe);
-                offerVibraniumStuffRecipe(Items.NETHERITE_AXE, VIBRANIUM_STUFF.axe);
-                offerVibraniumStuffRecipe(Items.NETHERITE_HOE, VIBRANIUM_STUFF.hoe);
-                offerVibraniumStuffRecipe(Items.NETHERITE_SWORD, VIBRANIUM_STUFF.sword);
-                offerVibraniumStuffRecipe(Items.NETHERITE_SPEAR, VIBRANIUM_STUFF.spear);
+                offerVibraniumStuffRecipe(Items.NETHERITE_HELMET, VIBRANIUM_STUFF.helmet());
+                offerVibraniumStuffRecipe(Items.NETHERITE_CHESTPLATE, VIBRANIUM_STUFF.chestplate());
+                offerVibraniumStuffRecipe(Items.NETHERITE_LEGGINGS, VIBRANIUM_STUFF.leggings());
+                offerVibraniumStuffRecipe(Items.NETHERITE_BOOTS, VIBRANIUM_STUFF.boots());
+                offerVibraniumStuffRecipe(Items.NETHERITE_SHOVEL, VIBRANIUM_STUFF.shovel());
+                offerVibraniumStuffRecipe(Items.NETHERITE_PICKAXE, VIBRANIUM_STUFF.pickaxe());
+                offerVibraniumStuffRecipe(Items.NETHERITE_AXE, VIBRANIUM_STUFF.axe());
+                offerVibraniumStuffRecipe(Items.NETHERITE_HOE, VIBRANIUM_STUFF.hoe());
+                offerVibraniumStuffRecipe(Items.NETHERITE_SWORD, VIBRANIUM_STUFF.sword());
+                offerVibraniumStuffRecipe(Items.NETHERITE_SPEAR, VIBRANIUM_STUFF.spear());
                 offerVibraniumStuffRecipe(Items.NETHERITE_HORSE_ARMOR, VIBRANIUM_HORSE_ARMOR);
                 offerVibraniumStuffRecipe(Items.NETHERITE_NAUTILUS_ARMOR, VIBRANIUM_NAUTILUS_ARMOR);
 
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.helmet, ADAMANTIUM_STUFF.helmet);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.chestplate, ADAMANTIUM_STUFF.chestplate);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.leggings, ADAMANTIUM_STUFF.leggings);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.boots, ADAMANTIUM_STUFF.boots);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.shovel, ADAMANTIUM_STUFF.shovel);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.pickaxe, ADAMANTIUM_STUFF.pickaxe);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.axe, ADAMANTIUM_STUFF.axe);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.hoe, ADAMANTIUM_STUFF.hoe);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.sword, ADAMANTIUM_STUFF.sword);
-                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.spear, ADAMANTIUM_STUFF.spear);
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.helmet(), ADAMANTIUM_STUFF.helmet());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.chestplate(), ADAMANTIUM_STUFF.chestplate());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.leggings(), ADAMANTIUM_STUFF.leggings());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.boots(), ADAMANTIUM_STUFF.boots());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.shovel(), ADAMANTIUM_STUFF.shovel());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.pickaxe(), ADAMANTIUM_STUFF.pickaxe());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.axe(), ADAMANTIUM_STUFF.axe());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.hoe(), ADAMANTIUM_STUFF.hoe());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.sword(), ADAMANTIUM_STUFF.sword());
+                offerAdamantiumStuffRecipe(VIBRANIUM_STUFF.spear(), ADAMANTIUM_STUFF.spear());
                 offerAdamantiumStuffRecipe(VIBRANIUM_HORSE_ARMOR, ADAMANTIUM_HORSE_ARMOR);
                 offerAdamantiumStuffRecipe(VIBRANIUM_NAUTILUS_ARMOR, ADAMANTIUM_NAUTILUS_ARMOR);
 
-                offerNetherStuffRecipe(Items.IRON_HELMET, NETHER_STUFF.helmet);
-                offerNetherStuffRecipe(Items.IRON_CHESTPLATE, NETHER_STUFF.chestplate);
-                offerNetherStuffRecipe(Items.IRON_LEGGINGS, NETHER_STUFF.leggings);
-                offerNetherStuffRecipe(Items.IRON_BOOTS, NETHER_STUFF.boots);
-                offerNetherStuffRecipe(Items.IRON_SHOVEL, NETHER_STUFF.shovel);
-                offerNetherStuffRecipe(Items.IRON_PICKAXE, NETHER_STUFF.pickaxe);
-                offerNetherStuffRecipe(Items.IRON_AXE, NETHER_STUFF.axe);
-                offerNetherStuffRecipe(Items.IRON_HOE, NETHER_STUFF.hoe);
-                offerNetherStuffRecipe(Items.IRON_SWORD, NETHER_STUFF.sword);
-                offerNetherStuffRecipe(Items.IRON_SPEAR, NETHER_STUFF.spear);
+                offerNetherStuffRecipe(Items.IRON_HELMET, NETHER_STUFF.helmet());
+                offerNetherStuffRecipe(Items.IRON_CHESTPLATE, NETHER_STUFF.chestplate());
+                offerNetherStuffRecipe(Items.IRON_LEGGINGS, NETHER_STUFF.leggings());
+                offerNetherStuffRecipe(Items.IRON_BOOTS, NETHER_STUFF.boots());
+                offerNetherStuffRecipe(Items.IRON_SHOVEL, NETHER_STUFF.shovel());
+                offerNetherStuffRecipe(Items.IRON_PICKAXE, NETHER_STUFF.pickaxe());
+                offerNetherStuffRecipe(Items.IRON_AXE, NETHER_STUFF.axe());
+                offerNetherStuffRecipe(Items.IRON_HOE, NETHER_STUFF.hoe());
+                offerNetherStuffRecipe(Items.IRON_SWORD, NETHER_STUFF.sword());
+                offerNetherStuffRecipe(Items.IRON_SPEAR, NETHER_STUFF.spear());
 
                 oreSmelting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 200, "vibranium");
                 oreBlasting(VIBRANIUM_ORES, RecipeCategory.MISC, VIBRANIUM, 1.0F, 100, "vibranium");

@@ -36,47 +36,47 @@ public class AdabraniumItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .add(ModItems.ADAMANTIUM_INGOT);
 
         this.valueLookupBuilder(ItemTags.CLUSTER_MAX_HARVESTABLES)
-                .add(ModItems.VIBRANIUM_STUFF.pickaxe)
-                .add(ModItems.ADAMANTIUM_STUFF.pickaxe)
-                .add(ModItems.NETHER_STUFF.pickaxe);
+                .add(ModItems.VIBRANIUM_STUFF.pickaxe())
+                .add(ModItems.ADAMANTIUM_STUFF.pickaxe())
+                .add(ModItems.NETHER_STUFF.pickaxe());
 
         for (FullStuffs fullStuffs : FullStuffs.values()) {
             this.valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
-                    .add(fullStuffs.helmet)
-                    .add(fullStuffs.chestplate)
-                    .add(fullStuffs.leggings)
-                    .add(fullStuffs.boots);
+                    .add(fullStuffs.helmet())
+                    .add(fullStuffs.chestplate())
+                    .add(fullStuffs.leggings())
+                    .add(fullStuffs.boots());
         }
 
         this.valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.VIBRANIUM_STUFF.pickaxe)
-                .add(ModItems.ADAMANTIUM_STUFF.pickaxe)
-                .add(ModItems.NETHER_STUFF.pickaxe);
+                .add(ModItems.VIBRANIUM_STUFF.pickaxe())
+                .add(ModItems.ADAMANTIUM_STUFF.pickaxe())
+                .add(ModItems.NETHER_STUFF.pickaxe());
 
         this.valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.VIBRANIUM_STUFF.axe)
-                .add(ModItems.ADAMANTIUM_STUFF.axe)
-                .add(ModItems.NETHER_STUFF.axe);
+                .add(ModItems.VIBRANIUM_STUFF.axe())
+                .add(ModItems.ADAMANTIUM_STUFF.axe())
+                .add(ModItems.NETHER_STUFF.axe());
 
         this.valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.VIBRANIUM_STUFF.shovel)
-                .add(ModItems.ADAMANTIUM_STUFF.shovel)
-                .add(ModItems.NETHER_STUFF.shovel);
+                .add(ModItems.VIBRANIUM_STUFF.shovel())
+                .add(ModItems.ADAMANTIUM_STUFF.shovel())
+                .add(ModItems.NETHER_STUFF.shovel());
 
         this.valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.VIBRANIUM_STUFF.hoe)
-                .add(ModItems.ADAMANTIUM_STUFF.hoe)
-                .add(ModItems.NETHER_STUFF.hoe);
+                .add(ModItems.VIBRANIUM_STUFF.hoe())
+                .add(ModItems.ADAMANTIUM_STUFF.hoe())
+                .add(ModItems.NETHER_STUFF.hoe());
 
         this.valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.VIBRANIUM_STUFF.sword)
-                .add(ModItems.ADAMANTIUM_STUFF.sword)
-                .add(ModItems.NETHER_STUFF.sword);
+                .add(ModItems.VIBRANIUM_STUFF.sword())
+                .add(ModItems.ADAMANTIUM_STUFF.sword())
+                .add(ModItems.NETHER_STUFF.sword());
 
         this.valueLookupBuilder(ItemTags.SPEARS)
-                .add(ModItems.VIBRANIUM_STUFF.spear)
-                .add(ModItems.ADAMANTIUM_STUFF.spear)
-                .add(ModItems.NETHER_STUFF.spear);
+                .add(ModItems.VIBRANIUM_STUFF.spear())
+                .add(ModItems.ADAMANTIUM_STUFF.spear())
+                .add(ModItems.NETHER_STUFF.spear());
 
         this.valueLookupBuilder(AdabraniumItemTags.ADAMANTIUM_MATERIALS).add(ModItems.ADAMANTIUM_INGOT);
         this.valueLookupBuilder(AdabraniumItemTags.VIBRANIUM_MATERIALS).add(ModItems.VIBRANIUM_INGOT);

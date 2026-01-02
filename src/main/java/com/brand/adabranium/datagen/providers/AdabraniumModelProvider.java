@@ -48,16 +48,16 @@ public class AdabraniumModelProvider extends FabricModelProvider {
 
 
         for (FullStuffs fullStuffs : FullStuffs.values()) {
-            modelGenerator.generateTrimmableItem(fullStuffs.helmet, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.chestplate, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.leggings, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-            modelGenerator.generateTrimmableItem(fullStuffs.boots, fullStuffs.equipmentKey, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
-            modelGenerator.generateFlatItem(fullStuffs.sword, ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.pickaxe, ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.axe, ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.shovel, ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateFlatItem(fullStuffs.hoe, ModelTemplates.FLAT_HANDHELD_ITEM);
-            modelGenerator.generateSpear(fullStuffs.spear);
+            modelGenerator.generateTrimmableItem(fullStuffs.helmet(), fullStuffs.equipmentKey(), ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.chestplate(), fullStuffs.equipmentKey(), ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.leggings(), fullStuffs.equipmentKey(), ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+            modelGenerator.generateTrimmableItem(fullStuffs.boots(), fullStuffs.equipmentKey(), ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+            modelGenerator.generateFlatItem(fullStuffs.sword(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.pickaxe(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.axe(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.shovel(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateFlatItem(fullStuffs.hoe(), ModelTemplates.FLAT_HANDHELD_ITEM);
+            modelGenerator.generateSpear(fullStuffs.spear());
         }
         modelGenerator.generateFlatItem(ModItems.VIBRANIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
         modelGenerator.generateFlatItem(ModItems.ADAMANTIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);

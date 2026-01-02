@@ -41,16 +41,16 @@ public class AdabraniumLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.VIBRANIUM_SOUP, "Vibranium Soup");
 
         for (FullStuffs fullStuffs : FullStuffs.values()) {
-            translationBuilder.add(fullStuffs.helmet, name(fullStuffs.equipmentKey.identifier().getPath() + " Helmet"));
-            translationBuilder.add(fullStuffs.chestplate, name(fullStuffs.equipmentKey.identifier().getPath() + " Chestplate"));
-            translationBuilder.add(fullStuffs.leggings, name(fullStuffs.equipmentKey.identifier().getPath() + " Leggings"));
-            translationBuilder.add(fullStuffs.boots, name(fullStuffs.equipmentKey.identifier().getPath() + " Boots"));
-            translationBuilder.add(fullStuffs.pickaxe, name(fullStuffs.equipmentKey.identifier().getPath() + " Pickaxe"));
-            translationBuilder.add(fullStuffs.axe, name(fullStuffs.equipmentKey.identifier().getPath() + " Axe"));
-            translationBuilder.add(fullStuffs.shovel, name(fullStuffs.equipmentKey.identifier().getPath() + " Shovel"));
-            translationBuilder.add(fullStuffs.hoe, name(fullStuffs.equipmentKey.identifier().getPath() + " Hoe"));
-            translationBuilder.add(fullStuffs.sword, name(fullStuffs.equipmentKey.identifier().getPath() + " Sword"));
-            translationBuilder.add(fullStuffs.spear, name(fullStuffs.equipmentKey.identifier().getPath() + " Spear"));
+            translationBuilder.add(fullStuffs.helmet(), name(fullStuffs.equipmentKey().identifier().getPath() + " Helmet"));
+            translationBuilder.add(fullStuffs.chestplate(), name(fullStuffs.equipmentKey().identifier().getPath() + " Chestplate"));
+            translationBuilder.add(fullStuffs.leggings(), name(fullStuffs.equipmentKey().identifier().getPath() + " Leggings"));
+            translationBuilder.add(fullStuffs.boots(), name(fullStuffs.equipmentKey().identifier().getPath() + " Boots"));
+            translationBuilder.add(fullStuffs.pickaxe(), name(fullStuffs.equipmentKey().identifier().getPath() + " Pickaxe"));
+            translationBuilder.add(fullStuffs.axe(), name(fullStuffs.equipmentKey().identifier().getPath() + " Axe"));
+            translationBuilder.add(fullStuffs.shovel(), name(fullStuffs.equipmentKey().identifier().getPath() + " Shovel"));
+            translationBuilder.add(fullStuffs.hoe(), name(fullStuffs.equipmentKey().identifier().getPath() + " Hoe"));
+            translationBuilder.add(fullStuffs.sword(), name(fullStuffs.equipmentKey().identifier().getPath() + " Sword"));
+            translationBuilder.add(fullStuffs.spear(), name(fullStuffs.equipmentKey().identifier().getPath() + " Spear"));
         }
         translationBuilder.add(ModItems.VIBRANIUM_HORSE_ARMOR, "Vibranium Horse Armor");
         translationBuilder.add(ModItems.ADAMANTIUM_HORSE_ARMOR, "Adamantium Horse Armor");

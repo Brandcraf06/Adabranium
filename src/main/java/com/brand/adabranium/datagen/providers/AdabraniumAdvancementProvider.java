@@ -48,11 +48,11 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
         AdvancementHolder vibraniumPickaxe = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
-                        ModItems.VIBRANIUM_STUFF.pickaxe,
+                        ModItems.VIBRANIUM_STUFF.pickaxe(),
                         title("vibranium_pickaxe"), description("vibranium_pickaxe"), null,
                         AdvancementType.TASK, true, true, false
                 )
-                .addCriterion("vibranium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.pickaxe))
+                .addCriterion("vibranium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.pickaxe()))
                 .save(consumer, Adabranium.MOD_ID + "/vibranium_pickaxe");
 
         AdvancementHolder adamantiumIngot = Advancement.Builder.advancement()
@@ -68,14 +68,14 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
         AdvancementHolder vibraniumArmor = Advancement.Builder.advancement()
                 .parent(vibraniumIngot)
                 .display(
-                        ModItems.VIBRANIUM_STUFF.chestplate,
+                        ModItems.VIBRANIUM_STUFF.chestplate(),
                         title("purple_panther"), description("purple_panther"), null,
                         AdvancementType.TASK, true, true, false
                 )
-                .addCriterion("vibranium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.helmet))
-                .addCriterion("vibranium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.chestplate))
-                .addCriterion("vibranium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.leggings))
-                .addCriterion("vibranium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.boots))
+                .addCriterion("vibranium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.helmet()))
+                .addCriterion("vibranium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.chestplate()))
+                .addCriterion("vibranium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.leggings()))
+                .addCriterion("vibranium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_STUFF.boots()))
                 .requirements(AdvancementRequirements.Strategy.OR)
                 .save(consumer, Adabranium.MOD_ID + "/purple_panther");
 
@@ -92,35 +92,35 @@ public class AdabraniumAdvancementProvider extends FabricAdvancementProvider {
         AdvancementHolder adamantiumPickaxe = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
-                        ModItems.ADAMANTIUM_STUFF.pickaxe,
+                        ModItems.ADAMANTIUM_STUFF.pickaxe(),
                         title("adamantium_pickaxe"), description("adamantium_pickaxe"), null,
                         AdvancementType.TASK, true, true, false
                 )
-                .addCriterion("adamantium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.pickaxe))
+                .addCriterion("adamantium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.pickaxe()))
                 .save(consumer, Adabranium.MOD_ID + "/adamantium_pickaxe");
 
         AdvancementHolder adamantiumArmor = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
-                        ModItems.ADAMANTIUM_STUFF.chestplate,
+                        ModItems.ADAMANTIUM_STUFF.chestplate(),
                         title("adamantium_armor"), description("adamantium_armor"), null,
                         AdvancementType.CHALLENGE, true, true, false
                 )
-                .addCriterion("adamantium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.helmet))
-                .addCriterion("adamantium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.chestplate))
-                .addCriterion("adamantium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.leggings))
-                .addCriterion("adamantium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.boots))
+                .addCriterion("adamantium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.helmet()))
+                .addCriterion("adamantium_chestplate", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.chestplate()))
+                .addCriterion("adamantium_leggings", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.leggings()))
+                .addCriterion("adamantium_boots", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.boots()))
                 .rewards(AdvancementRewards.Builder.experience(60))
                 .save(consumer, Adabranium.MOD_ID + "/adamantium_armor");
 
         AdvancementHolder premiumHoe = Advancement.Builder.advancement()
                 .parent(adamantiumIngot)
                 .display(
-                        ModItems.ADAMANTIUM_STUFF.hoe,
+                        ModItems.ADAMANTIUM_STUFF.hoe(),
                         title("premium_hoe"), description("premium_hoe"), null,
                         AdvancementType.CHALLENGE, true, true, true
                 )
-                .addCriterion("adamantium_hoe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.hoe))
+                .addCriterion("adamantium_hoe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ADAMANTIUM_STUFF.hoe()))
                 .rewards(AdvancementRewards.Builder.experience(15))
                 .save(consumer, Adabranium.MOD_ID + "/premium_hoe");
 

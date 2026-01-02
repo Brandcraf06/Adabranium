@@ -8,46 +8,66 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class FullStuffs {
-    private static final ArrayList<FullStuffs> LIST = new ArrayList<>();
+public record FullStuffs(
+        boolean fireResistant,
+        Item helmet,
+        Item chestplate,
+        Item leggings,
+        Item boots,
+        Item shovel,
+        Item axe,
+        Item pickaxe,
+        Item hoe,
+        Item sword,
+        Item spear,
+        ResourceKey<EquipmentAsset> equipmentKey
+) {
 
-    public Item axe;
-    public Item hoe;
-    public Item pickaxe;
-    public Item shovel;
-    public Item sword;
-    public Item spear;
-    public Item item;
-    public Item helmet;
-    public Item chestplate;
-    public Item leggings;
-    public Item boots;
-    public ResourceKey<EquipmentAsset> equipmentKey;
+    public static final List<FullStuffs> LIST = new ArrayList<>();
 
-    public FullStuffs(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, float hoeattackDamage, float hoeattackSpeed, float spearSwingDuration, float spearDamageMultiplier, float spearDelayTicks, float spearDismountMaxDurationTicks, float spearDismountMinSpeed, float spearKnockbackMaxDurationTicks, float spearDamageMaxDurationTicks, boolean isFireproof, ResourceKey<EquipmentAsset> equipmentKey) {
-
-        this.equipmentKey = equipmentKey;
-        Item.Properties itemSettings = new Item.Properties();
-        if (isFireproof)
-            itemSettings = itemSettings.fireResistant();
-
-        this.shovel = ModItems.register(type + "_shovel", (settings) -> new ShovelItem(toolMaterial, 1.5F, -3.0F, settings), itemSettings);
-        this.axe = ModItems.register(type + "_axe", (settings) -> new AxeItem(toolMaterial, axeattackDamage, axeattackSpeed, settings), itemSettings);
-        this.pickaxe = ModItems.register(type + "_pickaxe", itemSettings.pickaxe(toolMaterial, 1.0F, -2.8F));
-        this.hoe = ModItems.register(type + "_hoe", (settings) -> new HoeItem(toolMaterial, hoeattackDamage, hoeattackSpeed, settings), itemSettings);
-        this.sword = ModItems.register(type + "_sword", (itemSettings.sword(toolMaterial, 3, -2.4f)));
-        this.spear = ModItems.register(type + "_spear", (itemSettings.spear(toolMaterial, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, 5.1F, spearDamageMaxDurationTicks, 4.6F)));
-
-        this.helmet = ModItems.register(type + "_helmet", (itemSettings.humanoidArmor(armorMaterial, ArmorType.HELMET)));
-        this.chestplate = ModItems.register(type + "_chestplate", (itemSettings.humanoidArmor(armorMaterial, ArmorType.CHESTPLATE)));
-        this.leggings = ModItems.register(type + "_leggings", (itemSettings.humanoidArmor(armorMaterial, ArmorType.LEGGINGS)));
-        this.boots = ModItems.register(type + "_boots", (itemSettings.humanoidArmor(armorMaterial, ArmorType.BOOTS)));
-
-        LIST.add(this);
+    public static List<FullStuffs> values() {
+        return LIST;
     }
 
-    public static ArrayList<FullStuffs> values() {
-        return LIST;
+    public static Builder of(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage, float axeattackSpeed, float hoeattackDamage, float hoeattackSpeed, float spearSwingDuration, float spearDamageMultiplier, float spearDelayTicks, float spearDismountMaxDurationTicks, float spearDismountMinSpeed, float spearKnockbackMaxDurationTicks, float spearDamageMaxDurationTicks, boolean fireResistant, ResourceKey<EquipmentAsset> equipmentKey) {
+        return new Builder(type, armorMaterial, toolMaterial, axeattackDamage, axeattackSpeed, hoeattackDamage, hoeattackSpeed, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, spearDamageMaxDurationTicks, fireResistant, equipmentKey);
+    }
+
+    public record Builder(String type, ArmorMaterial armorMaterial, ToolMaterial toolMaterial, float axeattackDamage,
+                          float axeattackSpeed, float hoeattackDamage, float hoeattackSpeed, float spearSwingDuration,
+                          float spearDamageMultiplier, float spearDelayTicks, float spearDismountMaxDurationTicks,
+                          float spearDismountMinSpeed, float spearKnockbackMaxDurationTicks,
+                          float spearDamageMaxDurationTicks, boolean fireResistant,
+                          ResourceKey<EquipmentAsset> equipmentKey) {
+
+        public Item.Properties itemProperties() {
+            Item.Properties itemProperties = new Item.Properties();
+            if (fireResistant) {
+                itemProperties = itemProperties.fireResistant();
+            }
+            return itemProperties;
+        }
+
+        public FullStuffs register() {
+
+            Item helmet = ModItems.register(type + "_helmet", (itemProperties().humanoidArmor(armorMaterial, ArmorType.HELMET)));
+            Item chestplate = ModItems.register(type + "_chestplate", (itemProperties().humanoidArmor(armorMaterial, ArmorType.CHESTPLATE)));
+            Item leggings = ModItems.register(type + "_leggings", (itemProperties().humanoidArmor(armorMaterial, ArmorType.LEGGINGS)));
+            Item boots = ModItems.register(type + "_boots", (itemProperties().humanoidArmor(armorMaterial, ArmorType.BOOTS)));
+
+            Item shovel = ModItems.register(type + "_shovel", (properties) -> new ShovelItem(toolMaterial, 1.5F, -3.0F, properties), itemProperties());
+            Item axe = ModItems.register(type + "_axe", (properties) -> new AxeItem(toolMaterial, axeattackDamage, axeattackSpeed, properties), itemProperties());
+            Item pickaxe = ModItems.register(type + "_pickaxe", itemProperties().pickaxe(toolMaterial, 1.0F, -2.8F));
+            Item hoe = ModItems.register(type + "_hoe", (properties) -> new HoeItem(toolMaterial, hoeattackDamage, hoeattackSpeed, properties), itemProperties());
+            Item sword = ModItems.register(type + "_sword", (itemProperties().sword(toolMaterial, 3, -2.4f)));
+            Item spear = ModItems.register(type + "_spear", (itemProperties().spear(toolMaterial, spearSwingDuration, spearDamageMultiplier, spearDelayTicks, spearDismountMaxDurationTicks, spearDismountMinSpeed, spearKnockbackMaxDurationTicks, 5.1F, spearDamageMaxDurationTicks, 4.6F)));
+
+            FullStuffs bundle = new FullStuffs(fireResistant, helmet, chestplate, leggings, boots, shovel, axe, pickaxe, hoe, sword, spear, equipmentKey);
+
+            LIST.add(bundle);
+            return bundle;
+        }
     }
 }

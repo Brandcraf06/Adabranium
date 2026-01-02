@@ -42,16 +42,16 @@ public class AdabraniumGroup {
             entries.accept(ModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE);
 
             for (FullStuffs stuff : FullStuffs.values()) {
-                entries.accept(stuff.helmet);
-                entries.accept(stuff.chestplate);
-                entries.accept(stuff.leggings);
-                entries.accept(stuff.boots);
-                entries.accept(stuff.sword);
-                entries.accept(stuff.spear);
-                entries.accept(stuff.shovel);
-                entries.accept(stuff.pickaxe);
-                entries.accept(stuff.axe);
-                entries.accept(stuff.hoe);
+                entries.accept(stuff.helmet());
+                entries.accept(stuff.chestplate());
+                entries.accept(stuff.leggings());
+                entries.accept(stuff.boots());
+                entries.accept(stuff.sword());
+                entries.accept(stuff.spear());
+                entries.accept(stuff.shovel());
+                entries.accept(stuff.pickaxe());
+                entries.accept(stuff.axe());
+                entries.accept(stuff.hoe());
             }
 
             entries.accept(ModItems.VIBRANIUM_HORSE_ARMOR);
